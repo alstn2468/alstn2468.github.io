@@ -3088,3 +3088,9 @@
 			}
 
 	}
+	#typewriteText{
+		color: #777;
+		font-size: 1.75em;
+		font-weight: 700;
+		margin-top: -0.75em;
+	}

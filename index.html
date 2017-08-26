@@ -15,6 +15,68 @@
 		<meta property="og:image" content="https://ucarecdn.com/e9eef344-4c89-4043-9703-c759ac38d5a5/thumbnail.jpg">
 		<meta property="og:url" content="http://kim-ms.ga">
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<script src="http://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+    <script src="assets/js/typewrite.js"></script>
+		<script>
+        $(document).ready(function(){
+            $('#typewriteText').typewrite({
+                actions: [
+                    {type: 'I\'m a normal college student '},
+                    {type: '<br>'},
+                    {type: 'who wznt t '},
+                    {delay: 1500},
+                    {remove: {num: 1, type: 'stepped'}},
+                    {select: {from: 37, to: 42}},
+                    {delay: 500},
+                    {remove: {num: 5, type: 'whole'}},
+                    {delay: 300},
+                    {type: 'ants to be a good developer. (ง •̀ω•́)ง✧ '},
+                ]
+            });
+        });
+    </script>
+		<script>
+    $('#typewriteText').typewrite({
+      // typing speed
+      speed: 12,
+      // blinking speed
+      blinkSpeed: 2,
+      // show blinking cursor
+      showCursor: true,
+      // enable blinking cursor
+      blinkingCursor: true,
+      // cursor character
+      cursor: '|',
+      // background color of selected text
+      selectedBackground: '#F1F1F1',
+      // font color of selected text
+      selectedText: '#333333'
+    });
+    </script>
+    <script>
+    $('#typewriteText')
+      .on('typewriteStarted', function() {
+          // typewrite has started
+      })
+      .on('typewriteComplete', function() {
+          // typewrite has complete
+      })
+      .on('typewriteTyped', function(event, data) {
+          // typewrite has typed', data);
+      })
+      .on('typewriteRemoved', function(event, data) {
+          // typewrite has removed', data);
+      })
+      .on('typewriteNewLine', function() {
+          // typewrite has added a new line
+      })
+      .on('typewriteSelected', function(event, data) {
+          // typewrite has selected text', data);
+      })
+      .on('typewriteDelayEnded', function() {
+          // typewrite delay has ended
+      })
+      </script>
 	</head>
 	<body>
 
@@ -54,8 +116,8 @@
 								<div class="container">
 									<header class="major">
 										<h2>KIM MIN SU</h2>
-										<p>I'm a normal college student<br />
-											who wants to be a good developer. (ง •̀ω•́)ง✧</p>
+										<div id="typewriteText"></div>
+										<br />
 									</header>
 									<p>Hello, my name is Minsu Kim<br />
 										I am student at Soonchunhyang University.<br />
@@ -508,7 +570,7 @@
 			</div>
 
 		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
