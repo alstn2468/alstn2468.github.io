@@ -25,7 +25,7 @@
 	-webkit-transform: translate(-50%,-50%);
 	overflow: hidden;
 	z-index: 15;
-	width: 100%;
+	width: auto;
 }
 	.pop-overlay.light .pop-wrapper {
 		/*border: 1px solid #D5D5D5;*/
@@ -131,7 +131,6 @@
 .features article .inner img .certificate {
 	width: 100% !important;
 }
-
 @@media screen and(min-width:1024px){
 	.pop-wrapper,
 	.pop-content-image{
