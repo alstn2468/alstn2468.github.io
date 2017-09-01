@@ -56,8 +56,6 @@
 		text-align:justify;
 		font-size: 14px;
 		overflow: auto;
-		max-width: 900px;
-		max-height: 900px;
 	}
 		.pop-wrapper .pop-content.image { padding: 0; }
 	.pop-wrapper .pop-close {
