@@ -127,13 +127,3 @@
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(360deg); }
 }
-
-.features article .inner img .certificate {
-	width: 100% !important;
-}
-@@media screen and(min-width:1024px){
-	.pop-wrapper,
-	.pop-content-image{
-		width: auto !important;
-	}
-}
