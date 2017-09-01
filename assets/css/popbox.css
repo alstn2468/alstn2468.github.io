@@ -25,7 +25,7 @@
 	-webkit-transform: translate(-50%,-50%);
 	overflow: hidden;
 	z-index: 15;
-	width: 100%;
+	width: auto;
 }
 	.pop-overlay.light .pop-wrapper {
 		/*border: 1px solid #D5D5D5;*/
@@ -55,7 +55,7 @@
 		background-color:#fff;
 		text-align:justify;
 		font-size: 14px;
-		overflow: auto;
+		overflow: 100%;
 	}
 		.pop-wrapper .pop-content.image { padding: 0; }
 	.pop-wrapper .pop-close {
