@@ -25,7 +25,7 @@
 	-webkit-transform: translate(-50%,-50%);
 	overflow: hidden;
 	z-index: 15;
-	width: auto;
+	width: 100%;
 }
 	.pop-overlay.light .pop-wrapper {
 		/*border: 1px solid #D5D5D5;*/
