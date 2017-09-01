@@ -3094,3 +3094,22 @@
 		font-weight: 700;
 		margin-top: -0.75em;
 	}
+ #Popup-Trigger{
+	 width:100px;
+	 background-color: #64a2d0;
+   border: none;
+   color:#fff;
+   padding: 10px 0;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 15px;
+   margin: 4px;
+   cursor: pointer;
+	 border-radius: 10px;
+
+ }
+ #Popup-Trigger:hover{
+	 background-color: #fff;
+	 color: #64a2d0;
+ }
