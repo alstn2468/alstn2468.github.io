@@ -3113,7 +3113,8 @@
 	 background-color: #fff;
 	 color: #64a2d0;
  }
-
-#opup-Demo {
-	width: 100% !important;
-}
+ @media screen and (min-width: 1024px) {
+	 #opup-Demo{
+         width: auto !important;
+     }
+ }
