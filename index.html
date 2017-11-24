@@ -1,220 +1,278 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-		<title>Welcome (๑•‿•๑)</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta property="og:title" content="KIM MIN SU">
-		<meta property="og:type" content="website">
-		<meta property="og:description" content="Welcome to Minsu's personal Webpage">
-		<meta property="og:image" content="https://ucarecdn.com/e9eef344-4c89-4043-9703-c759ac38d5a5/thumbnail.jpg">
-		<meta property="og:url" content="http://kim-ms.ga">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<script src="//code.jquery.com/jquery.min.js"></script>
-		<!--typewriteText -->
-    <script src="assets/js/typewrite.js"></script>
-		<script>
-        $(document).ready(function(){
-            $('#typewriteText').typewrite({
-                actions: [
-                    {type: 'I\'m a normal university student  '},
-                    {type: '<br>'},
-                    {type: 'who wanna '},
-                    {delay: 1500},
-                    {remove: {num: 1, type: 'stepped'}},
-                    {select: {from: 40, to: 44}},
-                    {delay: 500},
-                    {remove: {num: 4, type: 'whole'}},
-                    {delay: 300},
-                    {type: 'ants to be a good developer.(ง •̀ω•́)ง'},
-                ]
-            });
-        });
-    </script>
-		<script>
-    $('#typewriteText').typewrite({
-      // typing speed
-      speed: 12,
-      // blinking speed
-      blinkSpeed: 2,
-      // show blinking cursor
-      showCursor: true,
-      // enable blinking cursor
-      blinkingCursor: true,
-      // cursor character
-      cursor: '|',
-      // background color of selected text
-      selectedBackground: '#F1F1F1',
-      // font color of selected text
-      selectedText: '#333333'
-    });
-    </script>
-    <script>
-    $('#typewriteText')
-      .on('typewriteStarted', function() {
-          // typewrite has started
-      })
-      .on('typewriteComplete', function() {
-          // typewrite has complete
-      })
-      .on('typewriteTyped', function(event, data) {
-          // typewrite has typed', data);
-      })
-      .on('typewriteRemoved', function(event, data) {
-          // typewrite has removed', data);
-      })
-      .on('typewriteNewLine', function() {
-          // typewrite has added a new line
-      })
-      .on('typewriteSelected', function(event, data) {
-          // typewrite has selected text', data);
-      })
-      .on('typewriteDelayEnded', function() {
-          // typewrite delay has ended
-      })
-		  </script>
-	</head>
-	<body>
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Kim MinSu</a></h1>
-					<p>No Pain No Gain<br />
-					1999.01.02</p>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">Introduction</a></li>
-						<li><a href="#two">About Me</a></li>
-						<li><a href="#three">Career</a></li>
-						<li><a href="#four"></a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="https://www.facebook.com/profile.php?id=100003769223078" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-						<li><a href="https://www.instagram.com/_alstn2468_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/alstn2468" class="icon fa-github"><span class="label">Github</span></a></li>
-					</ul>
-				</footer>
+<head>
+	<title>Welcome (๑•‿•๑)</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:title" content="KIM MIN SU">
+	<meta property="og:type" content="website">
+	<meta property="og:description" content="Welcome to Minsu's personal Webpage">
+	<meta property="og:image" content="https://ucarecdn.com/e9eef344-4c89-4043-9703-c759ac38d5a5/thumbnail.jpg">
+	<meta property="og:url" content="http://kim-ms.ga">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<script src="//code.jquery.com/jquery.min.js"></script>
+	<!--typewriteText -->
+	<script src="assets/js/typewrite.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('#typewriteText').typewrite({
+				actions: [{
+						type: 'I\'m a normal university student  '
+					},
+					{
+						type: '<br>'
+					},
+					{
+						type: 'who wanna '
+					},
+					{
+						delay: 1500
+					},
+					{
+						remove: {
+							num: 1,
+							type: 'stepped'
+						}
+					},
+					{
+						select: {
+							from: 40,
+							to: 44
+						}
+					},
+					{
+						delay: 500
+					},
+					{
+						remove: {
+							num: 4,
+							type: 'whole'
+						}
+					},
+					{
+						delay: 300
+					},
+					{
+						type: 'ants to be a good developer.(ง •̀ω•́)ง'
+					},
+				]
+			});
+		});
+	</script>
+	<script>
+		$('#typewriteText').typewrite({
+			// typing speed
+			speed: 12,
+			// blinking speed
+			blinkSpeed: 2,
+			// show blinking cursor
+			showCursor: true,
+			// enable blinking cursor
+			blinkingCursor: true,
+			// cursor character
+			cursor: '|',
+			// background color of selected text
+			selectedBackground: '#F1F1F1',
+			// font color of selected text
+			selectedText: '#333333'
+		});
+	</script>
+	<script>
+		$('#typewriteText')
+			.on('typewriteStarted', function() {
+				// typewrite has started
+			})
+			.on('typewriteComplete', function() {
+				// typewrite has complete
+			})
+			.on('typewriteTyped', function(event, data) {
+				// typewrite has typed', data);
+			})
+			.on('typewriteRemoved', function(event, data) {
+				// typewrite has removed', data);
+			})
+			.on('typewriteNewLine', function() {
+				// typewrite has added a new line
+			})
+			.on('typewriteSelected', function(event, data) {
+				// typewrite has selected text', data);
+			})
+			.on('typewriteDelayEnded', function() {
+				// typewrite delay has ended
+			})
+	</script>
+</head>
+
+<body>
+
+	<!-- Header -->
+	<section id="header">
+		<header>
+			<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+			<h1 id="logo"><a href="#">Kim MinSu</a></h1>
+			<p>No Pain No Gain<br /> 1999.01.02
+			</p>
+		</header>
+		<nav id="nav">
+			<ul>
+				<li><a href="#one" class="active">Introduction</a></li>
+				<li><a href="#two">About Me</a></li>
+				<li><a href="#three">Career</a></li>
+				<li><a href="#four">Languages</a></li>
+			</ul>
+		</nav>
+		<footer>
+			<ul class="icons">
+				<li><a href="https://www.facebook.com/profile.php?id=100003769223078" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+				<li><a href="https://www.instagram.com/_alstn2468_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="https://github.com/alstn2468" class="icon fa-github"><span class="label">Github</span></a></li>
+			</ul>
+		</footer>
+	</section>
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- One -->
+			<section id="one">
+				<div class="container">
+					<header class="major">
+						<h2>KIM MIN SU</h2>
+						<div id="typewriteText"></div>
+						<br />
+					</header>
+					<p>Hello, my name is Minsu Kim<br /> I am student at Soonchunhyang University.<br /> My future hope is being good developer.<br /> I can make a simple homepage or portfolio homepage.<br /> For more information, please contact me on Kakao Talk or Facebook
+						Message.</p>
+				</div>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- One -->
-							<section id="one">
-								<div class="container">
-									<header class="major">
-										<h2>KIM MIN SU</h2>
-										<div id="typewriteText"></div>
-										<br />
-									</header>
-									<p>Hello, my name is Minsu Kim<br />
-										I am student at Soonchunhyang University.<br />
-										My future hope is being good developer.<br />
-										I can make a simple homepage or portfolio homepage.<br />
-										For more information, please contact me on Kakao Talk or Facebook Message.</p>
-								</div>
-							</section>
-
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>About Me</h3>
-									<p>It is a simple information about me.<br />
-										For more information, please ask Kakao Talk or Facebook Message.</p>
-									<ul class="feature-icons">
-										<li class="fa-home">Resident in Cheonan</li>
-										<li class="fa-graduation-cap">Cheonan High School 61th graduation</li>
-										<li class="fa-university">Attending Soonchunhyang University</li>
-										<li class="fa-thumbs-o-up">Hobby : Baseball</li>
-										<li class="fa-users">Thumb's Director of Public Relations</li>
-										<li class="fa-comments">Kakao Talk : alstn2468</li>
-									</ul>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Career</h3>
-									<p>It is my career so far and I will update it.</p>
-									<div class="features">
-										<article>
-											<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Cheonan High School 61th graduation</h4>
-												<p>2014. 03. 01 ~ 2017. 02. 07<br />
-													Baseballclub Rendez-vous<br />
-													Cheonan high school club baseball league 2nd place</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Attending Soonchunhyang University</h4>
-												<p>2017. 02. 28 ~ Proceeding<br />
-													Department of Display New Material Engineering
-													<br />Baseballclub <a href="http://thumb-sch.ga/">thumb</a> : PR Manager</p>
-											</div>
-										</article>
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Coding Eveningschool 2nd graduation</h4>
-												<p>2017. 07. 17 ~ 2017. 08. 15<br />
-													Studied web programming<br />
-													Thanks for<a href="https://opentutorials.org/course/1"> Coding EveryBody<br /></a>
-													<button id="Popup-Trigger">수료증 보기</button>
-													<img id="opup-Demo" src="images/certificate.png"  data-trigger="#Popup-Trigger" class="certificate">
-												</p>
-											</div>
-										</article>
-								</div>
-							</section>
-					</div>
-
-				<!-- Footer -->
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li>
-							</ul>
-						</div>
-					</section>
+			<!-- Two -->
+			<section id="two">
+				<div class="container">
+					<h3>About Me</h3>
+					<p>It is a simple information about me.<br /> For more information, please ask Kakao Talk or Facebook Message.</p>
+					<ul class="feature-icons">
+						<li class="fa-home">Resident in Cheonan</li>
+						<li class="fa-graduation-cap">Cheonan High School 61th graduation</li>
+						<li class="fa-university">Attending Soonchunhyang University</li>
+						<li class="fa-thumbs-o-up">Hobby : Baseball</li>
+						<li class="fa-users">Thumb's Director of Public Relations</li>
+						<li class="fa-comments">Kakao Talk : alstn2468</li>
+					</ul>
 				</div>
+			</section>
+
+			<!-- Three -->
+			<section id="three">
+				<div class="container">
+					<h3>Career</h3>
+					<p>It is my career so far and I will update it.</p>
+					<div class="features">
+						<article>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+							<div class="inner">
+								<h4>Cheonan High School 61th graduation</h4>
+								<p>2014. 03. 01 ~ 2017. 02. 07<br /> Baseballclub Rendez-vous<br /> Cheonan high school club baseball league 2nd place</p>
+							</div>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+							<div class="inner">
+								<h4>Attending Soonchunhyang University</h4>
+								<p>2017. 02. 28 ~ Proceeding<br /> Department of Display New Material Engineering
+									<br />Baseballclub <a href="http://thumb-sch.ga/">thumb</a> : PR Manager</p>
+							</div>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							<div class="inner">
+								<h4>Coding Eveningschool 2nd graduation</h4>
+								<p>2017. 07. 17 ~ 2017. 08. 15<br /> Studied web programming<br /> Thanks for<a href="https://opentutorials.org/course/1"> Coding EveryBody<br /></a>
+									<button id="Popup-Trigger">수료증 보기</button>
+									<img id="opup-Demo" src="images/certificate.png" data-trigger="#Popup-Trigger" class="certificate">
+								</p>
+							</div>
+						</article>
+					</div>
+			</section>
+
+			<!-- four --->
+			<section id="four">
+				<div class="container">
+					<h3>Programming Languages</h3>
+					<p>Programmin languages which I can use.<br/>(Include Mark Up Languages.)</p>
+					<div class="features">
+						<article>
+							<img src="images/c.png" alt="" / class = "images">
+							<div class="inner">
+								<h4>C language</h4>
+								<p>Studying in progress <br />Project : NULL</p>
+							</div>
+						</article>
+						<article>
+							<img src="images/html_css.png" alt="" / class = "images">
+							<div class="inner">
+								<h4>HTML + CSS</h4>
+								<p>Junior<br />Project : <a href="kimminsu.ml">kimminsu.ml</a>  ,  <a href="thumb-sch.ga">thumb-sch.ga</a></p>
+							</div>
+						</article>
+						<article>
+							<img src="images/php.png" alt="" / class = "images">
+							<div class="inner">
+								<h4>PHP</h4>
+								<p>Studing in progress<br />Project : NULL</p>
+							</div>
+						</article>
+						<article>
+							<img src="images/python.png" alt="" / class = "images">
+							<div class="inner">
+								<h4>Python</h4>
+								<p>Studying in progress<br />Project : NULL</p>
+							</div>
+						</article>
+					</div>
+			</section>
+			</div>
+
+			<!-- Footer -->
+			<section id="footer">
+				<div class="container">
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li>
+					</ul>
+				</div>
+			</section>
+			</div>
 
 			<script src="assets/js/jquery.scrollzer.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
-		<!-- Popup script -->
-		<link href="assets/css/popbox.css" rel="stylesheet">
-		<script src="assets/js/popbox-1.1.js"></script>
-		<script>
-			$('#opup-Demo').popbox({
-				animation:    'grow',
-				// 'fade' | 'slide' | 'grow' | 'bringup' | 'bringdown'
-				animationSpeed: 380,
-				// animation speed in milliseconds
-				overlay:    true,
-				// displays the background overlay
-				overlayClose:   true,
-				// closes the popup when click on the overlay
-				close:      true,
-				// displays the close button
-				theme:      'white'
-				// or 'dark'
-			});
+			<!-- Popup script -->
+			<link href="assets/css/popbox.css" rel="stylesheet">
+			<script src="assets/js/popbox-1.1.js"></script>
+			<script>
+				$('#opup-Demo').popbox({
+					animation: 'grow',
+					// 'fade' | 'slide' | 'grow' | 'bringup' | 'bringdown'
+					animationSpeed: 380,
+					// animation speed in milliseconds
+					overlay: true,
+					// displays the background overlay
+					overlayClose: true,
+					// closes the popup when click on the overlay
+					close: true,
+					// displays the close button
+					theme: 'white'
+					// or 'dark'
+				});
 			</script>
-	</body>
+</body>
+
 </html>

@@ -2628,3 +2628,15 @@ input[type="submit"].disabled, input[type="submit"]:disabled, input[type="reset"
     width: auto !important;
   }
 }
+#four .features .inner{
+  border-left : solid 5px  #e4e4e4;
+  padding-left : 13px;
+  margin-left : 10px;
+  position: relative;
+  left : 100px;
+}
+#four .features .images{
+  position: absolute;
+  width : 97px;
+  height : 97px;
+}
