@@ -8,7 +8,7 @@ alstn2468.github.io
 - - -
 ### 1. Create a repository
 - - -
-Head over to GitHub and create a new repository named username.github.io,<br>
+Head over to [GitHub](https://github.com/) and [create a new repository](https://github.com/new) named username.github.io,<br>
 where username is your username (or organization name) on GitHub.<br>
 If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.<br>
 ### 2. Clone the repository
