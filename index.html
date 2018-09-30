@@ -1,264 +1,308 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-	<title>Welcome (๑•‿•๑)</title>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta property="og:title" content="KIM MIN SU">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:title" content="KIM MIN SU">
 	<meta property="og:type" content="website">
 	<meta property="og:description" content="Welcome to Minsu's personal Webpage">
 	<meta property="og:image" content="https://ucarecdn.com/e9eef344-4c89-4043-9703-c759ac38d5a5/thumbnail.jpg">
 	<meta property="og:url" content="http://kimminsu.ml">
-	<link rel="stylesheet" href="assets/css/main.css" />
-	<script src="//code.jquery.com/jquery.min.js"></script>
-	<!--typewriteText -->
-	<script src="assets/js/typewrite.js"></script>
-	<script>
-		$(document).ready(function() {
-			$('#typewriteText').typewrite({
-				actions: [{
-						type: 'I\'m a normal university student  '
-					},
-					{
-						type: '<br>'
-					},
-					{
-						type: 'who wanna '
-					},
-					{
-						delay: 1500
-					},
-					{
-						remove: {
-							num: 1,
-							type: 'stepped'
-						}
-					},
-					{
-						select: {
-							from: 40,
-							to: 44
-						}
-					},
-					{
-						delay: 500
-					},
-					{
-						remove: {
-							num: 4,
-							type: 'whole'
-						}
-					},
-					{
-						delay: 300
-					},
-					{
-						type: 'ants to be a good developer.'
-					},
-				]
-			});
-		});
-	</script>
-	<script>
-		$('#typewriteText').typewrite({
-			// typing speed
-			speed: 12,
-			// blinking speed
-			blinkSpeed: 2,
-			// show blinking cursor
-			showCursor: true,
-			// enable blinking cursor
-			blinkingCursor: true,
-			// cursor character
-			cursor: '|',
-			// background color of selected text
-			selectedBackground: '#F1F1F1',
-			// font color of selected text
-			selectedText: '#333333'
-		});
-	</script>
-	<script>
-		$('#typewriteText')
-			.on('typewriteStarted', function() {
-				// typewrite has started
-			})
-			.on('typewriteComplete', function() {
-				// typewrite has complete
-			})
-			.on('typewriteTyped', function(event, data) {
-				// typewrite has typed', data);
-			})
-			.on('typewriteRemoved', function(event, data) {
-				// typewrite has removed', data);
-			})
-			.on('typewriteNewLine', function() {
-				// typewrite has added a new line
-			})
-			.on('typewriteSelected', function(event, data) {
-				// typewrite has selected text', data);
-			})
-			.on('typewriteDelayEnded', function() {
-				// typewrite delay has ended
-			})
-	</script>
+
+    <title>Welcome (๑•‿•๑)</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/resume.min.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body id="page-top">
 
-	<!-- Header -->
-	<section id="header">
-		<header>
-			<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-			<h1 id="logo"><a href="#">Kim MinSu</a></h1>
-			<p>No Pain No Gain<br /> 1999.01.02
-			</p>
-		</header>
-		<nav id="nav">
-			<ul>
-				<li><a href="#one" class="active">Introduction</a></li>
-				<li><a href="#two">About Me</a></li>
-				<li><a href="#three">Career</a></li>
-				<li><a href="#four">Languages</a></li>
-			</ul>
-		</nav>
-		<footer>
-			<ul class="icons">
-				<li><a href="https://www.facebook.com/profile.php?id=100003769223078"  class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="https://www.instagram.com/_alstn2468_/" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-				<li><a href="https://github.com/alstn2468" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/minsu-kim-336289160/" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-			</ul>
-		</footer>
-	</section>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+            <span class="d-block d-lg-none">Kim Minsu</span>
+            <span class="d-none d-lg-block">
+                <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
+            </span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-	<!-- Wrapper -->
-	<div id="wrapper">
+    <div class="container-fluid p-0">
 
-		<!-- Main -->
-		<div id="main">
+        <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+            <div class="my-auto">
+                <h1 class="mb-0">Kim
+                    <span class="text-primary">Minsu</span>
+                </h1>
+                <div class="subheading mb-5">Department of Computer Software Engineering · Sophomore ·
+                    <a href="mailto:alstn2468_@email.com">alstn2468_@naver.com</a>
+                </div>
+                <p class="lead mb-5">
+                    Birth. 1999 / 01 / 02
+                    <br />
+                    <br />
+                    Hello, my name is Minsu Kim<br />
+                    I am student at Soonchunhyang University.<br />
+                    Wanna be a FullStack Developer.<br />
+                </p>
+                <div class="social-icons">
+                    <a href="https://linkedin.com/in/minsu-kim-336289160">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/alstn2468">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/_alstn2468_/">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100003769223078">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-			<!-- One -->
-			<section id="one">
-				<div class="container">
-					<header class="major">
-						<h2>KIM MIN SU</h2>
-						<div id="typewriteText"></div>
-						<br />
-					</header>
-					<p>
-						Hello, my name is Minsu Kim<br />
-						I am student at Soonchunhyang University.<br />
-						My future hope is being good developer.<br />
-						For more information, please contact me on Kakao Talk or Facebook Message.
-					</p>
-				</div>
-			</section>
+        <hr class="m-0">
 
-			<!-- Two -->
-			<section id="two">
-				<div class="container">
-					<h3>About Me</h3>
-					<p>
-						It is a simple information about me.<br />
-						For more information, please ask Kakao Talk or Facebook Message.
-					</p>
-					<ul class="feature-icons">
-						<li class="fa-home">Resident in Cheonan</li>
-						<li class="fa-graduation-cap">Cheonan High School 61th graduation</li>
-						<li class="fa-university">Attending Soonchunhyang University</li>
-						<li class="fa-thumbs-o-up">Hobby : Baseball</li>
-						<li class="fa-code">Junior Developer</li>
-						<li class="fa-comments">Kakao Talk : alstn2468</li>
-					</ul>
-				</div>
-			</section>
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="experience">
+            <div class="my-auto">
+                <h2 class="mb-5">Experience</h2>
 
-			<!-- Three -->
-			<section id="three">
-				<div class="container">
-					<h3>Career</h3>
-					<p>It is my career so far and I will update it.</p>
-					<div class="features">
-						<article>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
-							<div class="inner">
-								<h4>Cheonan High School 61th graduation</h4>
-								<p>2014. 03. 01 ~ 2017. 02. 07<br /></p>
-							</div>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
-							<div class="inner">
-								<h4>Attending Soonchunhyang University</h4>
-								<p>2017. 02. 28 ~ Proceeding<br />Department of Computer Software Engineering</p>
-							</div>
-						</article>
-						<article>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-							<div class="inner">
-								<h4>Coding Eveningschool 2nd graduation</h4>
-								<p>2017. 07. 17 ~ 2017. 08. 15<br /> Studied web programming<br />
-									<button id="Popup-Trigger">Certification</button>
-									<img id="opup-Demo" src="images/certificate.png" data-trigger="#Popup-Trigger" class="certificate">
-								</p>
-							</div>
-						</article>
-					</div>
-			</section>
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Development Manager</h3>
+                        <div class="subheading mb-3">Help-Us</div>
+                        <p>
+                            Working at Help-Us as Development Manager.<br />
+                            Help-Us is startup club in Soonchunhyang University.<br />
+                            <br />
 
-			<!-- four --->
-			<section id="four">
-				<div class="container">
-					<h3>Programming Languages</h3>
-					<p>Programming languages which I can use. (+ Mark Up Language)<br/></p>
-					<div class="features">
-						<article>
-							<img src="images/c.png" alt="" / class = "images">
-							<img src="images/html_css.png" alt="" / class = "images">
-							<img src="images/java.png" alt="" / class = "images">
-							<img src="images/php.png" alt="" / class = "images">
-							<img src="images/python.png" alt="" / class = "images">
-						</article>
-					</div>
-			</section>
-			</div>
+                            - Service -<br />
+                            Soonchunhyang University Bot (순천향대 봇)<br />
+                            Shuttle Where (셔틀 웨어)
+                        </p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">May 2018 - Present</span>
+                    </div>
+                </div>
 
-			<!-- Footer -->
-			<section id="footer">
-				<div class="container">
-					<ul class="copyright">
-						<li>&copy; Untitled. All rights reserved.</li>
-					</ul>
-				</div>
-			</section>
-			</div>
+            </div>
 
-			<script src="assets/js/jquery.scrollzer.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+        </section>
 
-			<!-- Popup script -->
-			<link href="assets/css/popbox.css" rel="stylesheet">
-			<script src="assets/js/popbox-1.1.js"></script>
-			<script>
-				$('#opup-Demo').popbox({
-					animation: 'grow',
-					// 'fade' | 'slide' | 'grow' | 'bringup' | 'bringdown'
-					animationSpeed: 380,
-					// animation speed in milliseconds
-					overlay: true,
-					// displays the background overlay
-					overlayClose: true,
-					// closes the popup when click on the overlay
-					close: true,
-					// displays the close button
-					theme: 'white'
-					// or 'dark'
-				});
-			</script>
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+            <div class="my-auto">
+                <h2 class="mb-5">Education</h2>
+
+                <div class="resume-item d-flex flex-column flex-md-row mb-5">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Soonchunhyang University</h3>
+                        <div class="subheading mb-3">In college</div>
+                        <div>Computer Software Engineering</div>
+                        <p>GPA: 3.58</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Feb 2017 - Present</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Coding Evening School</h3>
+                        <div class="subheading mb-3">2nd graduation</div>
+                        <div>Studied web programming</div>
+                        <p>HTML + CSS + JavaScript</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">Jul 2017 - Aug 2017</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row">
+                    <div class="resume-content mr-auto">
+                        <h3 class="mb-0">Cheonan High School</h3>
+                        <div class="subheading mb-3">61th Graduation</div>
+                        <p>Attend Regularly</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">March 2014 - Feb 2017</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+            <div class="my-auto">
+                <h2 class="mb-5">Skills</h2>
+
+                <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+                <ul class="list-inline dev-icons">
+                    <li class="list-inline-item">
+                        <i class="fab fa-html5"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-css3-alt"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-js-square"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-react"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-python"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-java"></i>
+                    </li>
+                    <li class="list-inline-item">
+                        <i class="fab fa-github"></i>
+                    </li>
+                </ul>
+
+                <div class="subheading mb-3">Workflow</div>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Collaborate with Git</li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Cross Browser Testing &amp; Debugging</li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Agile Development &amp; Scrum</li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Backend Developing with Pyhon Django</li>
+                    <li>
+                        <i class="fa-li fa fa-check"></i>
+                        Hybrid App Developing with React Native</li>
+                </ul>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+            <div class="my-auto">
+                <h2 class="mb-5">Interests</h2>
+                <p>
+                    I"m interesteing in Python, React, Go lang.<br />
+                    My hobby is playing baseball &amp; playing basketball &amp; listening music<br />
+
+                    <br />
+
+                    Python<br />
+                    - Deep Learning<br />
+                    - Machine Learning<br />
+                    - Data Science<br />
+                    - Django<br />
+
+                    <br />
+
+                    React<br />
+                    - Hybrid App Developing with React Native<br />
+
+                    <br />
+
+                    Go<br />
+                    - Want to have unique stack<br />
+                    - Basic grammar is available
+                </p>
+                <p class="mb-0">
+                    BaseBall<br />
+                    - I'm pitcher in my school club baseball team.<br />
+                    - I like Samsung Lions Baseball Club<br />
+
+                    <br />
+
+                    BasketBall<Br/>
+                    - I'm not a good player in basketball but I like play basketball.<br />
+                    - I like Golden State Warriors.<br />
+
+                    <br />
+
+                    Music<br />
+                    - Listening Hip-Hop<br />
+                    - Listening Modern Rock<br />
+
+                </p>
+            </div>
+        </section>
+
+        <hr class="m-0">
+
+        <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+            <div class="my-auto">
+                <h2 class="mb-5">Awards &amp; Certifications</h2>
+                <ul class="fa-ul mb-0">
+                    <li>
+                        <i class="fa-li fa fa-trophy text-warning"></i>
+                        Google Cloud Platform Essentials</li>
+                    <li>
+                        <i class="fa-li fa fa-trophy text-warning"></i>
+                        Kakao Algorithm Walk</li>
+                    <li>
+                        <i class="fa-li fa fa-trophy text-warning"></i>
+                        2<sup>nd</sup>
+                        Graduation - Coding Evening School at opentutorials</li>
+                </ul>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/resume.min.js"></script>
+
 </body>
 
 </html>
