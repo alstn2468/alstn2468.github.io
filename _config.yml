@@ -1,6 +1,6 @@
 # Site settings
-title: Kim Min Su
-description: 'Tech Blog'
+title: 초보 개발자의 테크 블로그
+description: 'Python / Go / Data Science / Deep Learning'
 url: 'https://alstn2468.github.io'
 baseurl: ''
 # google_analytics: 'UA-XXXXXX-X'

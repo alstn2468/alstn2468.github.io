@@ -1,0 +1,12 @@
+---
+title:  "테크-블로그-시작"
+date:   2018-12-04 17:17:23
+categories: [jekyll]
+tags: [jekyll, github, first]
+---
+
+### Github Pages와 Jekyll을 이용한 Tech Blog 시작
+기존의 정적인 resume 형식의 개인 페이지를 운영하고 있었다.<br/>
+Github Pages와 Jekyll을 이용해 Tech Blog를 시작하려고 마음 먹었다.<br>
+앞으로 `Deep Learning`이나 `Algorithm Solution`과 같이 사소한 것 까지 모두<br/>
+기록해보면서 글 쓰는 실력도 향상 시키고 기록도 남겨야겠다.
