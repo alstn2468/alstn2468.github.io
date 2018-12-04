@@ -6,14 +6,17 @@ tags: [jekyll]
 ---
 
 ### Github Pages와 Jekyll을 이용한 Blog 시작
-기존의 정적인 resume 형식 탈피하고자<br/>
 Github Pages와 Jekyll을 활용하였다.<br>
 
-- 앞으로 게시할 것
-> Deep Learning<br/>
-> Algorithm Solution<br/>
-> CS theory<br/>
-> Tip<br/>
-> etc...<br/>
+Uno 테마 사용<br/>
+[[THEME]](https://github.com/daleanthony/Uno)
 
-사소한 것 하나도 기록할 에정이다.<br/>
+- 앞으로 게시할 것
+1. Deep Learning<br/>
+2. Algorithm Solution<br/>
+3. CS theory<br/>
+4. Tip<br/>
+5. etc...<br/>
+
+아직 익숙하지 않아 복잡하지만 이것 저것 바꾸어 보아야겠다.<br/>
+우선 `favicon`을 바꿔보고 싶다.
