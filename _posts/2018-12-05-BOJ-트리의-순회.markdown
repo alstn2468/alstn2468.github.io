@@ -5,3 +5,143 @@ categories: [Algorithms, BOJ, Python]
 tags: [Algorithms]
 comments: true
 ---
+
+### [트리의 순회](https://www.acmicpc.net/problem/2263)
+
+| 시간 제한 | 메모리 제한 |
+| --------- | ----------- |
+|    5초    |    128MB    |
+
+#### 문제
+n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가 **중복** 없이 매겨져 있다.
+이와 같은 이진 트리의 인오더와 포스트오더가 주어졌을 때,<br/>
+프리오더를 구하는 프로그램을 작성하시오.
+
+#### 입력
+첫째 줄에 n(1 ≤ n ≤ 100,000)이 주어진다.<br/>
+다음 줄에는 인오더를 나타내는 n개의 자연수가 주어지고,<br/>
+그 다음 줄에는 같은 식으로 포스트오더가 주어진다.
+
+#### 출력
+첫째 줄에 프리오더를 출력한다.
+
+#### 예제 입력
+3<br/>
+1 2 3<br/>
+1 3 2<br/>
+
+#### 예제 출력
+2 1 3
+
+- - -
+
+### 풀이
+
+예제는 너무 쉽게 끝나므로 다음의 예시로 설명하겠습니다.
+
+<img src="/assets/2018-12-05-2263/1.png" width="400" height="auto">
+
+Inorder Traversal
+
+| 0   | 1   | 2   | 3   | 4   | 5   |
+| --- | --- | --- | --- | --- | --- |
+| 1   | 2   | 5   | 3   | 6   | 4   |
+
+Postorder Traversal
+
+| 0   | 1   | 2   | 3   | 4   | 5   |
+| --- | --- | --- | --- | --- | --- |
+| 1   | 5   | 2   | 6   | 4   | 3   |
+
+#### 접근 방법
+**후위** 순회의 **마지막** 출력은 **루트** 노드다.<br/>
+
+전체 배열 0 ~ 5 번쨰의 **5번째**의 **3**은 전체 트리의 루트 노드<br/>
+왼쪽 서브 트리 0 ~ 2 번째의 **2**번째의 **2**는 왼쪽 서브트리의 루트노드<br/>
+오른쪽 서브 트리 3 ~ 4 번째의 **4**번째의 **4**는 오른쪽 서브트리의 루트노드<br/>
+
+```Python
+root = postorder[postorder_end]
+```
+
+**서브 트리**의 **사이즈**는 다음의 공식으로 얻을 수 있다.
+- (중위 순회 루트 노드의 순회 순서) - (중위 순회의 시작 인덱스)
+
+```Python
+inorder_root = inposition[root]
+left_size = inorder_root - inorder_start
+```
+
+이를 위해서 중위 순회의 순회 순서인 `inposition` 배열을 하나 만들어야 한다.
+```Python
+inposition = [0] * max(inorder)
+
+for i, v in enumerate(inorder):
+    inposition[v] = i
+```
+
+따라서 다음과 같은 `inposition` 리스트가 하나 생성될 것이다.
+
+| 0   | 1   | 2   | 3   | 4   | 5   | 6   |
+| --- | --- | --- | --- | --- | --- | --- |
+| 0   | 0   | 1   | 3   | 5   | 2   | 4   |
+
+이제 본격적으로 함수를 구현해볼 차례다.
+
+함수의 정의<br/>
+- inorder_start : 중위 순회 시작 인덱스
+- inorder_end : 중위 순회 마지막 인덱스
+- postorder_start : 후위 순회 시작 인덱스
+- postorder_end : 후위 순회 마지막 인덱스
+
+탈출 조건은 `postorder_start > postorder_end` 와 `inorder_start > inorder_end` 두 가지다.
+
+```Python
+def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
+```
+
+해당 함수를 **재귀적**으로 호출하면서 **왼쪽 서브트리**, **오른쪽 서브트리**<br/>
+순서로 방문하면서 루트 노드를 출력해주면 된다.<br/>
+
+```Python
+def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
+    if postorder_start > postorder_end:
+        return
+
+    if inorder_start > inorder_end:
+        return
+
+    root = postorder[postorder_end]
+
+    print(root, end=" ")
+
+    left_size = inorder_root - inorder_start
+
+    get_preorder(inorder_start, inorder_root - 1,
+                postorder_start, postorder_start + left_size - 1)
+    get_preorder(inorder_root + 1, inorder_end,
+                postorder_start + left_size, postorder_end - 1)
+```
+
+메인 함수 부분
+
+```Python
+import sys
+
+sys.recursionlimit(10 ** 6)
+
+n = int(sys.stdin.readline())
+inorder = list(map(int, sys.stdin.readline().split(' ')))
+postorder = list(map(int, sys.stdin.readline().split(' ')))
+
+inposition = [0] * max(inorder)
+
+for i, v in enumerate(inorder):
+    inposition[v] = i
+
+get_preorder(0, n - 1, 0, n - 1)
+```
+
+직접 진행 순서를 한 번씩 그려보면서 이해해보는 것이 더 좋을 것이다&#128513;&#128513;.<br/>
+
+[[코드]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/2200~2299/2263.py)는 이곳에서 확인할 수 있다.
