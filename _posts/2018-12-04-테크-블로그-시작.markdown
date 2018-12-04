@@ -1,5 +1,5 @@
 ---
-title:  "테크-블로그-시작"
+title:  "Tech Blog 시작"
 date:   2018-12-04 17:17:23
 categories: [jekyll]
 tags: [jekyll, github, first]
