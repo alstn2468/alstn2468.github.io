@@ -7,6 +7,7 @@ baseurl: ''
 # disqus_shortname: 'your-disqus-name'
 
 remote_theme : joshgerdes/jekyll-uno
+discus-identifier: https-alstn2468-github-io
 
 author:
   name: 'Kim Minsu'
