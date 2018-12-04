@@ -7,7 +7,7 @@ baseurl: ''
 # disqus_shortname: 'your-disqus-name'
 
 remote_theme : joshgerdes/jekyll-uno
-disqus-identifier: https-alstn2468-github-io
+disqus_shortname: https-alstn2468-github-io
 
 disqus:
     shortname: https-alstn2468-github-io
