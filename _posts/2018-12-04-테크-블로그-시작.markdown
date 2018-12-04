@@ -2,7 +2,7 @@
 title:  "Tech Blog 시작"
 date:   2018-12-04 17:17:23
 categories: [jekyll]
-tags: [jekyll, github, first]
+tags: [jekyll]
 ---
 
 ### Github Pages와 Jekyll을 이용한 Tech Blog 시작
