@@ -8,6 +8,7 @@ baseurl: ''
 
 remote_theme : joshgerdes/jekyll-uno
 disqus_shortname: https-alstn2468-github-io
+highlighter: rouge
 
 disqus:
     shortname: https-alstn2468-github-io
