@@ -60,20 +60,20 @@ Postorder Traversal
 왼쪽 서브 트리 0 ~ 2 번째의 **2**번째의 **2**는 왼쪽 서브트리의 루트노드<br/>
 오른쪽 서브 트리 3 ~ 4 번째의 **4**번째의 **4**는 오른쪽 서브트리의 루트노드<br/>
 
-```Python
+```python
 root = postorder[postorder_end]
 ```
 
 **서브 트리**의 **사이즈**는 다음의 공식으로 얻을 수 있다.
 - (중위 순회 루트 노드의 순회 순서) - (중위 순회의 시작 인덱스)
 
-```Python
+```python
 inorder_root = inposition[root]
 left_size = inorder_root - inorder_start
 ```
 
 이를 위해서 중위 순회의 순회 순서인 `inposition` 배열을 하나 만들어야 한다.
-```Python
+```python
 inposition = [0] * max(inorder)
 
 for i, v in enumerate(inorder):
@@ -98,14 +98,14 @@ for i, v in enumerate(inorder):
 - `postorder_start > postorder_end`
 - `inorder_start > inorder_end`
 
-```Python
+```python
 def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 ```
 
 해당 함수를 **재귀적**으로 호출하면서 **왼쪽 서브트리**, **오른쪽 서브트리**<br/>
 순서로 방문하면서 루트 노드를 출력해주면 된다.<br/>
 
-```Python
+```python
 def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
     if postorder_start > postorder_end:
         return
@@ -127,7 +127,7 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
 #### 메인 함수 부분
 
-```Python
+```python
 import sys
 
 sys.recursionlimit(10 ** 6)
