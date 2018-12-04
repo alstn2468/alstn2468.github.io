@@ -1,37 +1,45 @@
-alstn2468.github.io
-===================
-<https://www.kimminsu.ml>
-------------------------
-#### Ready to get started? Build your own site from scratch or generate one for your project.
-#### You get one site per GitHub account and organization,
-#### and unlimited project sites. Let‘s get started.
-- - -
-### 1. Create a repository
-- - -
-Head over to [GitHub](https://github.com/) and [create a new repository](https://github.com/new) named username.github.io,<br>
-where username is your username (or organization name) on GitHub.<br>
-If the first part of the repository doesn’t exactly match your username, it won’t work, so make sure to get it right.<br>
-### 2. Clone the repository
-- - -
-Go to the folder where you want to store your project, and clone the new repository:
-```
-git clone https://github.com/username/username.github.io
-```
-### 3. Hello World
-- - -
-Enter the project folder and add an index.html file:
-```
-cd username.github.io
-echo "Hello World" > index.html
-```
-### 4. Push it
-- - -
-Add, commit, and push your changes:
-```
-git add --all
-git commit -m "Initial commit"
-git push -u origin master
-```
-### 5. …and you're done!
-- - -
-Fire up a browser and go to https://username.github.io.
+# jekyll-uno
+
+Jekyll-Uno - a minimal, responsive theme for Jekyll based on the [Uno](https://github.com/daleanthony/Uno) theme for Ghost.
+
+> :warning:
+  This theme requires ruby and rubygems installed
+
+### Features
+
+* Clean layout
+* Resposive layout
+* Pagination
+* Syntax highlighting
+* Social links
+* Tags listing page
+* Categories listing page
+* Google Analytics integration
+* Disqus integration
+
+---
+
+### Install and Test
+
+1. Download or clone repo `git clone git@github.com:joshgerdes/jekyll-uno.git`
+2. Enter the folder: `cd jekyll-uno/`
+3. If you don't have bundler installed: `gem install bundler`
+3. Install Ruby gems: `bundle install`
+4. Start Jekyll server: `bundle exec jekyll serve --watch`
+
+Access via: [http://localhost:4000/jekyll-uno/](http://localhost:4000/jekyll-uno/)
+
+---
+
+### Demo and Download
+
+[Demo](http://joshgerdes.com/jekyll-uno/)
+[Download](https://github.com/joshgerdes/jekyll-uno/archive/master.zip)
+
+![jekyll-uno - free Jekyll theme](/screenshot.png)
+
+---
+
+### Copyright and license
+
+It is under [the MIT license](/LICENSE).
