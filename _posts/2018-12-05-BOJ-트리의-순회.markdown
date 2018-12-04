@@ -74,7 +74,7 @@ left_size = inorder_root - inorder_start
 
 이를 위해서 중위 순회의 순회 순서인 `inposition` 배열을 하나 만들어야 한다.
 ```python
-inposition = [0] * max(inorder)
+inposition = [0] * (max(inorder) + 1)
 
 for i, v in enumerate(inorder):
     inposition[v] = i
@@ -136,7 +136,7 @@ n = int(sys.stdin.readline())
 inorder = list(map(int, sys.stdin.readline().split(' ')))
 postorder = list(map(int, sys.stdin.readline().split(' ')))
 
-inposition = [0] * max(inorder)
+inposition = [0] * (max(inorder) + 1)
 
 for i, v in enumerate(inorder):
     inposition[v] = i
