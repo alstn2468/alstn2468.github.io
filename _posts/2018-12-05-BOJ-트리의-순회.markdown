@@ -67,6 +67,9 @@ root = postorder[postorder_end]
 **왼쪽 서브 트리**의 **사이즈**는 다음의 공식으로 얻을 수 있다.
 - (중위 순회 루트 노드의 순회 순서) - (중위 순회의 시작 인덱스)
 
+**오른쪽 서브 트리**의 **사이즈**는 자연스럽게 얻을 수 있다.
+- (원본 트리 사이즈) - (왼쪽 서브 트리 사이즈) - 1
+
 ```python
 inorder_root = inposition[root]
 left_size = inorder_root - inorder_start
@@ -105,6 +108,8 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 #### 탈출 조건
 - `postorder_start > postorder_end`
 - `inorder_start > inorder_end`
+
+#### 함수 구현부
 
 ```python
 def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
