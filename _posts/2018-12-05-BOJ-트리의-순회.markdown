@@ -122,7 +122,10 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 | --- |
 | 3   |
 
-- 3 출력
+- root = postorder[postorder_end] = 3
+- print(root, end=" ") 3 출력
+- inorder_root = inposition[root = 3
+- left_size = (inorder_root - inorder_start) = (3 - 0) = 3
 
 왼쪽 서브 트리
 - inorder_start : 0
