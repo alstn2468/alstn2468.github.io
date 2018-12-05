@@ -116,7 +116,7 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
 #### 간단한 흐름 설명
 
-루트 노드 ( inposition[root] = 3)
+**루트 노드 ( inposition[root] = 3)**
 
 | 3   |
 | --- |
@@ -127,7 +127,7 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 - inorder_root = inposition[root = 3
 - left_size = (inorder_root - inorder_start) = (3 - 0) = 3
 
-왼쪽 서브 트리
+**왼쪽 서브 트리**
 - inorder_start : 0
 - inorder_end : (inorder_root - 1) = 2
 - postorder_start : 0
@@ -139,7 +139,7 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
 - 왼쪽 서브 트리의 postorder_end번째 노드(**2**)가 **새로운 루트 노드**
 
-오른쪽 서브 트리
+**오른쪽 서브 트리**
 - inorder_start : (inorder_root + 1) = 4
 - inorder_end : 5
 - postorder_start : (postorder_start + left_size) = 3
