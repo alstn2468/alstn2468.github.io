@@ -172,4 +172,4 @@ config???
 |        | aba | config.inf | config.ins | aca | b   |     |     |
 | Output | ??? | config???? | config???s | a?a | ?   | ?a  | a   |
 
-[[코드]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/1000~1099/1032.py)는 이곳에서 확인할 수 있다.
+&#9989; [[코드]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/1000~1099/1032.py)는 이곳에서 확인할 수 있다.
