@@ -116,15 +116,15 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
 #### 간단한 흐름 설명
 
-**루트 노드 ( inposition[root] = 3)**
+**루트 노드**
 
-| 3   |
-| --- |
-| 3   |
+| index   | 3   | index     | 5   |
+| ------- | --- | --------- | --- |
+| inorder | 3   | postorder | 3   | 
 
 - root = postorder[postorder_end] = 3
 - print(root, end=" ") 3 출력
-- inorder_root = inposition[root = 3
+- inorder_root = inposition[root] = 3
 - left_size = (inorder_root - inorder_start) = (3 - 0) = 3
 
 **왼쪽 서브 트리**
