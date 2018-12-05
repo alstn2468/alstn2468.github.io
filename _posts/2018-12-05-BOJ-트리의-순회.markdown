@@ -1,8 +1,8 @@
 ---
 title:  "BOJ 2263 트리의 순회"
 date:   2018-12-05 01:41:23
-categories: [Algorithms, BOJ, Python]
-tags: [Algorithms]
+categories: [Algorithms]
+tags: [Algorithms, BOJ, Python]
 comments: true
 ---
 
