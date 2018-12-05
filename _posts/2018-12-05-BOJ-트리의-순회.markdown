@@ -132,6 +132,8 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 | ------- | --- | --------- | --- |
 | inorder | 3   | postorder | 3   |
 
+- 중위 순회의 **중간** 인덱스와 후위 순회의 **마지막** 인덱스가 **루트 노드**
+
 **왼쪽 서브 트리**
 - inorder_start : 0
 - inorder_end : (inorder_root - 1) = 2
