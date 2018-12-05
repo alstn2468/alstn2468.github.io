@@ -13,7 +13,7 @@ comments: true
 |    5초    |    128MB    |
 
 #### 문제
-n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가 **중복** 없이 매겨져 있다.
+n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가 **중복** 없이 매겨져 있다.<br/>
 이와 같은 이진 트리의 인오더와 포스트오더가 주어졌을 때,<br/>
 프리오더를 구하는 프로그램을 작성하시오.
 
@@ -59,6 +59,8 @@ Preorder Traversal
 | --- | --- | --- | --- | --- | --- |
 | 3   | 2   | 1   | 5   | 4   | 6   |
 
+<br/>
+
 #### 접근 방법
 **후위** 순회의 **마지막** 출력은 **루트** 노드다.<br/>
 
@@ -101,6 +103,8 @@ for i, v in enumerate(inorder):
 
 이제 본격적으로 함수를 구현해볼 차례다.
 
+<br/>
+
 #### 함수의 정의
 - inorder_start : 중위 순회 시작 인덱스
 - inorder_end : 중위 순회 마지막 인덱스
@@ -112,7 +116,9 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 ```
 
 해당 함수를 **재귀적**으로 호출하면서 **왼쪽 서브트리**, **오른쪽 서브트리**<br/>
-순서로 방문하면서 루트 노드를 출력해주면 된다.<br/>
+순서로 방문하면서 루트 노드를 출력해주면 된다.
+
+<br/>
 
 #### 간단한 흐름 설명
 
@@ -152,9 +158,13 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
 다음과 같은 과정을 **재귀적**으로 호출하면 문제가 해결된다.
 
+<br/>
+
 #### 탈출 조건
 - `postorder_start > postorder_end`
 - `inorder_start > inorder_end`
+
+<br/>
 
 #### 함수 구현부
 
@@ -179,6 +189,8 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
                 postorder_start + left_size, postorder_end - 1)
 ```
 
+<br/>
+
 #### 메인 함수 부분
 
 ```python
@@ -197,6 +209,8 @@ for i, v in enumerate(inorder):
 
 get_preorder(0, n - 1, 0, n - 1)
 ```
+
+<br/>
 
 #### 결과(Preorder Traversal)
 3 &#10095; 2 &#10095; 1 &#10095; 5 &#10095; 4 &#10095; 6 의 순서로 출력이 된다.
