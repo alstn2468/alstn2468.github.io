@@ -37,7 +37,7 @@ n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가
 
 ### 풀이
 
-예제는 너무 쉽게 끝나므로 다음의 예시로 설명하겠습니다.
+백준의 예제는 너무 쉽게 끝나므로 다음의 예로 설명하겠습니다.
 
 <img src="/assets/2018-12-05-2263/1.PNG" width="400" height="auto">
 
@@ -64,7 +64,7 @@ Postorder Traversal
 root = postorder[postorder_end]
 ```
 
-**서브 트리**의 **사이즈**는 다음의 공식으로 얻을 수 있다.
+**왼쪽 서브 트리**의 **사이즈**는 다음의 공식으로 얻을 수 있다.
 - (중위 순회 루트 노드의 순회 순서) - (중위 순회의 시작 인덱스)
 
 ```python
@@ -117,6 +117,7 @@ def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 
     print(root, end=" ")
 
+    inorder_root = inposition[root]
     left_size = inorder_root - inorder_start
 
     get_preorder(inorder_start, inorder_root - 1,
