@@ -3,7 +3,7 @@ title: Minsu's Dev Log
 description: 'Python / Go / Data Science'
 url: 'https://alstn2468.github.io'
 baseurl: ''
-# google_analytics: 'UA-XXXXXX-X'
+google_analytics: 'UA-130518962-1'
 # disqus_shortname: 'your-disqus-name'
 
 remote_theme : joshgerdes/jekyll-uno
