@@ -94,16 +94,17 @@ for i, v in enumerate(inorder):
 - postorder_start : 후위 순회 시작 인덱스
 - postorder_end : 후위 순회 마지막 인덱스
 
-#### 탈출 조건
-- `postorder_start > postorder_end`
-- `inorder_start > inorder_end`
-
 ```python
 def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
 ```
 
 해당 함수를 **재귀적**으로 호출하면서 **왼쪽 서브트리**, **오른쪽 서브트리**<br/>
 순서로 방문하면서 루트 노드를 출력해주면 된다.<br/>
+
+
+#### 탈출 조건
+- `postorder_start > postorder_end`
+- `inorder_start > inorder_end`
 
 ```python
 def get_preorder(inorder_start, inorder_end, postorder_start, postorder_end):
