@@ -23,12 +23,12 @@ comments: true
 배열을 4등분 한 후에 (크기가 같은 2^(N-1)로) 재귀적으로 순서대로 방문한다.<br/>
 다음 예는 2^2 * 2^2 크기의 배열을 방문한 순서이다.<br/>
 
-<img src="/assets/2018-12-09-1074/2.PNG" width="200" height="auto">
+<img src="/assets/2018-12-09-1074/2.PNG" width="150" height="auto">
 
 N이 주어졌을 때, (r, c)를 몇 번째로 방문하는지 출력하는 프로그램을 작성하시오.<br/>
 다음 그림은 N=3일 때의 예이다.<br/>
 
-<img src="/assets/2018-12-09-1074/3.PNG" width="400" height="auto">
+<img src="/assets/2018-12-09-1074/3.PNG" width="300" height="auto">
 
 #### 입력
 첫째 줄에 N r c가 주어진다. N은 15보다 작거나 같은 자연수이고,<br/>
