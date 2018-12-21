@@ -78,6 +78,6 @@ for a in A:
 <br/>
 
 #### 결과
-<img src="/assets/2018-12-22-1015/1.PNG" width="500" height="auto">
+<img src="/assets/2018-12-22-1015/1.png" width="500" height="auto">
 
 &#9989; 코드는 [[여기]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/1000~1099/1015.py)에서 확인할 수 있다.
