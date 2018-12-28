@@ -9,7 +9,7 @@ comments: true
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-### 기본적인 Machine Learnnig의 용어와 개념 설명
+<br/>
 
 ### 머신러닝이란 무엇인가?
 - 일종의 **소프트웨어**
