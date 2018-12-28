@@ -10,7 +10,7 @@ comments: true
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
 
-## TensorFlow의 설치및 기본적인 operations (new)
+### TensorFlow의 설치및 기본적인 operations (new)
 
 ### TensorFlow란
 - **Data flow graphs**를 사용해서 **numerical** 계산을 할 수 있는 라이브러리
@@ -211,6 +211,7 @@ print(sess.run(adder_node, feed_dict={a: [1, 3], b: [2, 4]}))
 <br/>
 
 ### Types
+
 | Data type | Python type | Description             |
 | --------- | ----------- | ----------------------- |
 | DT_FLOAT  | tf.float32  | 32 bits floating point. |
