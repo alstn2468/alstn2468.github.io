@@ -4,6 +4,7 @@ date:   2018-12-31 01:41:23
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
 comments: true
+use_math: true
 ---
 
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>

@@ -54,4 +54,8 @@
   <link rel="canonical" href="{% if page.canonical %}{{ page.canonical }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.baseurl }}/feed.xml">
   <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+
+  {% if page.use_math %}
+    {% include mathjax_support %}
+  {% endif %}
 </head>
