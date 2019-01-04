@@ -14,7 +14,6 @@ comments: true
 ### Predicting exam score
 **Regression using three inputs(x1, x2, x3)**
 
-<br/>
 multi-variable/feature
 
 | x1 (quiz1) | x2 (quiz2) | x3 (midterm 1) | Y (final) |
@@ -31,19 +30,25 @@ multi-variable/feature
 
 ### Hypothesis
 
-$H(x_1, x_2, x_3) = w_1x_1 + w_2x_2+ w_3x_3 + b$
+\begin{align}
+H(x_1, x_2, x_3) = w_1x_1 + w_2x_2+ w_3x_3 + b \\
+\end{align}
 
 <br/>
 
 ### Cost function
 
-$cost(W,b) = \frac{1}{m}\sum_{i=1}^m(H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)}) - y^{(i)})^2$
+\begin{align}
+cost(W,b) = \frac{1}{m}\sum_{i=1}^m(H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)}) - y^{(i)})^2 \\
+\end{align}
 
 <br/>
 
 ### Multi - Variable
 - Hypothesis
-    + $H(x_1, x_2, x_3, ..., x_n) = w_1x_1 + w_2x_2+ w_3x_3 + ... + w_nx_n + b$
+\begin{align}
+H(x_1, x_2, x_3, ..., x_n) = w_1x_1 + w_2x_2+ w_3x_3 + ... + w_nx_n + b \\
+\end{align}
 
 <br/>
 
@@ -55,15 +60,21 @@ $cost(W,b) = \frac{1}{m}\sum_{i=1}^m(H(x_1^{(i)}, x_2^{(i)}, x_3^{(i)}) - y^{(i)
 
 ### Hypothesis using matrix
 - Hypothesis
-    + $w_1x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n$
+\begin{align}
+w_1x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n \\
+\end{align}
 
 - Matrix multiplication
-    + $(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\w_2\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3)$
+\begin{align}
+(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\w_2\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3) \\
+\end{align}
 
 Hypothesis와 다르게 행렬 곱셈은 `X`가 앞에 나오기 때문에<br/>
 matrix를 사용할 때 `X`를 앞에다 쓴다.
 
-$H(X) = XW$
+\begin{align}
+H(X) = XW \\
+\end{align}
 
 <br/>
 
@@ -95,7 +106,11 @@ Hypothesis에서 `x`는 3개 밖에 없지만 해당 table의 `instance`는 5개
 
 ### WX vs XW
 - Lecture(theory)
-    + $H(X) = Wx + b$
+\begin{align}
+H(X) = Wx + b \\
+\end{align}
 
 - Implementation (TensorFlow)
-    + $H(X) = XW$
+\begin{align}
+H(X) = XW \\
+\end{align}
