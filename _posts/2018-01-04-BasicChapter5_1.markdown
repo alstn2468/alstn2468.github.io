@@ -66,7 +66,7 @@ w_1x_1 + w_2x_2 + w_3x_3 + ... + w_nx_n \\
 
 - Matrix multiplication
 \begin{align}
-(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\w_2\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3) \\
+(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\\w_2\\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3) \\
 \end{align}
 
 Hypothesis와 다르게 행렬 곱셈은 `X`가 앞에 나오기 때문에<br/>
