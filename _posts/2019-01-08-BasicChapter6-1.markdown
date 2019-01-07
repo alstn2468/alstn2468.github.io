@@ -38,7 +38,7 @@ comments: true
 <br/>
 
 ### Logistic Hypothesis
-**logistic function**, **sigmoid function**
++ **logistic function**, **sigmoid function**
 
 \begin{align}
 g(z) = \frac{1}{(1+e^{-z})} \\
@@ -49,7 +49,7 @@ g(z) = \frac{1}{(1+e^{-z})} \\
     + 출력 범위가 `0`에서 `1`사이
     + `"S"`모양의 그래프 형성
 
-- Logistic Hypothesis
+- **Logistic Hypothesis**
 
 \begin{align}
 H(X) = \frac{1}{1 + e^{-W^{T}X}} \\
