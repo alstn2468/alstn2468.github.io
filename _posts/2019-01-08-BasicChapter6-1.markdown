@@ -1,6 +1,6 @@
 ---
 title:  "Logistic Classification의 가설 함수 정의"
-date:   2019-01-08 01:41:23
+date:   2019-01-08 00:00:01
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
 comments: true
