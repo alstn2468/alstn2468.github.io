@@ -26,6 +26,7 @@ cost(W) = \frac{1}{m}\sum c(H(x),y) \\
 
 \begin{align}
 C(H(x),y) =
+\left\{
 \begin{array}{c}
 -log(H(x))     &{: y = 1} \\
 -log(1 - H(x)) &{: y = 0}
