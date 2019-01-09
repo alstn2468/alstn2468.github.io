@@ -31,6 +31,7 @@ C(H(x),y) =
 -log(H(x))     &{: y = 1} \\
 -log(1 - H(x)) &{: y = 0}
 \end{array}
+\right.
 \end{align}
 
 <br/>
