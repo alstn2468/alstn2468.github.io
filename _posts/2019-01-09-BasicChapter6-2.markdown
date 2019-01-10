@@ -24,15 +24,17 @@ comments: true
 cost(W) = \frac{1}{m}\sum c(H(x),y) \\
 \end{align}
 
-\begin{align}
-C(H(x),y) =
-    \left\{
-        \begin{cases}
-            -log(H(x))     &{: y = 1} \\
-            -log(1 - H(x)) &{: y = 0}
-        \end{cases}
-    \right\.
-\end{align}
+\begin{document}
+    \[
+    C(H(x),y) =
+        \left\{
+            \begin{array}{lr}
+                -log(H(x))     &{: y = 1} \\
+                -log(1 - H(x)) &{: y = 0}
+            \end{array}
+        \right\.
+    \]
+\end{document}
 
 <br/>
 
