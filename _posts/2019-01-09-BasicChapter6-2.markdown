@@ -26,10 +26,12 @@ cost(W) = \frac{1}{m}\sum c(H(x),y) \\
 
 \begin{align}
 C(H(x),y) =
-\begin{cases}
--log(H(x))     &{: y = 1} \\
--log(1 - H(x)) &{: y = 0}
-\end{cases}
+    \left\{
+        \begin{cases}
+            -log(H(x))     &{: y = 1} \\
+            -log(1 - H(x)) &{: y = 0}
+        \end{cases}
+    \right\.
 \end{align}
 
 <br/>
