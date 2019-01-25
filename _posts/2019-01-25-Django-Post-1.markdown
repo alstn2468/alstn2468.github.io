@@ -1,6 +1,6 @@
 ---
 title:  "기본환경 셋팅 및 Hello World 이론"
-date:   2019-01-025 00:00:01
+date:   2019-01-25 00:00:01
 categories: [Django]
 tags: [Django, Python, Backend, Web, Server]
 comments: true
@@ -101,5 +101,5 @@ python manage.py startapp <app이름>
 처리될지 알려주는 **함수** 작성
 
 **url.py**<br/>
-작성한 html이 어떤 `url**을 입력했을 때<br/>
+작성한 html이 어떤 `url`을 입력했을 때<br/>
 보여지게할지 설정
