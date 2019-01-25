@@ -1,5 +1,5 @@
 ---
-title:  "기본환경 셋팅 및 Hello World 이론"
+title:  "Django 기본환경 셋팅 및 Hello World 이론"
 date:   2019-01-25 00:00:01
 categories: [Django]
 tags: [Django, Python, Backend, Web, Server]
