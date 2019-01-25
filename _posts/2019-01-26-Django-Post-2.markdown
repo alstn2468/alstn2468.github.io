@@ -89,7 +89,7 @@ urlpatterns = [
 ```
 
 #### 10. 파일 설정 후 서버 구동 테스트<br/>
-<img src="/assets/2010-01-26/1.png" width="600" height="auto">
+<img src="/assets/2019-01-26/1.png" width="600" height="auto">
 
 <br/>
 
