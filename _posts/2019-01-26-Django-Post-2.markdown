@@ -10,6 +10,7 @@ comments: true
 [여기](https://github.com/LikeLionSCH/LikeLion_Study_Summary)에서 확인할 수 있습니다.
 
 ### Hello World 실습
+
 #### 1. 가상 환경을 켜고 시작
 ```
 source myvenv/bin/activate
@@ -94,6 +95,7 @@ urlpatterns = [
 <br/>
 
 ### MTV 패턴
+
 #### MTV란?
 `Model`, `Template`, `View`의 약자<br/>
 
