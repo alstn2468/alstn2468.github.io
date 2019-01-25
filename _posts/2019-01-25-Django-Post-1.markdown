@@ -35,7 +35,7 @@ deactivate
 ```
 
 #### Django 설치하기
-> 가상환경을 실행하고 설치
+**가상환경을 실행하고 설치**
 
 ```
 pip install django
