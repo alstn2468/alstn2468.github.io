@@ -9,6 +9,7 @@ comments: true
 이 POST의 모든 마크다운과 실습 코드는<br/>
 [여기](https://github.com/LikeLionSCH/LikeLion_Study_Summary)에서 확인할 수 있습니다.
 
+### 기본환경 셋팅
 #### 사전작업
 1. `git` 설치하기
 2. 작업 디렉토리 만들기
@@ -41,6 +42,7 @@ deactivate
 pip install django
 ```
 
+### Hello World 이론
 #### 학습 목표<br/>
 `Django`내에서의 **정보**의 흐름<br/>
 여기에서 **정보**란 `HTML`파일<br/>
