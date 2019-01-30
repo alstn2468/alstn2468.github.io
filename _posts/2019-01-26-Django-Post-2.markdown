@@ -1,5 +1,5 @@
 ---
-title:  "Django Hello World 실습 및 MVC 패턴"
+title:  "Django Hello World 실습 및 MTV 패턴"
 date:   2019-01-26 00:00:01
 categories: [Django]
 tags: [Django, Python, Backend, Web, Server]
