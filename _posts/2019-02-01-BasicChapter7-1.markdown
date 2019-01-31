@@ -31,16 +31,16 @@ Training Data
 
 따라서 아래의 식이 3개 필요하다.
 
-\begin{align}
+$$
     \begin{bmatrix} w_1 & w_2 & w_3 \end{bmatrix}
     \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix}
     = [w_1x_2 + w_2x_2 + w_3x_3]
-\end{align}
+$$
 
 3개의 식을 독립적으로 계산하는 것은 복잡하기 때문에<br/>
 하나의 **행렬 곱셈**식으로 합쳐서 이용
 
-\begin{align}
+$$
     \begin{bmatrix}
          w_{A1} & w_{A2} & w_{A3} \\
          w_{B1} & w_{B2} & w_{B3} \\
@@ -62,4 +62,4 @@ Training Data
         H_B(x) \\
         H_C(x) \\
     \end{bmatrix}
-\end{align}
+$$
