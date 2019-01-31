@@ -27,7 +27,7 @@ Training Data
 `X`가 들어갔을 때 해당 데이터가 무슨 성적을 반환할지에 대한<br/>
 3개의 **독립적인** `Classfier`가 필요
 
-<img src="/assets/2019-02-01-7_1/1.png" width="600" height="auto">
+<img src="/assets/2019-02-01-7_1/1.png" width="400" height="auto">
 
 따라서 아래의 식이 3개 필요하다.
 
