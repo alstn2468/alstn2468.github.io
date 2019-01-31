@@ -11,9 +11,6 @@ comments: true
 
 <br/>
 
-
-## TensorFlow로 Logistic Classification 구현하기(new)
-
 ### Logistic Regression
 \begin{align}
 H(X) = \frac{1}{1 + e^{-W^{T}X}} \\
