@@ -14,14 +14,14 @@ comments: true
 ### Sigmoid?
 `0`에서 `1`사이의 값을 필요로 하다.
 
-\begin{align}
+$$
     WX = y
     \begin{bmatrix}
         2.0 \rightarrow p = 0.7 \\
         1.0 \rightarrow p = 0.2 \\
         0.1 \rightarrow p = 0.1 \\
     \end{bmatrix}
-\end{align}
+$$
 
 <br/>
 
@@ -31,7 +31,7 @@ comments: true
 \end{align}
 
 
-\begin{align}
+$$
     y
     \begin{bmatrix}
         2.0 \\
@@ -46,7 +46,7 @@ comments: true
     \begin{bmatrix}
         1.0 \\ 0.0 \\ 0.0
     \end{bmatrix}
-\end{align}
+$$
 
 **SoftMax**을 이용하여 수치를 `0`에서 `1`사이의 값으로 변환하고<br/>
 **One Hot Encoding**을 이용하여 마지막 확률을 예측
