@@ -1,5 +1,5 @@
 ---
-title:  ""
+title:  "주어진 수가 4의 거듭제곱인지 확인하기"
 date:   2019-03-13 00:00:01
 categories: [Algorithms]
 tags: [Algorithms, Python, Mail Programming]
