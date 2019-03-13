@@ -147,6 +147,14 @@ def is_power_of_four(num):
             num = num // 4
 
         return True
+
+num = int(input())
+
+if is_power_of_four(num):
+    print("This num {} is power of 4".format(num))
+
+else:
+    print("This num {} is not power of 4".format(num))
 ```
 
 ### 실행 결과
