@@ -139,14 +139,13 @@ def is_power_of_four(num):
     if num == 0:
         return False
 
-    else:
-        while num != 1:
-            if num % 4 != 0:
-                return False
+    while num != 1:
+        if num % 4 != 0:
+            return False
 
-            num = num // 4
+        num = num // 4
 
-        return True
+    return True
 
 num = int(input())
 
