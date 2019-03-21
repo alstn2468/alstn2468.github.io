@@ -71,8 +71,8 @@ arr.remove(random.randrange(100))
 misiing_one_val_in_arr = arr
 ```
 
-그 후 `before`이라는 변수에 저장해 둔 값이 사라지기 전의 리스트의 합과<br/>
-`sum`함수를 사용해 값이 사라진 후의 리스트의 값의 **합을 빼** 새로운 변수에 저장했다.
+그 후 `before`이라는 변수에 저장해 둔 값이 사라지기 **전의 리스트의 합**과<br/>
+`sum`함수를 사용해 값이 사라진 **후의 리스트의 값의 합을 빼** 새로운 변수에 저장했다.
 
 ```python
 missing_val = before - sum(misiing_one_val_in_arr)
