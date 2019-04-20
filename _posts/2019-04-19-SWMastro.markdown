@@ -6,4 +6,18 @@ tags: [Reminiscence, SW Mastro, Developer]
 comments: true
 ---
 
-작성 중 입니다.
+본 게시물은 **SoftWare Mastro 과정 10기** 선발 과정<br/>
+후기를 **주관적**으로 작성한 게시물 입니다.
+
+
+### 1. 서류 전형
+
+### 2. 적성 전형
+
+### 3. 코딩 테스트
+
+### 4. 심층 면접
+
+### 5. 결과
+
+### 6. 총 후기
