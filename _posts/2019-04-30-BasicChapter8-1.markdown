@@ -14,12 +14,15 @@ comments: true
 ### Learning rate 조절
 
 #### Learning rate가 클 경우
-cost가 줄어들지 않고 그래프 밖으로 값이 튀어 나갈 수 있어 학습이 이루어지지 않을 수 있다.<br/>
+cost가 줄어들지 않고 그래프 밖으로 값이 튀어 나갈 수 있어<br/>
+학습이 이루어지지 않을 수 있다.<br/>
 이 현상을 **Overshooting**이라고 한다.<br/>
 
 #### Learning rate가 작을 경우
-cost가 줄어들지만 너무 오래걸려 멈추게 되면 최저점에 도달하지 않아도 멈추는 경우가 있다.<br/>
-이 상황을 방지하기 위해 cost의 값을 출력해보고 값이 너무 변하지 않으면 Learning rate를 조절해야하 한다.<br/>
+cost가 줄어들지만 너무 오래걸려 멈추게 되면 최저점에<br/>
+도달하지 않아도 멈추는 경우가 있다.<br/>
+이 상황을 방지하기 위해 cost의 값을 출력해보고 값이<br/>
+너무 변하지 않으면 Learning rate를 조절해야하 한다.<br/>
 
 #### 결론
 Lerning rate를 정하는 것에는 답이 없다.<br/>
@@ -39,7 +42,8 @@ Lerning rate를 정하는 것에는 답이 없다.<br/>
 | 6 | 8000 | B |
 | 9 | 9000 | C |
 
-다음과 같은 2차원 데이터에서 x2 데이터들의 **차이**가 너무 크기때문에 **왜곡**된 그래프가 그려질 수 있다.<br/>
+다음과 같은 2차원 데이터에서 x2 데이터들의 **차이**가<br/>
+너무 크기때문에 **왜곡**된 그래프가 그려질 수 있다.<br/>
 이러한 상황에서 필요한 것이 **정규화(Normalization)**다.<br/>
 
 #### Zero-centered data
@@ -75,12 +79,12 @@ X_sdt[:,0] = (X[:,0] - X[:,0].mean()) / X[:,0].std()
 가지고 있는 **Weight**을 큰 값을 갖지 안도록 하는 것<br/>
 **Overfitting**된 그래프를 편다는 것은 **Weight**을 적은 값을 갖도록 하는 것
 
-기존의 Loss (i는 Training SET)
+기존의 Loss (i는 Training SET)<br/>
 $$
     Loss = \frac{1}{N} \sum_{i} D(S(WX_i+b), L_i) \
 $$
 
-변경된 Loss
+변경된 Loss<br/>
 $$
     Loss = \frac{1}{N} \sum_{i} D(S(WX_i+b), L_i) + \lambda \sum W^2\
 $$
