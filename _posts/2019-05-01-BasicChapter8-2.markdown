@@ -41,7 +41,7 @@ comments: true
 
 ### Training, Validation and Test Set
 
-<img src="./assets/2019-05-01/1.png" width="600" height="auto">
+<img src="/assets/2019-05-01/1.png" width="600" height="auto">
 
 가지고 있는 **Training Set**을 두개로 나눈다.<br/>
 **Training Set**으로 학습을 시키고 **Validation Set**으로<br/>
