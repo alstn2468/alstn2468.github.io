@@ -1,6 +1,6 @@
 ---
 title:  "Training/Testing 데이타 셋"
-date:   2019-05--1 00:00:01
+date:   2019-05-01 00:00:01
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
 comments: true
