@@ -143,4 +143,4 @@ with tf.Session() as sess:
 
 
 
-<img src="/assets/2019-05-04/1.png" width="400" height="auto">
+<img src="/assets/2019-05-04/1.png" width="200" height="auto">
