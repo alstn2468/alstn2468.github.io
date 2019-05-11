@@ -1,5 +1,5 @@
 ---
-title:  "multi-variable linear regression (new)"
+title:  "multi-variable linear regression"
 date:   2019-01-05 01:41:23
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]

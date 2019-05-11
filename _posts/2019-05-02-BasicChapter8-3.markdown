@@ -1,5 +1,5 @@
 ---
-title:  "lab 07-1: training/test dataset, learning rate, normalization (new)"
+title:  "lab:training/test dataset, learning rate, normalization"
 date:   2019-05-02 00:00:01
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]

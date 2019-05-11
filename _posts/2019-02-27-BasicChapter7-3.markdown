@@ -1,5 +1,5 @@
 ---
-title:  "lab 06-1: TensorFlow로 Softmax Classification의 구현하기 (new)"
+title:  "lab:TensorFlow로 Softmax Classification의 구현하기"
 date:   2019-02-27 00:00:01
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
