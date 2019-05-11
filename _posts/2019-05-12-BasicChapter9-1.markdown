@@ -27,7 +27,7 @@ comments: true
 
 ### Logistic regression uniuts
 #### 소프트웨어
-<img src="/2019-05-12/1.png" width="200" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-12/1.png" width="200" height="auto" alt="아직 안만듬">
 
 #### 하드웨어적
 - Perceptron(Frank Rosenblatt, ~1957)
@@ -43,7 +43,7 @@ comments: true
 
 ### XOR Problem
 
-<img src="/2019-05-12/2.png" width="400" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-12/2.png" width="400" height="auto" alt="아직 안만듬">
 
 | X1  | X2  | Y   |
 | --- | --- | --- |
