@@ -20,6 +20,7 @@ pp = pprint.PrettyPrinter(indent=4)
 sess = tf.InteractiveSession()
 ```
 
+
 ### 1차원 Array
 
 
@@ -194,10 +195,6 @@ tf.matmul(matrix1, matrix2).eval()
 
     Matrix 1 shape (2, 2)
     Matrix 2 shape (2, 1)
-
-
-
-
 
     array([[ 5.],
            [11.]], dtype=float32)
@@ -578,16 +575,100 @@ tf.one_hot([[0], [1], [2], [0]], depth=3).eval()
 모든 데이터 **타입을 바꾸어**주는 기능<br/>
 `True`, `False` 값으로도 변경 가능
 
+
+```python
+tf.cast([1.8, 2.2, 3.3, 4.9], tf.int32).eval()
+```
+
+
+
+
+    array([1, 2, 3, 4], dtype=int32)
+
+
+
+
+```python
+tf.cast([True, False, 1 == 1, 0 == 1], tf.int32).eval()
+```
+
+
+
+
+    array([1, 0, 1, 0], dtype=int32)
+
+
+
 <br/>
 
 ### Stack
 값을 쌓아주는 기능<br/>
 축(**axis**)를 기준으로도 가능
 
+
+```python
+x = [1, 4]
+y = [2, 5]
+z = [3, 6]
+
+tf.stack([x, y, z]).eval()
+```
+
+
+
+
+    array([[1, 4],
+           [2, 5],
+           [3, 6]], dtype=int32)
+
+
+
+
+```python
+tf.stack([x, y, z], axis=1).eval()
+```
+
+
+
+
+    array([[1, 2, 3],
+           [4, 5, 6]], dtype=int32)
+
+
+
 <br/>
 
 ### Ones and Zeros like
 **똑같은 shape**을 가진 0 또는 1로 채워진 Tensor 생성
+
+
+```python
+x = [[0, 1, 2],
+     [2, 1, 0]]
+
+tf.ones_like(x).eval()
+```
+
+
+
+
+    array([[1, 1, 1],
+           [1, 1, 1]], dtype=int32)
+
+
+
+
+```python
+tf.zeros_like(x).eval()
+```
+
+
+
+
+    array([[0, 0, 0],
+           [0, 0, 0]], dtype=int32)
+
+
 
 <br/>
 
