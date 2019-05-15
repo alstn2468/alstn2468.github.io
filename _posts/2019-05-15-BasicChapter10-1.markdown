@@ -44,7 +44,7 @@ $$
         5 \\
         5 \\
     \end{bmatrix}
-    -8 = -8, Y1 = Sigmoid(-8), ∴ 0
+    -8 = -8 = Y1, Sigmoid(Y1) = 0
 $$
 
 $$
@@ -55,7 +55,7 @@ $$
         -7 \\
         -7 \\
     \end{bmatrix}
-    + 3 = 3, Y(2) = Sigmoid(3), ∴ 1
+    + 3 = 3 = Y2, Sigmoid(Y2) = 1
 $$
 
 $$
