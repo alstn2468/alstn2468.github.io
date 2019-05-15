@@ -32,7 +32,7 @@ comments: true
 
 
 위의 Unit과 같은 모양이지만 다른 **weight**과 **bias**를 갖는<br/>
-두개의 Unit에서 나온 결과 다른 Unit에 넣어 값을 예측한다.
+두개의 Unit에서 나온 결과(Y1, Y2) 다른 Unit에 넣어 값을 예측한다.
 
 <img src="/assets/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
 
