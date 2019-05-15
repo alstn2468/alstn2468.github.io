@@ -87,4 +87,4 @@ $$
 
 ### Forward Propagation
 
-<img src="assets/2019-05-15/3.png" width="800" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-15/3.png" width="800" height="auto" alt="아직 안만듬">
