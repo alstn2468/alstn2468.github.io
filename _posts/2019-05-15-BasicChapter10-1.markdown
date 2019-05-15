@@ -11,12 +11,6 @@ comments: true
 
 <br/>
 
-### XOR 문제
-하나의 모델(Unit)로는 **XOR 문제** 해결 불가<br/>
-**여러개의 Unit**을 합치면 해결 가능하다.
-
-<br/>
-
 ### Neural Network를 사용해 XOR 풀기
 
 | X1  | X2  | XOR |
