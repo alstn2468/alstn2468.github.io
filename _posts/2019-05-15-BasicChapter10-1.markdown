@@ -18,6 +18,7 @@ comments: true
 <br/>
 
 ### Neural Network를 사용해 XOR 풀기
+
 | X1  | X2  | XOR |
 | --- | --- | --- |
 | 0   | 0   | 0   |
@@ -26,14 +27,16 @@ comments: true
 | 1   | 1   | 0   |
 
 #### 하나의 Unit
-<img src="assets/2019-05-15/1.png" width="500" height="auto" alt="아직 안만듬">
+
+<img src="/assets/2019-05-15/1.png" width="500" height="auto" alt="아직 안만듬">
 
 
 위의 Unit에서 서로 다른 **weight**과 **bias**를 갖는<br/>
 두개의 Unit에서 나온 결과 다른 Unit에 넣어 값을 예측한다.
-<img src="assets/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
 
-\begin{align}
+<img src="/assets/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
+
+$$
     \begin{bmatrix}
         0 & 0 \\
     \end{bmatrix}
@@ -42,9 +45,9 @@ comments: true
         5 \\
     \end{bmatrix}
     -8 = -8, Y1 = Sigmoid(-8), ∴ 0
-\end{align}
+$$
 
-\begin{align}
+$$
     \begin{bmatrix}
         0 & 0 \\
     \end{bmatrix}
@@ -53,9 +56,9 @@ comments: true
         -7 \\
     \end{bmatrix}
     + 3 = 3, Y(2) = Sigmoid(3), ∴ 1
-\end{align}
+$$
 
-\begin{align}
+$$
     \begin{bmatrix}
         0 & 1 \\
     \end{bmatrix}
@@ -64,7 +67,7 @@ comments: true
         -11 \\
     \end{bmatrix}
     + 6 = -11 + 6 = 5 = Ȳ, Sigmoid(Ȳ) = 0
-\end{align}
+$$
 
 위와 같은 방법으로 아래의 모든 케이스를 진행<br/>
 **Sigmoid**함수는 입력값이 **작을수록 0**에 수렴<br/>
