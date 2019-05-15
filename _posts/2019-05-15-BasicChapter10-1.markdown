@@ -33,6 +33,7 @@ comments: true
 #### 계산 과정
 
 $$
+    Y1 =
     \begin{bmatrix}
         0 & 0 \\
     \end{bmatrix}
@@ -40,10 +41,11 @@ $$
         5 \\
         5 \\
     \end{bmatrix}
-    -8 = -8 = Y1, Sigmoid(Y1) = 0
+    -8 = -8, Sigmoid(Y1) = 0
 $$
 
 $$
+    Y2 =
     \begin{bmatrix}
         0 & 0 \\
     \end{bmatrix}
@@ -51,10 +53,11 @@ $$
         -7 \\
         -7 \\
     \end{bmatrix}
-    + 3 = 3 = Y2, Sigmoid(Y2) = 1
+    + 3 = 3, Sigmoid(Y2) = 1
 $$
 
 $$
+    \bar{ Y } =
     \begin{bmatrix}
         0 & 1 \\
     \end{bmatrix}
@@ -62,7 +65,7 @@ $$
         -11 \\
         -11 \\
     \end{bmatrix}
-    + 6 = -11 + 6 = 5 = \bar{ Y }, Sigmoid(\bar{ Y }) = 0
+    + 6 = -11 + 6 = 5, Sigmoid(\bar{ Y }) = 0
 $$
 
 위와 같은 방법으로 아래의 모든 케이스를 진행<br/>
