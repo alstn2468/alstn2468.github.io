@@ -101,7 +101,7 @@ $$
 다른 **weight**값과 **bias**값은 존재 가능<br/>
 위의 구조는 아래의 **Nominal Classification**과 비슷하다.
 
-\begin{align}
+$$
     \begin{bmatrix}
          w_{A1} & w_{A2} & w_{A3} \\
          w_{B1} & w_{B2} & w_{B3} \\
@@ -118,7 +118,7 @@ $$
         \overline{y_B} \\
         \overline{y_C} \\
     \end{bmatrix}
-\end{align}
+$$
 
 그림으로 위의 그림의 구조를 표현해보자면
 
