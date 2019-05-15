@@ -33,8 +33,9 @@ comments: true
 입력값이 **작을수록 0**에 수렴<br/>
 입력값이 **클수록 1**에 수렴
 
-<img src="/assets/2019-05-15/4.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-15/4.png" width="300" height="auto" alt="아직 안만듬">
 
+[[이미지 참조]](https://en.wikipedia.org/wiki/Sigmoid_function)
 
 #### 계산 과정
 
