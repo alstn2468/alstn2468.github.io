@@ -94,4 +94,52 @@ $$
 
 ### Forward Propagation
 
+아래와 같은 구조를 하나의 **Neural Network**라고 할 수 있다.
+
 <img src="/assets/2019-05-15/3.png" width="800" height="auto" alt="아직 안만듬">
+
+다른 **weight**값과 **bias**값은 존재 가능<br/>
+위의 구조는 아래의 **Nominal Classification**과 비슷하다.
+
+\begin{align}
+    \begin{bmatrix}
+         w_{A1} & w_{A2} & w_{A3} \\
+         w_{B1} & w_{B2} & w_{B3} \\
+         w_{C1} & w_{C2} & w_{C3} \\
+    \end{bmatrix}
+    \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} =
+    \begin{bmatrix}
+         w_{A1}x_1 & w_{A2}x_2 & w_{A3}x_3 \\
+         w_{B1}x_1 & w_{B2}x_2 & w_{B3}x_3 \\
+         w_{C1}x_1 & w_{C2}x_2 & w_{C3}x_3 \\
+    \end{bmatrix} =
+    \begin{bmatrix}
+        \overline{y_A} \\
+        \overline{y_B} \\
+        \overline{y_C} \\
+    \end{bmatrix}
+\end{align}
+
+그림으로 위의 그림의 구조를 표현해보자면
+
+<img src="/assets/2019-05-15/5.png" width="800" height="auto" alt="아직 안만듬">
+
+다음과 같은 구조로 표현이 가능하다.<br/>
+위의 구조를 수식으로 정리하면 아래와 같다.
+
+뒤쪽 Unit 구조의 수식화<br/>
+$$
+K(X) = Sigmoid(XW_1 + B_1)
+$$
+
+모든 Unit 구조의 수식화<br/>
+$$
+    \bar{ Y } =
+    H(X) = Sigmoid(K(X){W_2} + {B_2})
+$$
+
+다음 수식을 코드로 구현하면 아래와 같다.
+```python
+K = tf.sigmoid(tf.matmul(X,, W1) + b1)
+hypothesis = tf.sigmoid(tf.matmul(K, W2) + 2)
+```
