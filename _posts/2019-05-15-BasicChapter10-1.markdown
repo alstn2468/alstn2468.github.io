@@ -30,11 +30,11 @@ comments: true
 
 <img src="/assets/2019-05-15/1.png" width="500" height="auto" alt="아직 안만듬">
 
-
 위의 Unit과 같은 모양이지만 다른 **weight**과 **bias**를 갖는<br/>
 두개의 Unit에서 나온 결과(Y1, Y2) 다른 Unit에 넣어 값을 예측한다.
 
 <img src="/assets/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
+
 
 #### 계산 과정
 
@@ -74,6 +74,7 @@ $$
 위와 같은 방법으로 아래의 모든 케이스를 진행<br/>
 **Sigmoid**함수는 입력값이 **작을수록 0**에 수렴<br/>
 입력값이 **클수록 1**에 수렴한다.
+
 
 #### 결과 확인 표
 
