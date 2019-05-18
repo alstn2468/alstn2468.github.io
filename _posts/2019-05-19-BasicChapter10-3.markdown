@@ -30,7 +30,7 @@ comments: true
 <img src="/assets/2019-05-19/6.png" width="500" height="auto" alt="아직 안만듬">
 <br/>
 
-1. forward ($$w = -2, x = 5, b = 3$$)
+- forward ($$w = -2, x = 5, b = 3$$)
 
 <img src="/assets/2019-05-19/7.png" width="500" height="auto" alt="아직 안만듬">
 
@@ -64,4 +64,4 @@ hypothesis = tf.sigmoid(tf.matmul(L2, W2) + b2)
 cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
 ```
 
-2. backward
+- backward
