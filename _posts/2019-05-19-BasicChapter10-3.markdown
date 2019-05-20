@@ -67,7 +67,7 @@ $$b$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial b} $$로 **1
 \end{align}
 
 $$w$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial w} $$로 **-2**다.<br/>
-$$x$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial x} $$로 **5**다.<
+$$x$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial x} $$로 **5**다.
 
 여기에서 **미분값의 의미**는 $$b$$의 값은 **1**인데 이것은 $$b$$의 영향이<br/>
 **1:1**과 같다는 뜻이고 $$w$$d의 값은 **5**인데 이것은 $$w$$의 영향이<br/>
