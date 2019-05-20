@@ -99,8 +99,8 @@ hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
 **Logistic Regression**의 **Cost Function**은 아래와 같다.<br/>
 $$
 C(H(x), y) =
-- Y * log(H(x)
-- (1 - Y) * log(1 - H(X))
+-Y * log(H(x)
+-(1 - Y) * log(1 - H(X))
 $$
 
 구해진 Cost를 가지고 **경사하강법**을 사용해 학습을 진행한다.
