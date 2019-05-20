@@ -118,7 +118,8 @@ train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 위에 작성한 **Hypothesis**와 **Cost Function**을 사용해 학습을 진행<br/>
 `cast`함수를 사용해 **Hypothesis**의 값이 **0.5**보다 클경우 **True**로<br/>
 **0.5**보다 작을경우 **False**로 값을 바꾸어준다.<br/>
-또한 예측값과 결과값을 비교해 `cast`함수를 사용한 **결과의 평균**을 구해 **정확도**를 계산한다.
+또한 예측값과 결과값을 비교해 `cast`함수를 사용한<br/>
+**결과의 평균**을 구해 **정확도**를 계산한다.
 
 
 ```python
