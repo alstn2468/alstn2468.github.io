@@ -12,6 +12,7 @@ comments: true
 <br/>
 
 
+
 ```python
 import tensorflow as tf
 import numpy as np
@@ -34,7 +35,7 @@ $$
 
 #### Logic Diagram Symbol
 
-<img src="/assets/2019-05-20/10.png" width="400" height="auto" alt="아직 안만듬">
+<img src="./10.png" width="400" height="auto" alt="아직 안만듬">
 
 [[이미지 출처]](https://mathphysics.tistory.com/579)
 
@@ -118,8 +119,7 @@ train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 위에 작성한 **Hypothesis**와 **Cost Function**을 사용해 학습을 진행<br/>
 `cast`함수를 사용해 **Hypothesis**의 값이 **0.5**보다 클경우 **True**로<br/>
 **0.5**보다 작을경우 **False**로 값을 바꾸어준다.<br/>
-또한 예측값과 결과값을 비교해 `cast`함수를 사용한<br/>
-**결과의 평균**을 구해 **정확도**를 계산한다.
+또한 예측값과 결과값을 비교해 `cast`함수를 사용한 **결과의 평균**을 구해 **정확도**를 계산한다.
 
 
 ```python
@@ -130,48 +130,142 @@ with tf.Session() as sess:
     sess.run(tf.global_variables_initializer())
 
     for step in range(10001):
-        sess.run(train, feed_dict={X: x_data, Y: y_data})
+        _, cost_val, w_val = sess.run(
+            [train, cost, W], feed_dict={X: x_data, Y: y_data}
+        )
 
         if step % 1000 == 0:
-            print(step,
-                  sess.run(cost, feed_dict={X: x_data, Y: y_data}),
-                  sess.run(W))
+            print(step, cost_val, w_val)
 
     h, c, a = sess.run(
         [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
     )
+
     print("\nHypothesis: ", h, "\nCorrect: ", c, "\nAccuracy: ", a)
 ```
 
-    0 1.2234817 [[0.39820135]
-     [0.6167415 ]]
-    1000 0.7463542 [[0.81462926]
-     [0.9441738 ]]
-    2000 0.71863586 [[0.58613837]
-     [0.6557569 ]]
-    3000 0.70510155 [[0.4054208 ]
-     [0.44273508]]
-    4000 0.69867206 [[0.2778502 ]
-     [0.29783332]]
-    5000 0.6956826 [[0.18950936]
-     [0.20020682]]
-    6000 0.69430697 [[0.12888761]
-     [0.13461326]]
-    7000 0.69367695 [[0.08749887]
-     [0.09056317]]
-    8000 0.693389 [[0.05932756]
-     [0.06096753]]
-    9000 0.6932575 [[0.04019087]
-     [0.04106851]]
-    10000 0.6931975 [[0.02720905]
-     [0.02767869]]
+    0 0.9182138 [[-0.62333226]
+     [-1.721802  ]]
+    1000 0.7150526 [[-0.20138076]
+     [-0.80708164]]
+    2000 0.7022653 [[-0.17236823]
+     [-0.49763605]]
+    3000 0.69705784 [[-0.13972938]
+     [-0.31400913]]
+    4000 0.69485706 [[-0.10680828]
+     [-0.20011428]]
+    5000 0.6939054 [[-0.07875179]
+     [-0.1286929 ]]
+    6000 0.6934868 [[-0.05671478]
+     [-0.08344253]]
+    7000 0.69330025 [[-0.04018797]
+     [-0.05449189]]
+    8000 0.69321644 [[-0.02814952]
+     [-0.03580439]]
+    9000 0.69317865 [[-0.01955061]
+     [-0.02364719]]
+    10000 0.6931615 [[-0.01349265]
+     [-0.01568495]]
 
-    Hypothesis:  [[0.49186257]
-     [0.49878156]
-     [0.49866414]
-     [0.5055836 ]]
-    Correct:  [[0.]
-     [0.]
-     [0.]
-     [1.]]
-    Accuracy:  0.25
+    Hypothesis:  [[0.504326  ]
+     [0.50040483]
+     [0.5009529 ]
+     [0.49703178]]
+    Correct:  [[1.]
+     [1.]
+     [1.]
+     [0.]]
+    Accuracy:  0.75
+
+
+<br/>
+
+### 전체적인 코드
+
+
+```python
+import tensorflow as tf
+import numpy as np
+
+x_data = np.array(
+    [
+        [0, 0],
+        [0, 1],
+        [1, 0],
+        [1, 1],
+    ],
+    dtype=np.float32
+)
+y_data = np.array(
+    [
+        [0],
+        [1],
+        [1],
+        [0],
+    ],
+    dtype=np.float32
+)
+
+X = tf.placeholder(tf.float32)
+Y = tf.placeholder(tf.float32)
+W = tf.Variable(tf.random_normal([2, 1]), name='weight')
+b = tf.Variable(tf.random_normal([1]), name="bias")
+
+hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
+cost = -tf.reduce_mean(Y * tf.log(hypothesis)
+                      + (1 - Y) * tf.log(1 - hypothesis))
+train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
+
+predicted = tf.cast(hypothesis > 0.5, dtype=tf.float32)
+accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype=tf.float32))
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+
+    for step in range(10001):
+        _, cost_val, w_val = sess.run(
+            [train, cost, W], feed_dict={X: x_data, Y: y_data}
+        )
+
+        if step % 1000 == 0:
+            print(step, cost_val, w_val)
+
+    h, c, a = sess.run(
+        [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
+    )
+
+    print("\nHypothesis: ", h, "\nCorrect: ", c, "\nAccuracy: ", a)
+```
+
+    0 0.79332465 [[-1.5087284 ]
+     [-0.87561625]]
+    1000 0.7269697 [[-0.8733893]
+     [-0.5328631]]
+    2000 0.70880514 [[-0.56933945]
+     [-0.38662037]]
+    3000 0.70032305 [[-0.37374794]
+     [-0.27585343]]
+    4000 0.69642156 [[-0.24622394]
+     [-0.19381025]]
+    5000 0.6946392 [[-0.16283266]
+     [-0.13477722]]
+    6000 0.6938269 [[-0.10807667]
+     [-0.09306139]]
+    7000 0.6934569 [[-0.07196444]
+     [-0.06392865]]
+    8000 0.6932883 [[-0.04804941]
+     [-0.04374896]]
+    9000 0.69321156 [[-0.03215438]
+     [-0.02985292]]
+    10000 0.6931765 [[-0.02155725]
+     [-0.0203256 ]]
+
+    Hypothesis:  [[0.50620955]
+     [0.5011285 ]
+     [0.5008206 ]
+     [0.49573925]]
+    Correct:  [[1.]
+     [1.]
+     [1.]
+     [0.]]
+    Accuracy:  0.75
