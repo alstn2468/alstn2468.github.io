@@ -11,6 +11,9 @@ comments: true
 
 <br/>
 
+
+## 딥넷트웍 학습 시키기 (backpropagation)
+
 ###  Neural Network (NN)
 두개의 유닛의 **Weight**과 **Bias**를 학습시키는 방법<br/>
 **Gradient descent**알고리즘을 사용<br/>
@@ -27,7 +30,7 @@ comments: true
 \begin{align} f = wx + b, g = wx, f = g + b \end{align}
 위의 식을 그래프(**NN**) 형태의 그림으로 표현하면 아래와 같다.<br/>
 
-<img src="/assets/2019-05-19/6.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./6.png" width="500" height="auto" alt="아직 안만듬">
 <br/>
 위의 그림으로 $$w$$, $$x$$, $$b$$가 $$f$$에 미치는 영향을<br/>
 구하기위해 미분값을 계산해 사용해야한다.
@@ -37,7 +40,7 @@ comments: true
     - $$ w * x = g = -10 $$
     - $$ g + b = -7 $$
 
-<img src="/assets/2019-05-19/7.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./7.png" width="500" height="auto" alt="아직 안만듬">
 
 $$
 g = wx \rightarrow \frac{\partial g}{\partial w} = x,
@@ -73,8 +76,25 @@ $$x$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial x} $$로 **5
 **1:1**과 같다는 뜻이고 $$w$$d의 값은 **5**인데 이것은 $$w$$의 영향이<br/>
 **5:1**과 같다는 뜻이다. $$w$$의 값이 **1만큼 변하면** $$f$$의 값 **5배 바뀐다**는 의미다.
 
+<img src="./8.png" width="700" height="auto" alt="아직 안만듬">
 
-#### Tensorflow 코드로 구현
+여러개의 Layer가 겹쳐있어도 위와 같은 그림의 방법을 사용하면 된다.
+
+#### Sigmoid의 그래프 표현
+
+\begin{align}
+    g(z) = \frac{1}{1+{e}^{-2}}
+\end{align}
+
+위의 **Sigmoid Function**을 아래와 같은 그래프로 표현되어<br/>
+**Backpropagation**을 계산할 수 있다.
+
+<img src="./9.png" width="700" height="auto" alt="아직 안만듬">
+
+
+#### Tensorflow /assets/2019-05-19/드로 구현
+**TensorFlow**또한 모든 것을 **그래프**로 가지고 계산한다.
+
 ```python
 hypothesis = tf.sigmoid(tf.matmul(L2, W2) + b2)
 cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
