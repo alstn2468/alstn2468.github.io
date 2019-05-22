@@ -16,6 +16,7 @@ import tensorflow as tf
 import numpy as np
 ```
 
+
 ### XOR data set
 
 | A | B | X |
@@ -140,34 +141,34 @@ with tf.Session() as sess:
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
 
-    0 0.88025 [[-1.083335 ]
-     [ 2.2019713]]
-    1000 0.7614425 [[-0.50063527]
-     [ 1.3991983 ]]
-    2000 0.71648085 [[-0.21180181]
-     [ 0.83265454]]
-    3000 0.7010773 [[-0.07087812]
-     [ 0.49279353]]
-    4000 0.6959399 [[-0.0084115]
-     [ 0.2940039]]
-    5000 0.69418055 [[0.015548 ]
-     [0.1775102]]
-    6000 0.6935492 [[0.02187311]
-     [0.1085681 ]]
-    7000 0.69331074 [[0.0208589 ]
-     [0.06725767]]
-    8000 0.6932161 [[0.01734459]
-     [0.04217583]]
-    9000 0.693177 [[0.0134572 ]
-     [0.02674591]]
-    10000 0.6931603 [[0.01002164]
-     [0.01713319]]
+    0 0.99409974 [[-1.081909 ]
+     [ 2.3671274]]
+    1000 0.75658506 [[-0.85761964]
+     [ 1.1723609 ]]
+    2000 0.7131047 [[-0.46316972]
+     [ 0.65583754]]
+    3000 0.699124 [[-0.23715353]
+     [ 0.36725613]]
+    4000 0.6949206 [[-0.11818436]
+     [ 0.20615283]]
+    5000 0.69367814 [[-0.05713516]
+     [ 0.11657296]]
+    6000 0.69330937 [[-0.02641575]
+     [ 0.06656651]]
+    7000 0.6931982 [[-0.01132161]
+     [ 0.03844175]]
+    8000 0.6931639 [[-0.00415682]
+     [ 0.02247488]]
+    9000 0.69315296 [[-0.00093976]
+     [ 0.01331245]]
+    10000 0.6931492 [[0.00036489]
+     [0.00799207]]
 
     Hypothesis:
-    [[0.4959739 ]
-     [0.5002571 ]
-     [0.49847925]
-     [0.5027625 ]]
+    [[0.4987609 ]
+     [0.50075895]
+     [0.49885216]
+     [0.5008502 ]]
     Predicted:
     [[0.]
      [1.]
@@ -241,7 +242,6 @@ with tf.Session() as sess:
         if step % 1000 == 0:
             print(step, cost_val)
 
-    # Accuracy report
     h, p, a = sess.run(
         [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
     )
@@ -249,23 +249,23 @@ with tf.Session() as sess:
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
 
-    0 0.7279828
-    1000 0.6738095
-    2000 0.5043707
-    3000 0.18984827
-    4000 0.081655145
-    5000 0.048282392
-    6000 0.0335411
-    7000 0.025466135
-    8000 0.020430896
-    9000 0.017012684
-    10000 0.014549621
+    0 0.82048273
+    1000 0.67851186
+    2000 0.606001
+    3000 0.4774453
+    4000 0.1442676
+    5000 0.06338048
+    6000 0.039486427
+    7000 0.028429154
+    8000 0.022119436
+    9000 0.01806068
+    10000 0.015238974
 
     Hypothesis:
-    [[0.01193648]
-     [0.9842308 ]
-     [0.9842269 ]
-     [0.01428502]]
+    [[0.01475588]
+     [0.9810414 ]
+     [0.985857  ]
+     [0.01261569]]
     Predicted:
     [[0.]
      [1.]
@@ -318,3 +318,80 @@ with tf.Session() as sess:
 
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
+
+<br/>
+
+### Deep Neural Network로 XOR 해결하기
+
+
+```python
+X = tf.placeholder(tf.float32, [None, 2])
+Y = tf.placeholder(tf.float32, [None, 1])
+
+W1 = tf.Variable(tf.random_normal([2, 10]), name='weight1')
+b1 = tf.Variable(tf.random_normal([10]), name='bias1')
+layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
+
+W2 = tf.Variable(tf.random_normal([10, 10]), name='weight2')
+b2 = tf.Variable(tf.random_normal([10]), name='bias2')
+layer2 = tf.sigmoid(tf.matmul(layer1, W2) + b2)
+
+W3 = tf.Variable(tf.random_normal([10, 10]), name='weight3')
+b3 = tf.Variable(tf.random_normal([10]), name='bias3')
+layer3 = tf.sigmoid(tf.matmul(layer2, W3) + b3)
+
+W4 = tf.Variable(tf.random_normal([10, 1]), name='weight4')
+b4 = tf.Variable(tf.random_normal([1]), name='bias4')
+hypothesis = tf.sigmoid(tf.matmul(layer3, W4) + b4)
+
+cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
+train = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
+
+predicted = tf.cast(hypothesis > 0.5, dtype=tf.float32)
+accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype=tf.float32))
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+
+    for step in range(10001):
+        _, cost_val = sess.run(
+            [train, cost], feed_dict={X: x_data, Y: y_data}
+        )
+
+        if step % 1000 == 0:
+            print(step, cost_val)
+
+    h, p, a = sess.run(
+        [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
+    )
+
+    print("\nHypothesis: ", h, "\nPredicted: ", p, "\nAccuracy: ", a)
+```
+
+    0 0.786564
+    1000 0.21167177
+    2000 0.030031722
+    3000 0.013181003
+    4000 0.008059783
+    5000 0.005704046
+    6000 0.0043751714
+    7000 0.0035298648
+    8000 0.0029479803
+    9000 0.0025245028
+    10000 0.0022032897
+
+    Hypothesis:  [[0.00249692]
+     [0.99716216]
+     [0.998467  ]
+     [0.00193409]]
+    Predicted:  [[0.]
+     [1.]
+     [1.]
+     [0.]]
+    Accuracy:  1.0
+
+
+**Hypothesis**의 값을 보면 0이 되어야하는 값은<br/>
+0에 더 가까워졌고 1이 되어야하는 값은 1에 더 가까워졌다.<br/>
+여러개의 Layer를 사용해 **Deep**하게 학습한 결과<br/>
+**정확도**가 더 **높아**지게 되었다.
