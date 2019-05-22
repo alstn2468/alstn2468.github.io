@@ -272,3 +272,7 @@ with tf.Session() as sess:
      [0.]]
     Accuracy:
     1.0
+
+
+같은 **Hypothesis**와 **Cost Function**을 사용하였으나,<br/>
+2개의 Layer를 사용한 것만으로 **모든 값을 예측**하는데 성공하였다.
