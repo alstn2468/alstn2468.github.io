@@ -1,5 +1,5 @@
 ---
-title:  "Lab 9-1 : XOR을 위한 텐스플로우 딥넷트웍"
+title:  "하나의 Layer로 XOR문제 해결해보기"
 date:   2019-05-20 00:00:03
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
@@ -85,7 +85,7 @@ b = tf.Variable(tf.random_normal([1]), name="bias")
 
 ### Hypothesis
 **Sigmoid** 함수 사용<br/>
-$$ Sigmoid = \frac{1}{1+e^{-x}}$$
+\begin{align} Sigmoid = \frac{1}{1+e^{-x}} \end{align}
 
 **행렬 곱셉**을 사용한다.
 
@@ -177,6 +177,9 @@ with tf.Session() as sess:
      [0.]]
     Accuracy:  0.75
 
+모델이 정확하고 문제가 없음에도 불구하고 정확도가 높지않다.<br/>
+정확도를 올리기 위해서 **Neural Network**를 사용하면 된다.<br/>
+다음 Post에서 **Neural Network**를 사용해 **XOR** 문제를 해결해 보도록하겠다.
 
 <br/>
 
