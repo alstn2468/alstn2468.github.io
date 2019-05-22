@@ -16,7 +16,6 @@ import tensorflow as tf
 import numpy as np
 ```
 
-
 ### XOR data set
 
 | A | B | X |
@@ -33,7 +32,7 @@ $$
 
 #### Logic Diagram Symbol
 
-<img src="/assets/2019-05-20/10.png" width="400" height="auto" alt="아직 안만듬">
+<img src="./10.png" width="400" height="auto" alt="아직 안만듬">
 
 [[이미지 출처]](https://mathphysics.tistory.com/579)
 
@@ -106,8 +105,7 @@ $$
 
 
 ```python
-cost = -tf.reduce_mean(Y * tf.log(hypothesis)
-                      + (1 - Y) * tf.log(1 - hypothesis))
+cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
 train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 ```
 
@@ -135,45 +133,48 @@ with tf.Session() as sess:
         if step % 1000 == 0:
             print(step, cost_val, w_val)
 
-    h, c, a = sess.run(
+    h, p, a = sess.run(
         [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
     )
 
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
 
-    0 0.8513652 [[-2.1316051]
-     [ 0.1544597]]
-    1000 0.73598343 [[-1.1616342 ]
-     [ 0.11189499]]
-    2000 0.7089069 [[-0.6989508 ]
-     [-0.00860908]]
-    3000 0.6991427 [[-0.42546663]
-     [-0.05454065]]
-    4000 0.6955279 [[-0.2618011 ]
-     [-0.06305098]]
-    5000 0.6941303 [[-0.1630023 ]
-     [-0.05659783]]
-    6000 0.693566 [[-0.1026649 ]
-     [-0.04571436]]
-    7000 0.6933297 [[-0.06535754]
-     [-0.03487875]]
-    8000 0.69322795 [[-0.04200944]
-     [-0.02569827]]
-    9000 0.6931834 [[-0.02723129]
-     [-0.01850214]]
-    10000 0.69316345 [[-0.0177809 ]
-     [-0.01310943]]
+    0 0.88025 [[-1.083335 ]
+     [ 2.2019713]]
+    1000 0.7614425 [[-0.50063527]
+     [ 1.3991983 ]]
+    2000 0.71648085 [[-0.21180181]
+     [ 0.83265454]]
+    3000 0.7010773 [[-0.07087812]
+     [ 0.49279353]]
+    4000 0.6959399 [[-0.0084115]
+     [ 0.2940039]]
+    5000 0.69418055 [[0.015548 ]
+     [0.1775102]]
+    6000 0.6935492 [[0.02187311]
+     [0.1085681 ]]
+    7000 0.69331074 [[0.0208589 ]
+     [0.06725767]]
+    8000 0.6932161 [[0.01734459]
+     [0.04217583]]
+    9000 0.693177 [[0.0134572 ]
+     [0.02674591]]
+    10000 0.6931603 [[0.01002164]
+     [0.01713319]]
 
-    Hypothesis:  [[0.5045799 ]
-     [0.50130266]
-     [0.5001348 ]
-     [0.4968575 ]]
-    Correct:  [[1.]
+    Hypothesis:
+    [[0.4959739 ]
+     [0.5002571 ]
+     [0.49847925]
+     [0.5027625 ]]
+    Predicted:
+    [[0.]
      [1.]
-     [1.]
-     [0.]]
-    Accuracy:  0.75
+     [0.]
+     [1.]]
+    Accuracy:
+    0.5
 
 
 모델이 정확하고 문제가 없음에도 불구하고 정확도가 높지않다.<br/>
@@ -248,23 +249,23 @@ with tf.Session() as sess:
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
 
-    0 0.7882031
-    1000 0.66996527
-    2000 0.56226295
-    3000 0.46252495
-    4000 0.3979395
-    5000 0.13767728
-    6000 0.058626205
-    7000 0.036846615
-    8000 0.026778355
-    9000 0.020992192
-    10000 0.01724169
+    0 0.7279828
+    1000 0.6738095
+    2000 0.5043707
+    3000 0.18984827
+    4000 0.081655145
+    5000 0.048282392
+    6000 0.0335411
+    7000 0.025466135
+    8000 0.020430896
+    9000 0.017012684
+    10000 0.014549621
 
     Hypothesis:
-    [[0.01622479]
-     [0.98648304]
-     [0.97561294]
-     [0.01419624]]
+    [[0.01193648]
+     [0.9842308 ]
+     [0.9842269 ]
+     [0.01428502]]
     Predicted:
     [[0.]
      [1.]
@@ -276,3 +277,44 @@ with tf.Session() as sess:
 
 같은 **Hypothesis**와 **Cost Function**을 사용하였으나,<br/>
 2개의 Layer를 사용한 것만으로 **모든 값을 예측**하는데 성공하였다.
+
+<br/>
+
+### 전체적인 코드
+
+
+```python
+X = tf.placeholder(tf.float32, [None, 2])
+Y = tf.placeholder(tf.float32, [None, 1])
+
+W1 = tf.Variable(tf.random_normal([2, 2]), name='weight1')
+b1 = tf.Variable(tf.random_normal([2]), name='bias1')
+layer1 = tf.sigmoid(tf.matmul(X, W1) + b1)
+
+W2 = tf.Variable(tf.random_normal([2, 1]), name='weight2')
+b2 = tf.Variable(tf.random_normal([1]), name='bias2')
+hypothesis = tf.sigmoid(tf.matmul(layer1, W2) + b2)
+
+cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis))
+train = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
+
+predicted = tf.cast(hypothesis > 0.5, dtype=tf.float32)
+accuracy = tf.reduce_mean(tf.cast(tf.equal(predicted, Y), dtype=tf.float32))
+
+with tf.Session() as sess:
+    sess.run(tf.global_variables_initializer())
+
+    for step in range(10001):
+        _, cost_val = sess.run(
+            [train, cost], feed_dict={X: x_data, Y: y_data}
+        )
+
+        if step % 1000 == 0:
+            print(step, cost_val)
+
+    h, p, a = sess.run(
+        [hypothesis, predicted, accuracy], feed_dict={X: x_data, Y: y_data}
+    )
+
+    print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
+```
