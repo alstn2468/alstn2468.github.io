@@ -1,5 +1,5 @@
 ---
-title:  "Lab 9-1 : XOR을 위한 텐스플로우 딥넷트웍"
+title:  "Lab 9-1:XOR을 위한 텐스플로우 딥넷트웍"
 date:   2019-05-20 00:00:03
 categories: [Machine Learnnig]
 tags: [Machine Learnnig, Deep Learnnig, Data Science]
