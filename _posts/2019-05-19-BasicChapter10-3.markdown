@@ -83,7 +83,7 @@ $$x$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial x} $$로 **5
 #### Sigmoid의 그래프 표현
 
 \begin{align}
-    g(z) = \frac{1}{1+{e}^{-2}}
+    g(z) = \frac{1}{1+{e}^{-z}}
 \end{align}
 
 위의 **Sigmoid Function**을 아래와 같은 그래프로 표현되어<br/>
@@ -92,7 +92,7 @@ $$x$$가 $$f$$에 미치는 영향은 $$ \frac{\partial f}{\partial x} $$로 **5
 <img src="/assets/2019-05-19/9.png" width="700" height="auto" alt="아직 안만듬">
 
 
-#### Tensorflow /assets/2019-05-19/드로 구현
+#### Tensorflow 코드로 구현
 **TensorFlow**또한 모든 것을 **그래프**로 가지고 계산한다.
 
 ```python
