@@ -190,22 +190,29 @@ with tf.Session() as sess:
 ### XOR 문제 Log
 
 - Cost
+
 <img src="/assets/2019-05-23/11.png" width="500" height="auto" alt="아직 안만듬">
 
 - Accuracy
+
 <img src="/assets/2019-05-23/12.png" width="500" height="auto" alt="아직 안만듬">
 
 - Graph
+
 <img src="/assets/2019-05-23/13.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Distribution
+
 <img src="/assets/2019-05-23/14.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Distribution
+
 <img src="/assets/2019-05-23/15.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Histogram
+
 <img src="/assets/2019-05-23/16.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Histogram
+
 <img src="/assets/2019-05-23/17.png" width="500" height="auto" alt="아직 안만듬">
