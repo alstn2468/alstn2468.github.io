@@ -191,28 +191,28 @@ with tf.Session() as sess:
 
 - Cost
 
-<img src="/assets/2019-05-23/11.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/11.png" width="500" height="auto" alt="아직 안만듬">
 
 - Accuracy
 
-<img src="/assets/2019-05-23/12.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/12.png" width="500" height="auto" alt="아직 안만듬">
 
 - Graph
 
-<img src="/assets/2019-05-23/13.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/13.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Distribution
 
-<img src="/assets/2019-05-23/14.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/14.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Distribution
 
-<img src="/assets/2019-05-23/15.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/15.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Histogram
 
-<img src="/assets/2019-05-23/16.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/16.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Histogram
 
-<img src="/assets/2019-05-23/17.png" width="500" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-22/17.png" width="500" height="auto" alt="아직 안만듬">
