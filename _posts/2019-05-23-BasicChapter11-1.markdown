@@ -122,7 +122,7 @@ Layer의 깊이가 깊어질수록 최종 Layer근처의 경사는 나타나지�
 **0보다 작을 경우 비활성화** 하고 **0보다 클 경우 값을 크게** 한다.<br/>
 
 아래의 그래프와 같이 동작한다.<br/>
-<img src="/assets/2019-05-23/1.png" width="700" height="auto" alt="아직 안만듬">
+<img src="/assets/2019-05-23/1.png" width="500" height="auto" alt="아직 안만듬">
 
 **ReLU** (**Re**ctified **L**inear **U**nit)<br/>
 `tf.sigmoid`을 `tf.nn.relu`를 사용하면 된다.
