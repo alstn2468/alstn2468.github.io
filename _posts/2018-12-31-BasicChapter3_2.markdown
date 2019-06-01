@@ -1,8 +1,8 @@
 ---
 title:  "Tensorflow로 간단한 linear regression을 구현"
 date:   2018-12-31 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 title:  "레고처럼 넷트웍 모듈을 마음껏 쌓아 보자"
 date:   2019-06-01 00:00:03
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

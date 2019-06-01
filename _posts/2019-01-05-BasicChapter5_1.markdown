@@ -1,8 +1,8 @@
 ---
 title:  "multi-variable linear regression"
 date:   2019-01-05 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

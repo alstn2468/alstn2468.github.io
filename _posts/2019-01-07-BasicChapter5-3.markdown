@@ -1,8 +1,8 @@
 ---
 title:  "lab:TensorFlow로 파일에서 데이타 읽어오기"
 date:   2019-01-07 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

@@ -1,8 +1,8 @@
 ---
 title:  "Lab 9-2:Tensor Board로 딥네트웍 들여다보기"
 date:   2019-05-22 00:00:03
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

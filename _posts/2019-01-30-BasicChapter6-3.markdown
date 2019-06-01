@@ -1,8 +1,8 @@
 ---
 title:  "TensorFlow로 Logistic Classification 구현하기"
 date:   2019-01-30 00:00:01
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

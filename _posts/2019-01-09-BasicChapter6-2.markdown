@@ -1,8 +1,8 @@
 ---
 title:  "Logistic Regression의 cost 함수 설명"
 date:   2019-01-09 00:00:01
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

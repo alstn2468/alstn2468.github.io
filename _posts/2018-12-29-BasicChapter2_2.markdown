@@ -1,8 +1,8 @@
 ---
 title:  "TensorFlow의 설치및 기본적인 operations (new)"
 date:   2018-12-29 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

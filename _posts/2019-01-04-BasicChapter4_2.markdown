@@ -1,8 +1,8 @@
 ---
 title:  "Linear Regression 의 cost 최소화의 TensorFlow 구현"
 date:   2019-01-04 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

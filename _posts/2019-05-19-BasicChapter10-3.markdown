@@ -1,8 +1,8 @@
 ---
 title:  "딥넷트웍 학습 시키기 (backpropagation)"
 date:   2019-05-19 00:00:03
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 
