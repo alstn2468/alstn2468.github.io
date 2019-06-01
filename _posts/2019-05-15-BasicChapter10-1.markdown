@@ -1,8 +1,8 @@
 ---
 title:  "XOR 문제 딥러닝으로 풀기"
 date:   2019-05-15 00:00:03
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

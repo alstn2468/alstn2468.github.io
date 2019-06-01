@@ -1,8 +1,8 @@
 ---
 title:  "Multinomial 개념 소개"
 date:   2019-02-01 00:00:01
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

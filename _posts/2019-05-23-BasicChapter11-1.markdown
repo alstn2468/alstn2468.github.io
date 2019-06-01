@@ -1,8 +1,8 @@
 ---
 title:  "XSigmoid 보다 ReLU가 더 좋아"
 date:   2019-05-23 00:00:03
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

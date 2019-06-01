@@ -1,8 +1,8 @@
 ---
 title:  "Linear Regression의 cost 최소화 알고리즘의 원리"
 date:   2019-01-02 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

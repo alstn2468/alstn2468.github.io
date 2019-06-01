@@ -1,8 +1,8 @@
 ---
 title:  "학습 rate, Overfitting, 그리고 일반화 (Regularization)"
 date:   2019-04-30 00:00:01
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 

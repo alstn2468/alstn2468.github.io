@@ -1,8 +1,8 @@
 ---
 title:  "Linear Regression의 Hypothesis 와 cost"
 date:   2018-12-30 01:41:23
-categories: [Machine Learnnig]
-tags: [Machine Learnnig, Deep Learnnig, Data Science]
+categories: [Machine Learning]
+tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
 ---
 
