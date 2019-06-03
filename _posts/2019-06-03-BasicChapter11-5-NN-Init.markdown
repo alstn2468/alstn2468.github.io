@@ -47,7 +47,7 @@ X = tf.placeholder(tf.float32, [None, 784])
 Y = tf.placeholder(tf.float32, [None, 10])
 ```
 
-### 신경망을 위한 가중치와 바이어스 선언
+### Neural Network 구성
 **Xavier Initialization**사용<br/>
 **Weight**을 저장할 변수를 선언할 때 `initializer`속성에<br/>
 `tf.contrib.layers.xavier_initializer()`를 적용하면 된다.
