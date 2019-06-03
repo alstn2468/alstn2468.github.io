@@ -29,10 +29,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ```
 
-
-### Neural Network for MNIST
-
-#### 상수 정의
+### 상수 정의
 
 
 ```python
@@ -41,7 +38,7 @@ training_epochs = 15
 batch_size = 100
 ```
 
-#### 입력값 placeholder 선언
+### 입력값 placeholder 선언
 
 
 ```python
@@ -49,7 +46,7 @@ X = tf.placeholder(tf.float32, [None, 784])
 Y = tf.placeholder(tf.float32, [None, 10])
 ```
 
-#### 신경망을 위한 가중치와 바이어스 선언
+### 신경망을 위한 가중치와 바이어스 선언
 
 
 ```python
@@ -66,7 +63,7 @@ b3 = tf.Variable(tf.random_normal([10]))
 hypothesis = tf.matmul(L2, W3) + b3
 ```
 
-#### 손실함수와 최적화 방법 정의
+### 손실함수와 최적화 방법 정의
 
 
 ```python
@@ -78,7 +75,7 @@ cost = tf.reduce_mean(
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 ```
 
-#### Session 초기화
+### Session 초기화
 
 
 ```python
@@ -86,7 +83,7 @@ sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 ```
 
-#### 모델 학습 진행
+### 모델 학습 진행
 
 
 ```python
@@ -123,7 +120,7 @@ print('Learning Finished!')
     Learning Finished!
 
 
-#### 모델 테스트 및 정확도 확인
+### 모델 테스트 및 정확도 확인
 
 
 ```python
@@ -140,7 +137,7 @@ print(
     Accuracy: 0.9459
 
 
-#### 임의의 정수 예측하기
+### 임의의 정수 예측하기
 
 
 ```python
@@ -158,7 +155,7 @@ print(
     Prediction:  [9]
 
 
-#### 예측한 정수 그리기
+### 예측한 정수 그리기
 
 
 ```python
