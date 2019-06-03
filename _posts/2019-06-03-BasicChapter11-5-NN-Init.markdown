@@ -1,5 +1,5 @@
 ---
-title:  "Xavier Initialization으로 정확도 높이기"
+title:  "가중치 초기화로 MNIST 정확도 높이기"
 date:   2019-06-03 00:00:04
 categories: [Machine Learning]
 tags: [Machine Learning, Deep Learning, Data Science]
@@ -163,7 +163,7 @@ print(
 
     Accuracy: 0.9769
 
-**Weight**을 초기화하지 않았을 때 보다 **3%**증가
+**Weight**을 초기화하지 않았을 때 보다 **3%**증가했다.
 
 ### 임의의 정수 예측하기
 
