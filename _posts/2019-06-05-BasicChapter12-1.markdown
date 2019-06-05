@@ -1,6 +1,6 @@
 ---
 title:  "ConvNet의 Conv 레이어 만들기"
-date:   2019-06-03 00:00:03
+date:   2019-06-05 00:00:03
 categories: [Machine Learning]
 tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
