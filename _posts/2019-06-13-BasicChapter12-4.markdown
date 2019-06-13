@@ -27,7 +27,7 @@ Filter로 $$5 \times 5$$크기의 **Filter**로 **1**의 크기의 **Stride**사
 
 입력값 : $$227 \times 227 \times 3 $$의 컬러 이미지<br/>
 첫번째 Layer : **CNN** (96개의 $$11 \times 11$$크기, Stride가 4인 Filter)<br/>
-출력값의 크기: $$55 \times 55 \times 96$$
+출력값의 크기: $$55 \times 55 \times 96$$<br/>
 첫 번쨰 Layer의 Parameter : $$(11 \times 11 \times 3) \times 96 = 35K$$<br/>
 
 두 번쨰 Layer : Pooling Layer($$3 \times 3$$크기, Stride가 2인 Filter)<br/>
