@@ -89,3 +89,37 @@ Filter로 $$5 \times 5$$크기의 **Filter**로 **1**의 크기의 **Stride**사
 **Szegedy** et al (2014)<br/>
 **Inception Moudle**이라는 것을 사용했다.<br/>
 <img src="/assets/2019-06-13/12.png" width="700" height="auto" alt="아직 안만듬"><br/>
+
+<br/>
+
+### ResNet
+**He** et al (2015)<br/>
+152개의 Layer에 **Fastforward**사용<br/>
+실제 Layer는 많지만 실제 학습되는 Layer는 깊지 않다.<br/>
+잘 동작하지만 왜 잘되는지는 알지 못한 상태다.<br/>
+
+<br/>
+
+### CNN for Sentence Classfiation
+**Yoon Kim** (2014)<br/>
+자연어 처리 분야에 CNN을 사용<br/>
+
+<br/>
+
+### AlphaGo
+**DeepMind**<br/>
+흔히 잘 알고있는 AlphaGo도 CNN을 사용<br/>
+
+- Policy Network
+
+입력값 : **[$$19 \times 19 \times 48$$]**<br/>
+$$19 \times 19$$는 바둑판의 크기, 48개의 Feature<br/>
+
+CONV1 : 192 $$5 \times 5$$ Filters, strid 1, pad 2<br/>
+CONV1의 출력값은 **[$$19 \times 19 \times 192$$]**<br/>
+
+CONV2 ~ 12 : 192 $$3 \times 3$$ Filters, strid 1, pad 1<br/>
+CONV2 ~ 12의 출력값은 **[$$19 \times 19 \times 192$$]**<br/>
+
+CONV : 1 $$1 \times 1$$ Filters, strid 1, pad 0<br/>
+CONV의 출력값은 **[$$19 \times 19 $$]**<br/>
