@@ -1,6 +1,6 @@
 ---
 title:  "ConvNet을 TensorFlow로 구현하자 (MNIST)"
-date:   2019-07-20 00:00:04
+date:   assets/2019-07-20/ 00:00:04
 categories: [Machine Learning]
 tags: [Machine Learning, Deep Learning, Data Science]
 comments: true
@@ -12,7 +12,7 @@ comments: true
 <br/>
 
 ### 사용할 CNN 구성
-<img src="/2019-07-20/13.png" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="/assets/2019-07-20//13.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
 1. Conv Layer 1
 2. Pooling Layer 1
@@ -240,4 +240,4 @@ plt.imshow(
 plt.show()
 ```
 
-<img src="/2019-07-20/2019-07-20/output_27_0.png" width="200" height="auto" alt="아직 안만듬"><br/>
+<img src="/assets/2019-07-20//assets/2019-07-20//output_27_0.png" width="200" height="auto" alt="아직 안만듬"><br/>
