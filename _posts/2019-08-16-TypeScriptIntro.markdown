@@ -70,6 +70,7 @@ const greet = (name: string, age: number): string => {
   return `Hello ${name} you are ${age} years old`;
 };
 console.log(greet("Minsu", 21));
+// Hello Minsu you are 21 years old
 ```
 
 위의 함수는 **Parameter**로 `string`하나와 `number`하나를 받고<br/>
