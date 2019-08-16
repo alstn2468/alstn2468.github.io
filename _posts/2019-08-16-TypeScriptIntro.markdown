@@ -9,9 +9,8 @@ comments: true
 ## TypeScript란?
 
 **자바스크립트 대체 언어**의 하나로써 **자바스크립트의 상위확장**이다.<br/>
-C#의 창시자인 덴마크 출신 소프트웨어 엔지니어 Anders Hejlsberg(아네르스 하일스베르)가<br/>
-개발을 주도한 **TypeScript**는 Microsoft에서 2012년 발표한 **오픈소스**로,<br/>
-**정적 타이핑**을 지원하며 ES6(ECMAScript 2015)의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다.
+**TypeScript**는 Microsoft에서 2012년 발표한 **오픈소스**로<br/>
+**정적 타이핑**을 지원하며 ES6의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다.<br/>
 
 ## JavaScript와 차이
 
@@ -75,7 +74,6 @@ console.log(greet("Minsu", 21));
 
 위의 함수는 **Parameter**로 `string`하나와 `number`하나를 받고<br/>
 `string`을 반환하도록 명시되어있는 함수다.<br/>
-위의 함수에서 `string`을 반환하지 않고 아래와 같이 사용한다면 에러가 발생한다.<br/>
 
 ```typescript
 // const greet = (name: string, age: number): string => {
@@ -83,4 +81,5 @@ console.log(greet("Minsu", 21));
 // };
 ```
 
+이전의 함수를 `string`을 반환하지 않고 위와 같이 사용한다면 에러가 발생한다.<br/>
 이러한 **TypeScript**의 **정적 타이핑**은 개발자들이 쉽게 할 수 있는 실수를 줄여줄 것이다.
