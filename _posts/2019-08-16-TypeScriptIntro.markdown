@@ -10,7 +10,7 @@ comments: true
 
 **자바스크립트 대체 언어**의 하나로써 **자바스크립트의 상위확장**이다.<br/>
 **TypeScript**는 Microsoft에서 2012년 발표한 **오픈소스**로<br/>
-**정적 타이핑**을 지원하며 ES6의 클래스, 모듈 등과 ES7의 Decorator 등을 지원한다.<br/>
+**정적 타이핑**을 지원하며 ES6의 클래스, 모듈 등과 ES7의 Decorator 등을 지원<br/>
 
 ## JavaScript와 차이
 
