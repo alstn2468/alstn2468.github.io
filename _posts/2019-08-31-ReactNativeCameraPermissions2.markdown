@@ -45,8 +45,8 @@ componentDidMount = async () => {
 
 <img src="/assets/2019-08-31/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
-첫번째 `object`는 `componentDidMount`가 실행되기 전 초기의 상태이고<br>
-두번째 `object`는 `componentDidMount`가 실행된 후의 상태이다.<br>
+첫번째 `object`는 `componentDidMount`가 **실행**되기 **전** 초기의 상태이고<br>
+두번째 `object`는 `componentDidMount`가 **실행**된 **후**의 상태이다.<br>
 이로써 우리는 **권한 여부**에 따라 화면을 조절할 수 있는 `state`를 갖게 되었다.
 
 ## 6. 권한에 따라 다른 화면 보여주기
