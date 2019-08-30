@@ -6,9 +6,7 @@ tags: [React Native, JavaScript, ES6, React, Front-End, Application]
 comments: true
 ---
 
-## React Native로 카메라 사용하기 (1)
-
-### Dependencies
+## Dependencies
 
 -   expo
 -   react
@@ -19,7 +17,7 @@ comments: true
 
 모든 모듈의 버전은 **최신 버전** 기준 입니다.
 
-### 1. 프로젝트 생성하기
+## 1. 프로젝트 생성하기
 
 ```shell
 expo init <프로젝트 이름>
@@ -28,12 +26,12 @@ expo init <프로젝트 이름>
 -   Template는 `blank`를 선택합니다.
 -   `name`과 `slug`는 임의로 작성합니다.
 
-### 2. App.js 변경하기
+## 2. App.js 변경하기
 
 `function` 기반의 메인 `App.js`를 `class` 기반으로 변경 합니다.<br>
 `React`의 `Component`를 상속하는 `class`를 만들어줍니다.
 
-#### 변경 전
+### 변경 전
 
 ```javascript
 export default function App() {
@@ -45,7 +43,7 @@ export default function App() {
 }
 ```
 
-#### 변경 후
+### 변경 후
 
 ```javascript
 export default class App extends React.Component {
@@ -61,12 +59,12 @@ export default class App extends React.Component {
 
 `npm start` 또는 `yarn start`를 해 잘 작동하는지 확인합니다.
 
-#### 동작 테스트
+### 동작 테스트
 
 아래와 같이 잘 동작하는 것을 확인할 수 있습니다.<br>
 <img src="/assets/2019-08-30/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-### 3. 필요한 모듈 import 하기
+## 3. 필요한 모듈 import 하기
 
 아래와 같이 필요한 모듈들을 추가해줍니다.
 
@@ -78,7 +76,7 @@ import { Camera } from "expo-camera";
 import styled from "styled-components";
 ```
 
-### 4. 카메라 접근 권한 얻기
+## 4. 카메라 접근 권한 얻기
 
 `App`클래스 내부에 **권한**을 갖는지 확인하는 `state`를 선언합니다.<br>
 초기값은 `null`로 설정해줍니다.
@@ -101,9 +99,9 @@ componentDidMount = async () => {
 };
 ```
 
-#### 동작 테스트
+### 동작 테스트
 
-#### 주의 사항
+### 주의 사항
 
 -   권한 설정을 한번 **승인(거부)**하면 다시 팝업이 뜨지 않습니다.
 
