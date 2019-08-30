@@ -66,7 +66,7 @@ export default class App extends React.Component {
 #### 동작 테스트
 
 아래와 같이 잘 동작하는 것을 확인할 수 있습니다.<br>
-<img src="/assets/2019-08-30/1.PNG" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="/assets/2019-08-30/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ### 3. 필요한 모듈 import 하기
 
@@ -109,9 +109,9 @@ componentDidMount = async () => {
 
 -   권한 설정을 한번 **승인(거부)**하면 다시 팝업이 뜨지 않습니다.
 
-<img src="/assets/2019-08-30/2.PNG" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="/assets/2019-08-30/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-<img src="/assets/2019-08-30/3.PNG" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="/assets/2019-08-30/3.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
 카메라 사용 권한을 허락하면 `status`가 **granted**가 되는 것을 확인할 수 있다.<br>
 
