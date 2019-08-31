@@ -143,6 +143,8 @@ const { width, height } = Dimensions.get("window");
 
 `hasPermission`이 `true`인 부분을 아래와 같이 변경한다.<br>
 
+{% row %}
+
 ```javascript
 if (hasPermission === true) {
     return (
@@ -159,6 +161,8 @@ if (hasPermission === true) {
     );
 }
 ```
+
+{% endrow %}
 
 ### 작동 테스트
 
