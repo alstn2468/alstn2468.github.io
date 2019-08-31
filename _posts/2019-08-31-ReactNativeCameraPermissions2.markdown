@@ -8,6 +8,8 @@ comments: true
 
 ## 지난 포스트 Review
 
+[[이전 포스트로 이동]](https://alstn2468.github.io/2019/ReactNativeCameraPermissions/)
+
 1. 프로젝트 **생성**하기
 2. `App.js` 수정하기
 3. 필요한 **모듈 추가**하기
