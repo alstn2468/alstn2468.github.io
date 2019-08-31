@@ -275,11 +275,11 @@ export default class App extends React.Component {
 
 ### 사진을 찍는 함수 작성하기
 
-**1.** `Camera`에 전달된 `ref`가 존재하는지 확인한다.<br>
-**2.** `takePictureAsync`함수를 사용해 사진을 찍는다.<br>
-**3.** 사진 객체를 **Destructuring**해 `uri`를 가져와 확인한다.<br>
-**4.** `uri`가 존재할 경우 `savePhoto`함수를 사용해 저장한다.<br>
-**5.** 에러가 발생할 경우 띄워주고 **다시** 얼굴을 찾도록 `state` 변경<br>
+1. `Camera`에 전달된 `ref`가 존재하는지 확인한다.
+2. `takePictureAsync`함수를 사용해 사진을 찍는다.
+3. 사진 객체를 **Destructuring**해 `uri`를 가져와 확인한다.
+4. `uri`가 존재할 경우 `savePhoto`함수를 사용해 저장한다.
+5. 에러가 발생할 경우 띄워주고 **다시** 얼굴을 찾도록 `state` 변경
 
 ```javascript
 takePhoto = async () => {
@@ -319,13 +319,13 @@ const ALBUM_NAME = "Smiley Cam";
 
 아래와 같이 `savePhoto`함수를 작성한다.<br>
 
-**1.** `askAsync`를 사용해 카메라 권한이 있는지 확인한다.<br>
-**2.** `createAssetAsync`를 사용해 `asset`생성한다.<br>
-**3.** `getAlbumAsync`를 사용해 선언한 앨범의 이름을 가져온다.<br>
-**4.** 앨범이 존재하지 않을 경우 `createAlbumAsync`를 사용해 생성 및 사진 저장<br>
-**5.** 앨범이 존재할 경우 `addAssetsToAlbumAsync`를 사용해 사진 저장<br>
-**6.** 2초 뒤 `smileDetected`를 `false`로 변경해 다시 사진 촬영 가능<br>
-**7.** 권한이 없을 경우 권한을 설정하도록 `hasPermission`을 `false`로 변경<br>
+1. `askAsync`를 사용해 카메라 권한이 있는지 확인한다.
+2. `createAssetAsync`를 사용해 `asset`생성한다.
+3. `getAlbumAsync`를 사용해 선언한 앨범의 이름을 가져온다.
+4. 앨범이 존재하지 않을 경우 `createAlbumAsync`를 사용해 생성 및 사진 저장
+5. 앨범이 존재할 경우 `addAssetsToAlbumAsync`를 사용해 사진 저장
+6. 2초 뒤 `smileDetected`를 `false`로 변경해 다시 사진 촬영 가능
+7. 권한이 없을 경우 권한을 설정하도록 `hasPermission`을 `false`로 변경
 
 ```javascript
 savePhoto = async uri => {
