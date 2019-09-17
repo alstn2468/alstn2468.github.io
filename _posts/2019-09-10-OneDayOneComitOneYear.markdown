@@ -1,6 +1,6 @@
 ---
 title: "1일 1커밋 1주년 회고"
-date: 2019-09-01 00:00:05
+date: 2019-09-10 00:00:05
 categories: [React Native]
 tags: [Develope, Github, Developer, Reminiscence, 1Day 1Commit]
 comments: true
