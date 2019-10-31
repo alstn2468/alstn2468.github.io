@@ -90,4 +90,4 @@ a(function(resultFromA) {
 });
 ```
 
-해결 방법으로는 `Promise`와 `Async Func`이 존재한다.<br>
+해결 방법으로는 `Promise`와 `Async - Await Func`이 존재한다.<br>
