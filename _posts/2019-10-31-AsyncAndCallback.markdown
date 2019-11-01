@@ -6,8 +6,6 @@ tags: [Javascript, React, 멋쟁이 사자처럼, 문법]
 comments: true
 ---
 
-<br>
-
 ### Asynchronous (비동기성)
 
 -   절차적으로 진행되지 않는 특성

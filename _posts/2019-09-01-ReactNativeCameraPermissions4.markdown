@@ -6,8 +6,6 @@ tags: [React Native, JavaScript, ES6, React, Front-End, Application]
 comments: true
 ---
 
-<br>
-
 ## 지난 포스트 Review
 
 [[이전 포스트로 이동]](https://alstn2468.github.io/2019/ReactNativeCameraPermissions3/)

@@ -6,8 +6,6 @@ tags: [React Native, JavaScript, ES6, React, Front-End, Application]
 comments: true
 ---
 
-<br>
-
 ## Dependencies
 
 -   expo

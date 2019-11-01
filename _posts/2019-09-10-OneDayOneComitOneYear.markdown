@@ -6,8 +6,6 @@ tags: [Develope, Github, Developer, Reminiscence, 1Day 1Commit]
 comments: true
 ---
 
-<br>
-
 ## 1일 1커밋 1주년 달성
 
 <img src="/assets/2019-09-10/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
