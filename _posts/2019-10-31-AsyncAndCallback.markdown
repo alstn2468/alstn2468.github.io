@@ -2,7 +2,7 @@
 title: "Async와 Callback"
 date: 2019-10-31 00:00:05
 categories: [Javascript]
-tags: [Javascript, React, 멋쟁이 사자처럼, 문법]
+tags: [Javascript, React, 멋쟁이 사자처럼, ES6]
 comments: true
 ---
 
