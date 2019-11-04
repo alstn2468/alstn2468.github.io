@@ -6,7 +6,7 @@ tags: [Javascript, React, 멋쟁이 사자처럼, ES6]
 comments: true
 ---
 
-### Promise
+## Promise
 
 언젠가 해결될 것이라는 **약속**이라는 뜻<br>
 
@@ -17,7 +17,7 @@ new Promise((resolve, reject) => {});
 `then`이나 `catch`를 사용해서 **성공**하거나 **실패**했을 때에<br>
 나온 결과를 이후에 **동기적**으로 처리하도록 한다.<br>
 
-#### Promise 사용 이전
+### Promise 사용 이전
 
 ```javascript
 function sayHello(name, byeCallback) {
@@ -32,7 +32,7 @@ sayHello("Mike", function() {
 });
 ```
 
-#### Promise 사용 이후
+### Promise 사용 이후
 
 여기에서 `resolve`는 처리에 성공했을 때 실행되는 `callback`함수이고<br>
 `reject`는 처리에 실패했을 때 실행되는 `callback`함수다.<br>
@@ -59,7 +59,7 @@ sayHello("Frank").then(() => console.log("안녕히 가세요."));
 
 <img src="/assets/2019-11-02/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-#### Promise 활용하기
+### Promise 활용하기
 
 아래와 같이 `resolve`와 `reject`함수에도 **값을 넘길 수 있으며**<br>
 아래처럼 특정 조건에 따라 **성공**, **실패**를 나누어 사용 가능하다.<br>
@@ -94,7 +94,7 @@ sayHello("Mike")
 
 <img src="/assets/2019-11-02/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-### Async - Await
+## Async - Await
 
 `then`을 조금 더 직관적으로 사용하고 싶을 때 사용하는 방식<br>
 아래와 같은 기본적인 구조로 `async`, `await`을 사용한다.<br>
@@ -108,7 +108,7 @@ async function_name(p) {
 여기서 `get_result`함수는 **비동기적**으로 실행되는 함수이며<br>
 `await`키워드를 붙여 호출하게 되면 해당 함수가 **끝날때 까지 기다린다**.<br>
 
-#### 예제
+### 예제
 
 **비동기적**으로 처리되는 `sayHelloAsync`함수가 아래와 같이 정의되어 있다.<br>
 `async`, `await`을 사용하기 위해 `async`키워드를 사용한 함수 `sayByeAsync`를 정의하고<br>
