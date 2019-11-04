@@ -21,6 +21,8 @@ comments: true
 위의 통계에서 `React`나 `Vue`같은 프레임워크는 **프론트엔드**를 위한 프레임워크고<br>
 `Express`나 `Spring`, `Django`는 **백 엔드**를 위한 웹 프레임워크다.<br>
 
+<br>
+
 ### React의 장점
 
 #### 선언형
@@ -48,9 +50,10 @@ comments: true
 
 <img src="/assets/2019-11-04/2.png" width="400" height="auto"><br>
 
-
 위의 **DOM**은 `body`는 `h1`과 `div`가 묶여있고 `div`는 `p`두개와 묶여있는 구조를 갖는다.<br>
 따라서 **DOM**은 거대한 **트리 구조**로 되어있고 웹에서 동작하는 형태다.<br>
+
+<br>
 
 ### 컴포넌트란?
 
@@ -70,6 +73,8 @@ comments: true
 
 **DOM**은 `HTML`문서의 구조 자체며 **컴포넌트**는 그 구조를 **추상화**한 것이다.<br>
 
+<br>
+
 ### 이전 웹에서의 DOM과 Component
 
 웹은 각각의 컴포넌트를 거치며 데이터를 가지고 오며 페이지를 구성한다.<br>
@@ -77,6 +82,8 @@ comments: true
 **처음으로 돌아가** 다시 모든 컴포넌트를 거치며 **새로 페이지를 구성**한다.<br>
 
 <img src="/assets/2019-11-04/4.png" width="500" height="auto"><br>
+
+<br>
 
 ### React에서의 DOM과 Component
 
