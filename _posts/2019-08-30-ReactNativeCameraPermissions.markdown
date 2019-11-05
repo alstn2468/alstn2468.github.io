@@ -6,6 +6,8 @@ tags: [React Native, JavaScript, ES6, React, Front-End, Application]
 comments: true
 ---
 
+해당 포스트는 [Nomad Coder](https://academy.nomadcoders.co/courses/category/KR)의 초보를 위한 RN강의를 정리한 내용입니다.<br>
+
 ## Dependencies
 
 -   expo
