@@ -85,7 +85,7 @@ npm start
 <img src="/assets/2019-11-07/7.png" width="600" height="auto"><br>
 
 이 코드의 핵심 부분은 아래와 같다.<br>
-`ReactDom`이 `App`컴포넌트를 `document`의 `id`가 `root`인 태그안에 **랜더링**한다는 의미다.<br>
+`ReactDom`이 `App`을 `document`의 `id`가 `root`인 태그안에 **랜더링**한다는 의미다.<br>
 
 ```javascript
 ReactDOM.render(<App />, document.getElementById("root"));
