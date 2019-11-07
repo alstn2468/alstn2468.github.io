@@ -2,7 +2,7 @@
 title: "React앱 생성 및 구조 이해하기"
 date: 2019-11-07 00:00:05
 categories: [Javascript]
-tags: [Javascript, React, 멋쟁이 사자처럼, ES6, DOM, Web Component]
+tags: [Javascript, React, 멋쟁이 사자처럼, Web Component]
 comments: true
 ---
 
