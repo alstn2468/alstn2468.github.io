@@ -80,12 +80,12 @@ npm start
 
 ## index.js
 
-`index.html`과 이름이 비슷한 `index.js`를 보면 아래의 코드가 작성되어있는 것을 볼 수 있다.<br>
+`index.html`과 이름이 비슷한 `index.js`를 보면 아래의 코드가 작성되어 있다.<br>
 
 <img src="/assets/2019-11-07/7.png" width="600" height="auto"><br>
 
 이 코드의 핵심 부분은 아래와 같다.<br>
-`ReactDom`이 `App`컴포넌트를 `document`에서 `id`값이 `root`인 태그안에 **랜더링** 해준다는 의미다.<br>
+`ReactDom`이 `App`컴포넌트를 `document`의 `id`가 `root`인 태그안에 **랜더링**한다는 의미다.<br>
 
 ```javascript
 ReactDOM.render(<App />, document.getElementById("root"));
@@ -144,7 +144,7 @@ import "./App.css";
 
 -   이름이 `App`인 **함수형 컴포넌트**
 
-```javascript
+```jsx
 function App() {
     return (
         <div className="App">
