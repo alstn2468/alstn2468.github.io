@@ -37,7 +37,7 @@ function App() {
     return (
         <div className="App">
             <h1>Hello World!</h1>
-            <h2>ReactJS 둘러보기</h2>
+            <h2>ReactJS ...</h2>
         </div>
     );
 }
@@ -58,7 +58,7 @@ function App() {
     return (
         <div className="App">
             <h1 style={{ color: "red" }}>Hello World!</h1>
-            <h2>ReactJS 둘러보기</h2>
+            <h2>ReactJS ...</h2>
         </div>
     );
 }
@@ -84,7 +84,7 @@ function App() {
     return (
         <div className="App">
             <h1 style={headerStyle}>Hello World!</h1>
-            <h2>ReactJS 둘러보기</h2>
+            <h2>ReactJS ...</h2>
         </div>
     );
 }
@@ -116,7 +116,7 @@ function App() {
     return (
         <div className="App">
             <h1 style={headerStyle}>Hello World!</h1>
-            <h2 className={"titleStyle"}>ReactJS 둘러보기</h2>
+            <h2 className={"titleStyle"}>ReactJS ...</h2>
         </div>
     );
 }
