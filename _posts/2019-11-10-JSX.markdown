@@ -27,6 +27,8 @@ npx create-react-app my-app
 
 앱 생성이 완료되었다면 `App.js`파일을 아래와 같이 수정합니다.<br>
 
+{% raw %}
+
 ```javascript
 import React from "react";
 import "./App.css";
@@ -43,11 +45,15 @@ function App() {
 export default App;
 ```
 
+{% endraw %}
+
 ### h1 태그에 스타일 입혀보기
 
 `App.js`에서 `App`함수를 아래와 같이 수정한다.<br>
 
-```jsx
+{% raw %}
+
+```javascript
 function App() {
     return (
         <div className="App">
@@ -57,6 +63,8 @@ function App() {
     );
 }
 ```
+
+{% endraw %}
 
 `style={{...}}`에서 첫번째 **중괄호**는 JS코드가 들어간 다는 것을 의미를 갖고<br>
 그 안에있는 `{ color: "red }`는 하나의 스타일 정보를 가지고 있는 `Object`다.<br>
