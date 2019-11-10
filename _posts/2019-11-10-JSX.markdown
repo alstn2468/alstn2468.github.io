@@ -47,7 +47,7 @@ export default App;
 
 `App.js`에서 `App`함수를 아래와 같이 수정한다.<br>
 
-```javascript
+```jsx
 function App() {
     return (
         <div className="App">
