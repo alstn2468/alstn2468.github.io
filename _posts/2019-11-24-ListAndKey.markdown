@@ -80,7 +80,7 @@ function App() {
 
 아래와 같이 이전의 코드와 동일하게 작동하는 것을 확인할 수 있다.<br>
 
-<img src="./assets/2019-11-24/1.png" width="600" height="auto"><br>
+<img src="/assets/2019-11-24/1.png" width="600" height="auto"><br>
 
 ### Key
 
@@ -103,7 +103,7 @@ const WorldClockList = cityTimeData.map(cityTime => (
 
 위와 같이 `key`값에 1이라는 값을 넣었을 경우 아래와 같은 경고가 발생한다.<br>
 
-<img src="./assets/2019-11-24/2.png" width="600" height="auto"><br>
+<img src="/assets/2019-11-24/2.png" width="600" height="auto"><br>
 
 1의 키를 갖는 동일한 컴포넌트가 존재한다는 경고를 확인할 수 있다.<br>
 `map`함수에 작성한 `WorldClock`을 반환하는 함수에 `idx`를 추가로 받아<br>
@@ -121,7 +121,7 @@ const WorldClockList = cityTimeData.map((cityTime, idx) => (
 
 아래 처럼 각각의 컴포넌트에 `key`가 잘 전달된 것을 확인할 수 있다.<br>
 
-<img src="./assets/2019-11-24/3.png" width="300" height="auto"><br>
+<img src="/assets/2019-11-24/3.png" width="300" height="auto"><br>
 
 이러한 `Key`는 `React`에서 컴포넌트의 **추가**, **변경**, **삭제**를 확인하는데 사용한다.<br>
 **컴포넌트의 변화**가 발생하는 구간을 정확하고 빠르게 알기위해 사용하는 것이다.<br>
