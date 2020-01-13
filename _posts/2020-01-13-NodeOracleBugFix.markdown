@@ -11,8 +11,10 @@ comments: true
 처음들어간 회사에서 `node-oracledb`패키지가 필요한 프로젝트에 참여하게 되었다.<br/>
 프로젝트를 클론한 후 `npm install`명령어를 실행했지만 설치가 되지않고 오류가 발생했다.<br/>
 
-> oracledb ERR! NJS-067: a pre-built node-oracledb binary was not found for Node.js v12.14.1 (NODE_MODULE_VERSION=72) on win32 x64
-> oracledb ERR! Try compiling node-oracledb source code using https://oracle.github.io/node-oracledb/INSTALL.html#github
+```
+oracledb ERR! NJS-067: a pre-built node-oracledb binary was not found for Node.js v12.14.1 (NODE_MODULE_VERSION=72) on win32 x64
+oracledb ERR! Try compiling node-oracledb source code using https://oracle.github.io/node-oracledb/INSTALL.html#github
+```
 
 ### 오류 해결 방법
 
