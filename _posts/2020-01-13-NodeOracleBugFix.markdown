@@ -29,13 +29,13 @@ comments: true
 
 #### nvm으로 노드 버전 변경
 
-<img src="/assets/2020-01-13/nvm-install-use.png" width="600" height="auto"><br>
+<img src="/assets/2020-01-13/nvm-install-use.png" width="800" height="auto"><br>
 
 위와 같이 `nvm install 10.16.0`으로 `10.16.0`버전의 노드를 설치했다.<br>
 설치한 `10.16.0`버전의 `Node`를 사용하기 위해 `nvm use 10.16.0`명령어를 실행했다.
 
 ### node-oracledb 설치확인
 
-<img src="/assets/2020-01-13/install-success.png" width="600" height="auto"><br>
+<img src="/assets/2020-01-13/install-success.png" width="800" height="auto"><br>
 
 위의 스크린샷과 같이 모든 패키지가 문제없이 설치되는 것을 확인할 수 있다.
