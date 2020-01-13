@@ -23,7 +23,9 @@ oracledb ERR! Try compiling node-oracledb source code using https://oracle.githu
 `node-oracledb`패키지는 해당 버전을 지원하지 않는다.<br/>
 `node-oracledb`의 [설치 문서](https://oracle.github.io/node-oracledb/INSTALL.html)를 확인해보자.
 
-> Note Node.js 8.16, Node.js 10.16, or later is required.
+```
+Note Node.js 8.16, Node.js 10.16, or later is required.
+```
 
 위와 같이 필요한 `Node`의 버전이 명시되어 있는 것을 확인할 수 있다.<br/>
 나는 `Node`의 버전관리를 `nvm`을 활용해 하고있으므로<br/>
