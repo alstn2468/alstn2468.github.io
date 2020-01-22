@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Vanishing gradient를 해결하는 방법
+## Vanishing gradient를 해결하는 방법
 
 1. ReLU
 2. 초기 **Weight**값 설정
@@ -18,25 +16,19 @@ draft: false
 랜덤으로 **Weight**값 설정시 같은 코드를 실행시켜도<br/>
 **Cost**값이 변하는 것을 확인할 수 있다.
 
-<br/>
-
-### 모든 **Weight**값을 0으로 초기화해서 사용할 경우
+## 모든 **Weight**값을 0으로 초기화해서 사용할 경우
 
 **Chain rule**을 사용할 때 **Weight**값이 사용된다.<br/>
 **Weight**값이 0이게 되면 뒤의 모든 값이 0이되어서<br/>
 **Vanishing gradient**가 생긴다.
 
-<br/>
-
-### 어떻게 초기 Weight값을 설정할 것인가?
+## 어떻게 초기 Weight값을 설정할 것인가?
 
 - 무조건 **0**으로 설정하면 안된다.
 - "A Fast Learning Algorithm for Deep Belief Nets"<br/>
   논문에서 **R**estricted **B**oatman **M**achine(**RBM**) 사용
 
-<br/>
-
-### Restricted Boatman Machine (RBM)
+## Restricted Boatman Machine (RBM)
 
 RBM의 구조<br/>
 Reestriction : Layer안에서 연결이 없다.<br/>
@@ -59,9 +51,7 @@ Reestriction : Layer안에서 연결이 없다.<br/>
 **KL DIVERGENCE**은 거리를 구할때 사용하는 연산자다.<br/>
 **Encode**/**Decode**라고도 한다.
 
-<br/>
-
-### 어떻게 RBM이 작동하는가?
+## 어떻게 RBM이 작동하는가?
 
 앞의 2개의 Layer에서 **Encode**/**Decode**를<br/>
 반복하며 **Weight**값을 찾는다.<br/>
@@ -76,16 +66,14 @@ Reestriction : Layer안에서 연결이 없다.<br/>
 **Fine Tuning**이라고 부르는 이유는 데이터를<br/>
 많이 쓰지않고 빠르게 학습이 되기 떄문이다.
 
-<br/>
-
-### Good News
+## Good News
 
 - 복잡한 **RBM**을 사용하지 않아도된다.
 - 간단한 방법으로도 가능하다.
   - **Xavier initialization**
   - **He's initialization**
 
-#### Xavier/He initialization
+### Xavier/He initialization
 
 **좋은 Weight값을 선택**하고자 하는 기본적인 아이디어<br/>
 입력의 갯수(**fan_in**), 출력의 갯수(**fan_out**)에 따라 구하면 된다.<br/>

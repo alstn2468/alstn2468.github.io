@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Training and Test data sets
+## Training and Test data sets
 
 **Data Set**을 **Training Set**과 **Test Set**으로 나누어 진행<br/>
 
@@ -131,9 +129,7 @@ with tf.Session() as sess:
 **Test Set**을 예측한 값으로 모델 입장에서 한 번도<br/>
 **학습하지 않은 데이터**로 예측을한 의미가 있는 결과 값이다.
 
-<br/>
-
-### Large Learning Rate
+## Large Learning Rate
 
 Learning Rate가 너무 클경우
 
@@ -213,9 +209,7 @@ with tf.Session() as sess:
 Learning rate를 1.5로 올린 결과 **Overshooting**이<br/>
 발생해 학습이 잘 되지않은 모델이 생성되어 예측이 잘 되지않았다.
 
-<br/>
-
-### Learning Rate가 너무 작을 경우
+## Learning Rate가 너무 작을 경우
 
 - Many iterations
 - Local minima에 빠질 수 있다.
@@ -294,9 +288,7 @@ with tf.Session() as sess:
 Learning rate를 1e-10으로 낮추었더니,<br>
 cost가 줄어들지 않고 학습이 이루어지지 않은 결과가 생겼다.
 
-<br/>
-
-### Non-normalized inputs
+## Non-normalized inputs
 
 아래와 같이 데이터들 간의 차이가 큰 Data Set을 사용하면<br/>
 한쪽 방향으로 치우쳐진 **왜곡된 그래프**가 그려지게 된다.
@@ -310,8 +302,6 @@ cost가 줄어들지 않고 학습이 이루어지지 않은 결과가 생겼다
 | [819, 823, 1198100, 816]                     | [820.450012]        |
 | [811.700012, 815.25, 1098100, 809.780029]    | [813.669983]        |
 | [809.51001, 816.659973, 1398100, 804.539978] | [809.559998]        |
-
-<br/>
 
 ```python
 import numpy as np
@@ -418,7 +408,7 @@ for step in range(201):
 
 예측이 잘 되지않은 이유는 데이터가 **Normalized**되지 않았기 때문이다.
 
-### Normalized inputs (min-max scale)
+## Normalized inputs (min-max scale)
 
 ```python
 def min_max_scaler(data):

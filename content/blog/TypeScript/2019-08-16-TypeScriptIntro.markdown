@@ -11,7 +11,7 @@ draft: false
 
 ## JavaScript와 차이
 
-#### JavaScript
+### JavaScript
 
 ```javascript
 let hello = 'hello'
@@ -31,7 +31,7 @@ console.log(typeof hello) // number
 하지만 **TypeScript**에서는 아래와 같이 변수 선언을 할때<br/>
 **정적**으로 타입을 지정해 사용할 수 있다.<br/>
 
-#### TypeScript
+### TypeScript
 
 ```typescript
 let hello: string = 'hello'
@@ -48,7 +48,7 @@ console.log(typeof hello) // string
 이는 해당 변수를 사용할 때 사용자가 입력한 값이 유효한지 검사할 때<br>
 변수의 **Type**이 맞는지 검사하는 조건문을 줄여줄 수 있게된다.<br/>
 
-### 함수에서의 TypeScript
+## 함수에서의 TypeScript
 
 아래와 같이 함수의 **Parameter**의 타입을 정할 수 있다.<br/>
 지정한 **Type**과 다른 **Type**의 값이 들어온다면 실행되지 않을 것이다.<br/>

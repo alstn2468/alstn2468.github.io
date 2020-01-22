@@ -5,14 +5,12 @@ category: 'Reminiscence'
 draft: false
 ---
 
-### 1. 개발을 접한지 1년 + @
+## 1. 개발을 접한지 1년 + @
 
 처음 개발을 시작할 때만 하더라도 비전공자 였지만<br/>
 현재 전공자로서 공부하고 개발을 진행중.
 
-<br/>
-
-### 2. Github
+## 2. Github
 
 - [github.com/alstn2468](https://github.com/alstn2468)
 
@@ -22,9 +20,7 @@ draft: false
 
 <img src="/assets/2018-12-04-회고/1.jpg" width="300" height="auto">
 
-<br/>
-
-### 3. 순천향대 봇
+## 3. 순천향대 봇
 
 - [플러스 친구 링크](http://pf.kakao.com/_lxmrmC)
 
@@ -32,11 +28,9 @@ draft: false
 
 <img src="/assets/2018-12-04-회고/2.jpg" width="300" height="auto">
 
-<br/>
+## 4. 교내 창업 동아리
 
-### 4. 교내 창업 동아리
-
-#### 셔틀 웨어
+### 셔틀 웨어
 
 - `React Native`를 사용하여 개발 진행 중<br/>
 
@@ -45,40 +39,30 @@ draft: false
 
 <img src="/assets/2018-12-04-회고/3.jpg" width="300" height="auto">
 
-<br/>
-
-### 5. 데이터 사이언스
+## 5. 데이터 사이언스
 
 확실한 관심분야로 정해진 것 같다.<br/>
 겨울에는 **수학 + 딥러닝** 공부를 해야겠다.<br/>
 졸업 작품 또한 **딥러닝** 연계를 생각중 이다.<br/>
 
-<br/>
-
-### 6. NAVER CAMPUS HACKDAY
+## 6. NAVER CAMPUS HACKDAY
 
 혹시나 역시나 두번 다 떨어졌다🤐🤐<br/>
 더 **열심히** 공부하라는 계기가 됐으면한다.
 
-<br/>
-
-### 7. Python
+## 7. Python
 
 학교에서 항상 `C`언어로만 수업을 했었는데<br/>
 `Python`을 접한 후 이것저것 짜보고있다.<br/>
 쉬운 것은 잘 모르겠는데 확실히 **재미**있다.
 
-<br/>
-
-### 8. 천안고 메이저 데이
+## 8. 천안고 메이저 데이
 
 모교 후배들에게 **전공과 관련 강의**를 진행했다.<br/>
 전공자가 된지 일년도 안됐지만 후배들에게<br/>
 강의를 진행하게 되고 먼저 연락도 오고 뿌듯했다.<br/>
 
-<br/>
-
-### 9. 카카오와 함께하는 알고리즘 산책
+## 9. 카카오와 함께하는 알고리즘 산책
 
 제주도로 나름의 휴가(?)를 잘 다녀온듯하다.<br/>
 처음엔 강의를 들으려 방문했지만 생각보다 낮은 난이도에..<br/>
@@ -86,9 +70,7 @@ draft: false
 
 <img src="/assets/2018-12-04-회고/4.jpg" width="300" height="auto">
 
-<br/>
-
-### 10. 개발자 컨퍼런스 & 모임
+## 10. 개발자 컨퍼런스 & 모임
 
 - GDG Campus meet up
 - GDG DevFest 2018

@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### 머신러닝이란 무엇인가?
+## 머신러닝이란 무엇인가?
 
 - 일종의 **소프트웨어**
 - Limitations of explicit programming
@@ -18,9 +16,7 @@ draft: false
   - Automatic driving : too many rules
 - 개발자가 일일이 정하지 않고 프로그램 자체 **학습**
 
-<br/>
-
-### 러닝이란 무엇인가?
+## 러닝이란 무엇인가?
 
 - **Supervised Learning**(지도 학습)
 

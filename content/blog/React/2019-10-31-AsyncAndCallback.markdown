@@ -5,12 +5,12 @@ category: 'React'
 draft: false
 ---
 
-### Asynchronous (비동기성)
+## Asynchronous (비동기성)
 
 - 절차적으로 진행되지 않는 특성
 - 실행 결과가 반환되기 전에 다른 코드를 실행 가능
 
-#### 예제
+### 예제
 
 ```javascript
 setTimeout(() => {
@@ -25,7 +25,7 @@ console.log('안녕히가세요')
 
 <img src="/assets/2019-10-31/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-#### 비동기성의 이유
+### 비동기성의 이유
 
 - **자바스크립트**는 **웹**에 치중되어 있다.
 - 인터넷 **속도**에 **의존적**이다.
@@ -33,7 +33,7 @@ console.log('안녕히가세요')
 
 속도가 **느려도** **인터랙션**은 되어야 한다.<br>
 
-### Call back
+## Call back
 
 **다른 코드**의 **인수**로서 넘겨주는 실행 가능한 **코드**<br>
 **콜백**으로 넘겨받은 코드는 **즉시 실행**할 수도 있고, **나중에 실행**될 수도 있다.<br>
@@ -48,7 +48,7 @@ function doSomethingElseAsync(callback) {
 }
 ```
 
-#### 예제
+### 예제
 
 ```javascript
 function sayHello(sayGoodbye) {
@@ -66,7 +66,7 @@ sayHello(() => console.log('안녕히 가세요'))
 
 <img src="/assets/2019-10-31/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
-#### Callback Hell
+### Callback Hell
 
 **비동기 로직 처리**를 위해 **콜백 함수**를 **연속적으로 사용**할 때 발생하는 문제<br>
 아래와 같은 연속적인 **콜백 함수**의 사용으로 가독성을 해친다.<br>

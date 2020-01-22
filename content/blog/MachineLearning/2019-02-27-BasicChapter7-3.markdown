@@ -8,12 +8,10 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Softmax function
+## Softmax function
 
 `n`개의 값을 예측할 때 사용<br/>
-점수 -> Softmax function(점수) -> 확률<br/>
+점수 -> Softmax function(점수) $\to$ 확률<br/>
 `y_data`를 **One Hot Encoding**형식으로 사용
 
 ```python

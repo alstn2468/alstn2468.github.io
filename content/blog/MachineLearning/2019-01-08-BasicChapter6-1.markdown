@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Classification
+## Classification
 
 - **Binary**
 - 예시
@@ -18,9 +16,7 @@ draft: false
   - 패이스북 피드
   - 신용카드 부정 거래 감지
 
-<br/>
-
-### 0, 1 encoding
+## 0, 1 encoding
 
 - 스팸 메일 탐지
   - 스팸(**1**) or 햄(**0**)
@@ -29,23 +25,19 @@ draft: false
 - 신용카드 부정 거래 감지
   - 정당(**0**) or 부정(**1**)
 
-<br/>
-
-### Pass(1) / Fail(0) based on study hours
+## Pass(1) / Fail(0) based on study hours
 
 - `Linear Regression`으로도 가능한가?
   - 기울기가 낮아질 수 있어 올바른 예측 불가능
 - `Hypothesis`가 `1`보다 큰 값이나 `0`보다 작은 값을 줄 수도 있다.
 
-<br/>
-
-### Logistic Hypothesis
+## Logistic Hypothesis
 
 - **logistic function**, **sigmoid function**
 
-\begin{align}
-g(z) = \frac{1}{(1+e^{-z})} \\
-\end{align}
+$$
+g(z) = \dfrac{1}{(1+e^{-z})}
+$$
 
 - sigmoid
 
@@ -55,6 +47,6 @@ g(z) = \frac{1}{(1+e^{-z})} \\
 
 - **Logistic Hypothesis**
 
-\begin{align}
-H(X) = \frac{1}{1 + e^{-W^{T}X}} \\
-\end{align}
+$$
+H(X) = \dfrac{1}{1 + e^{-W^{T}X}}
+$$

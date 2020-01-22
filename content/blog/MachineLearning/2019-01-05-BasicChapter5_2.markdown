@@ -8,13 +8,11 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
+## Hypothesis using matrix
 
-### Hypothesis using matrix
-
-\begin{align}
-H(x_1, x_2, x_3) = x_1w_1 + x_2w_2 + x_3w_3 \\
-\end{align}
+$$
+H(x_1, x_2, x_3) = x_1w_1 + x_2w_2 + x_3w_3
+$$
 
 | x1  | x2  | x3  | Y   |
 | --- | --- | --- | --- |
@@ -101,17 +99,15 @@ for step in range(2001):
     Prediction:
      [150.5897  185.3251  180.47948 195.38242 143.36143]
 
- <br/>
+## Matrix
 
-### Matrix
+$$
+(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\w_2\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3)
+$$
 
-\begin{align}
-(x_1 x_2 x_3) \cdot \begin{pmatrix}w_1\\\w_2\\\w_3\end{pmatrix} = (x_1w_1 + x_2w_2 + x_3w_3) \\
-\end{align}
-
-\begin{align}
-H(X) = XW \\
-\end{align}
+$$
+H(X) = XW
+$$
 
 ```python
 x_data = [
@@ -170,56 +166,7 @@ for step in range(2001):
      [181.601  ]
      [197.4919 ]
      [138.17336]]
-    20 Cost: 7.187818
-    Prediction:
-     [[154.95755]
-     [182.20158]
-     [181.62575]
-     [197.51979]
-     [138.20421]]
-    30 Cost: 7.150592
-    Prediction:
-     [[154.94751]
-     [182.20862]
-     [181.62276]
-     [197.51749]
-     [138.21355]]
-    40 Cost: 7.1135874
-    Prediction:
-     [[154.93742]
-     [182.21553]
-     [181.61969]
-     [197.51506]
-     [138.22278]]
-    50 Cost: 7.07672
-    Prediction:
-     [[154.92738]
-     [182.22246]
-     [181.61665]
-     [197.51268]
-     [138.23204]]
-    ...
-    1960 Cost: 2.700992
-    Prediction:
-     [[153.4333 ]
-     [183.25021]
-     [181.16324]
-     [197.15027]
-     [139.6099 ]]
-    1970 Cost: 2.6879435
-    Prediction:
-     [[153.42735]
-     [183.2543 ]
-     [181.16145]
-     [197.14879]
-     [139.61542]]
-    1980 Cost: 2.6749604
-    Prediction:
-     [[153.42142]
-     [183.25839]
-     [181.15965]
-     [197.14731]
-     [139.62091]]
+     ...
     1990 Cost: 2.6620722
     Prediction:
      [[153.41551]

@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Ultimate Dream
+## Ultimate Dream
 
 **생각하는 기계**를 만드는 것<br/>
 
@@ -22,29 +20,23 @@ draft: false
 
 이것을 토대로 만들어진 것이 **활성화 함수** (**Activation Functions**)다.
 
-<br/>
+## Logistic regression uniuts
 
-### Logistic regression uniuts
-
-#### 소프트웨어
+### 소프트웨어
 
 <img src="/assets/2019-05-12/1.png" width="200" height="auto" alt="아직 안만듬">
 
-#### 하드웨어적
+### 하드웨어적
 
 - Perceptron(Frank Rosenblatt, ~1957)
 - Adaline/Madaline(Widrow and Hoff, ~1960)
 
-<br/>
-
-### AND/OR Problem
+## AND/OR Problem
 
 기계가 **AND/OR** 문제를 **예측**할 수 있는 것이 중요했다.<br/>
 **Linear**한 모델을 사용해서 **예측이 가능**하다.<br/>
 
-<br/>
-
-### XOR Problem
+## XOR Problem
 
 <img src="/assets/2019-05-12/2.png" width="400" height="auto" alt="아직 안만듬">
 
@@ -58,17 +50,13 @@ draft: false
 **XOR** 문제는 **Linear**한 모델로 예측이 **불가능**하다<br/>
 그래프에 어떠한 선을 그어도 결과를 찾을 수 없다.<br/>
 
-<br/>
-
-### Perceptrons (1969)
+## Perceptrons (1969)
 
 - Marvain Minsky (Founder of the MIT AI Lab)
 - 여러개의 신경망을 합친 **MLP**를 사용하면 해결할 수 있다.
 - 하지만 **Weight**과 **Bias**는 학습시킬 수 없다.
 
-<br/>
-
-### Backpropaagation
+## Backpropaagation
 
 - Paul Werbos (1974, 1982)
 - **Hinton** (1986)
@@ -76,9 +64,7 @@ draft: false
 - 값을 **뒤로 전달**하며 진행시키는 알고리즘
 - 더 복잡한 형태의 예측 가능
 
-<br/>
-
-### Convolutional Neural Networks
+## Convolutional Neural Networks
 
 - LeCun (1980)
 - 고양이의 신경망 세포를 관찰
@@ -86,9 +72,7 @@ draft: false
 - 이미지를 잘라서 **나중에 합치는 방법**으로 학습
 - 문자와 숫자를 인식하는데 **90% 이상** 정확도
 
-<br/>
-
-### A Big Problem
+## A Big Problem
 
 - **Backpropaagation**이 몇 개의 Layer에서 잘 동작
 - **10여개 이상**에서의 Layer에서 학습시킬 경우 **은닉**을<br/>

@@ -8,17 +8,15 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
+## Simplified hypothesis
 
-### Simplified hypothesis
+$$
+H(x) = Wx
+$$
 
-\begin{align}
-H(x) = Wx \\
-\end{align}
-
-\begin{align}
-cost(W) = \frac{1}{m}\sum\_{i=1}^m(Wx^{(i)} - y^{(i)})^2 \\
-\end{align}
+$$
+cost(W) = \dfrac{1}{m}\sum\_{i=1}^m(Wx^{(i)} - y^{(i)})^2
+$$
 
 ```python
 import tensorflow as tf
@@ -55,13 +53,11 @@ plt.show()
 
 <img src="/assets/2019-01-04-4_2/1.png" width="400" height="auto">
 
-<br/>
+## Gradient descent
 
-### Gradient descent
-
-\begin{align}
-W := W - a\frac{1}{m}\sum\_{i=1}^m(Wx^{(i)} - y^{(i)})x^{(i)} \\
-\end{align}
+$$
+W := W - a\dfrac{1}{m}\sum\_{i=1}^m(Wx^{(i)} - y^{(i)})x^{(i)}
+$$
 
 ```python
 import tensorflow as tf
@@ -120,9 +116,7 @@ for step in range(21):
     19 5.2067267e-10 [0.99998945]
     20 1.4516388e-10 [0.9999944]
 
-<br/>
-
-### Output when W = 5
+## Output when W = 5
 
 - **경사하강법**이 잘 되는지 테스트
 - 오른쪽에서 하강
@@ -181,9 +175,7 @@ for step in range(100):
     98 1.0
     99 1.0
 
-<br/>
-
-### Output when W = -3
+## Output when W = -3
 
 - **경사하강법**이 잘 되는지 테스트
 - 왼쪽에서 하강
@@ -242,9 +234,7 @@ for step in range(100):
     98 1.0
     99 1.0
 
-<br/>
-
-### Optional : compute_gradient and apply_gradient
+## Optional : compute_gradient and apply_gradient
 
 - Gradient를 수정하고 싶을 때 사용
 - `compute_gradients()`함수를 사용해 `cost`에 알맞는 `gradient` 계산
