@@ -8,14 +8,14 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
+## 필요한 모듈 import
 
 ```python
 import tensorflow as tf
 import numpy as np
 ```
 
-### XOR data set
+## XOR data set
 
 | A   | B   | X   |
 | --- | --- | --- |
@@ -24,13 +24,13 @@ import numpy as np
 | 1   | 0   | 1   |
 | 1   | 1   | 0   |
 
-#### Boolean Expression
+### Boolean Expression
 
 $$
 X = A \oplus B
 $$
 
-#### Logic Diagram Symbol
+### Logic Diagram Symbol
 
 <img src="/assets/2019-05-20/10.png" width="400" height="auto" alt="아직 안만듬">
 
@@ -61,7 +61,7 @@ y_data = np.array(
 
 <br/>
 
-### Logistic Regression으로 해결하기
+## Logistic Regression으로 해결하기
 
 **0**인지 **1**인지 예측하는 **Logistic Regression**사용<br/>
 $$X$$, $$Y$$에 맞게 **Weight**과 **Bias**를 결정해야한다.<br/>
@@ -79,10 +79,11 @@ b = tf.Variable(tf.random_normal([1]), name="bias")
 
 <br/>
 
-### Hypothesis
+## Hypothesis
 
 **Sigmoid** 함수 사용<br/>
-\begin{align} Sigmoid = \frac{1}{1+e^{-x}} \end{align}
+
+$Sigmoid = \dfrac{1}{1+e^{-x}}$
 
 **행렬 곱셉** 후 **Sigmoid Function**에 넣는다.
 
@@ -90,9 +91,7 @@ b = tf.Variable(tf.random_normal([1]), name="bias")
 hypothesis = tf.sigmoid(tf.matmul(X, W) + b)
 ```
 
-<br/>
-
-### Cost Function
+## Cost Function
 
 **Logistic Regression**의 **Cost Function**은 아래와 같다.<br/>
 
@@ -109,9 +108,7 @@ cost = -tf.reduce_mean(Y * tf.log(hypothesis) + (1 - Y) * tf.log(1 - hypothesis)
 train = tf.train.GradientDescentOptimizer(learning_rate=0.01).minimize(cost)
 ```
 
-<br/>
-
-### Training
+## Training
 
 위에 작성한 **Hypothesis**와 **Cost Function**을 사용해 학습을 진행<br/>
 `cast`함수를 사용해 **Hypothesis**의 값이 **0.5**보다 클경우 **True**로<br/>
@@ -179,9 +176,7 @@ with tf.Session() as sess:
 모델이 정확하고 문제가 없음에도 불구하고 정확도가 높지않다.<br/>
 정확도를 올리기 위해서 **Neural Network**를 사용하면 된다.
 
-<br/>
-
-### Using Neural Network
+## Using Neural Network
 
 여러개의 Layer를 사용하는 **NN**을 사용<br/>
 layer1의 결과물을 hypothesis에 넣어 한번더 학습시킨다.
@@ -214,9 +209,7 @@ $$ \bar{Y} $$이므로 **1개**이기 때문에 **weight**의 크기는 **[2. 1]
 | Layer1 | [2, 2] | [2]  |
 | Layer2 | [2, 1] | [1]  |
 
-<br/>
-
-### Training
+## Training
 
 2개의 Layer를 겹친 **Neural Network**를 이용해 한번 더 학습
 
@@ -273,9 +266,7 @@ with tf.Session() as sess:
 같은 **Hypothesis**와 **Cost Function**을 사용하였으나,<br/>
 2개의 Layer를 사용한 것만으로 **모든 값을 예측**하는데 성공하였다.
 
-<br/>
-
-### 전체적인 코드
+## 전체적인 코드
 
 ```python
 X = tf.placeholder(tf.float32, [None, 2])
@@ -313,9 +304,7 @@ with tf.Session() as sess:
     print(f"\nHypothesis:\n{h} \nPredicted:\n{p} \nAccuracy:\n{a}")
 ```
 
-<br/>
-
-### Deep Neural Network로 XOR 해결하기
+## Deep Neural Network로 XOR 해결하기
 
 ```python
 X = tf.placeholder(tf.float32, [None, 2])

@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### MNIST Dataset
+## MNIST Dataset
 
 손으로 숫자를 글씨 정보를 갖고있는 데이터 셋<br/>
 우체국에서 손으로 작성한 글씨를 판별하기 위해 만든 데이터 셋
@@ -39,9 +37,7 @@ W = tf.Variable(tf.random_normal([784, nb_classes]))
 b = tf.Variable(tf.random_normal([nb_classes]))
 ```
 
-<br/>
-
-### Softmax
+## Softmax
 
 ```python
 # Hypothesis (using softmax)
@@ -56,9 +52,7 @@ is_correct = tf.equal(tf.argmax(hypothesis, 1), tf.argmax(Y, 1))
 accuracy = tf.reduce_mean(tf.cast(is_correct, tf.float32))
 ```
 
-<br/>
-
-### Training epoch/batch
+## Training epoch/batch
 
 한번에 몇개씩 학습시킬시 결정하는 것이 **batch size**<br/>
 전체 데이터 셋을 한 번 다 도는 것을 **1epoch** 라고 한다.

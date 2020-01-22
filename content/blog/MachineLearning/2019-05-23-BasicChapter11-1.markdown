@@ -8,15 +8,13 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### 활성화 함수
+## 활성화 함수
 
 각 Unit 끝의 함수를 **Activation function**이라고 한다.<br/>
 **활성화 함수**는 출력값이 어떤 값보다 크면 작동하고<br/>
 어떤 값보다 작으면 작동하지 않는 함수를 의미한다.
 
-### Neural Network for XOR
+## Neural Network for XOR
 
 입력값은 공통적으로 $$X_1$$, $$X_2$$ 2개이므로<br/>
 첫번째 Layer의 크기는 `[2, n]`이 되어야하고 출력값은<br/>
@@ -55,7 +53,7 @@ hypothesis = tf.sigmoid(tf.matmul(L3, W3) + b3)
 
 안쪽에 보이지 않은 Layer를 **Hidden Layer**라고 한다.
 
-#### 9개의 Hidden Layer
+### 9개의 Hidden Layer
 
 **Input Layer** : `W1`<br/>
 **Hidden Layer** : `W2` ~ `W10`<br/>
@@ -117,9 +115,7 @@ NN의 맨 뒤에까지 가게 되면 **0과 매우 가까운 값**이 되는데<
 Layer의 깊이가 깊어질수록 최종 Layer근처의 경사는 나타나지만<br/>
 뒤쪽 Layer근처의 경사는 사라지게 되는 문제다.<br/>
 
-<br/>
-
-### Vanishing Gradient의 해결
+## Vanishing Gradient의 해결
 
 **Sigmoid Function**이 **Vanishing Gradient**문제가 발생<br/>
 **ReLU**라는 **Activation Function** 사용으로 문제를 해결<br/>
@@ -142,9 +138,7 @@ L1 = tf.nn.relu(tf.matmul(X, W1) + b1)
 `L11`만 **Sigmoid**를 사용하는 이유는<br/>
 **마지막 단**의 출력은 **0 ~ 1의 출력**을 얻어야하기 때문이다.
 
-<br/>
-
-### 활성화 함수의 종류
+## 활성화 함수의 종류
 
 - Sigmoid
 - tanh

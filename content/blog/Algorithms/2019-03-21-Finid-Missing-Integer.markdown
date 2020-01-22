@@ -5,7 +5,7 @@ category: 'Algorithms'
 draft: false
 ---
 
-### 문제
+## 문제
 
 1~N 까지 있는 정수 배열에 원소 하나가 없어졌습니다.<br/>
 없어진 원소의 값을 구하시오.<br/>
@@ -13,11 +13,11 @@ draft: false
 Given an integer array of 1~N except one number,<br/>
 find the missing integer.
 
-#### 입력
+### 입력
 
 이 문제는 입력 값이 없습니다.
 
-#### 출력
+### 출력
 
 ```
 This is Missing Integer : <사라진 정수값>
@@ -25,7 +25,7 @@ This is Missing Integer : <사라진 정수값>
 
 ---
 
-### 풀이
+## 풀이
 
 간단하게 문제를 해결할 수 있었다.<br/>
 1 ~ N까지가 저장되어 있는 배열에서<br/>
@@ -33,9 +33,7 @@ This is Missing Integer : <사라진 정수값>
 어떠한 정수 하나가 사라지게 되면<br/>
 값이 없어진 **배열의 합**을 구하여 이전의 배열에서 빼면 된다.
 
-<br/>
-
-### 코드 구현부
+## 코드 구현부
 
 임의의 정수 하나를 삭제하기 위하여 `random`을 추가
 
@@ -117,9 +115,7 @@ print("     |")
 
 정수 21과 23사이의 **22가 사라진 것**을 찾았다.
 
-<br/>
-
-### 전체 코드
+## 전체 코드
 
 전체 코드는 아래와 같다.
 
@@ -157,9 +153,7 @@ print("     |")
 
 ```
 
-<br/>
-
-### 분석
+## 분석
 
 `sum`함수의 **Time Complexity**는 **O(n)**이므로<br/>
 내가 해결한 방법은 **O(n)**이 되겠다.<br/>

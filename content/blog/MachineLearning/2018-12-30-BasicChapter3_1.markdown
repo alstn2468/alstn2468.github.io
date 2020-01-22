@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### 예시) 시험 점수의 예측 : Regression
+## 예시) 시험 점수의 예측 : Regression
 
 | x(hours) | y(score) |
 | -------- | -------- |
@@ -22,9 +20,7 @@ draft: false
 다음과 같은 **트레이닝 데이터**를 가지고 학습<br/>
 시간 값을 넣어 **0점 ~ 100점** 사이의 점수 예측
 
-<br/>
-
-### Regression (data)
+## Regression (data)
 
 - x : 예측을 하기위한 데이터, **feature**
 - y : 예측을 해야하는 값
@@ -46,9 +42,7 @@ x축이 `x`의 값을 표현하고 y축이 `y`의 값을 표현<br/>
 `w`와 `b`의 값에 따라 **선**이 결정된다.<br/>
 여러가지 선 중에서 어떠한 선이 **가장 알맞은지** 결정해야한다.
 
-<br/>
-
-### 무엇이 더 좋은가?
+## 무엇이 더 좋은가?
 
 <img src="/assets/2018-12-30-3_1/2.png" width="400" height="auto">
 

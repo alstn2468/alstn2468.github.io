@@ -8,34 +8,30 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Hypothesis and Cost function
+## Hypothesis and Cost function
 
 **Hypothesis**
 
 - 주어진 `x`값에 대하여 어떻게 값을 **예측**할 것인가
 
-\begin{align}
-H(x) = Wx + b \\
-\end{align}
+$$
+H(x) = Wx + b
+$$
 
 **Cost function**
 
 - 값을 얼마나 잘 **예측**했는지 나타나는 것
 - `Cost function`을 **가장 작게** 만드는 것이 **학습**
 
-\begin{align}
-cost(W,b) = \frac{1}{m}\sum\_{i=1}^m(H(x^{(i)}) - y^{(i)})^2 \\
-\end{align}
+$$
+cost(W,b) = \dfrac{1}{m}\sum\_{i=1}^m(H(x^{(i)}) - y^{(i)})^2
+$$
 
-<br/>
+## 1. Build graph using TF operations
 
-### 1. Build graph using TF operations
-
-\begin{align}
-H(x) = Wx + b \\
-\end{align}
+$$
+H(x) = Wx + b
+$$
 
 ```python
 import tensorflow as tf
@@ -54,9 +50,9 @@ hypothesis = x_train * W + b
     /anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
       from ._conv import register_converters as _register_converters
 
-\begin{align}
-cost(W,b) = \frac{1}{m}\sum\_{i=1}^m(H(x^{(i)}) - y^{(i)})^2 \\
-\end{align}
+$$
+cost(W,b) = \dfrac{1}{m}\sum\_{i=1}^m(H(x^{(i)}) - y^{(i)})^2
+$$
 
 ```python
 # Cost / Loss function
@@ -75,9 +71,7 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.01)
 train = optimizer.minimize(cost)
 ```
 
-<br/>
-
-### Run / Update graph and get results
+## Run / Update graph and get results
 
 `tensorflow`의 `variable`을 사용하기 전에는 **무조건**<br/>
 `tf.global_variables_initializer()`함수를 사용해 **초기화**
@@ -111,9 +105,7 @@ for step in range(2001):
     1980 2.4575631e-06 [1.0018208] [-0.00413892]
     2000 2.2321947e-06 [1.0017353] [-0.00394444]
 
-<br/>
-
-### Placeholders
+## Placeholders
 
 사전에 `train data`를 설정하지 않고 `Session`을 실행시킬 때<br/>
 `feed_dict`를 사용해 `train data` 지정이 가능하다.
@@ -159,9 +151,7 @@ for step in range(2001):
     1980 1.8629601e-08 [1.0000883] [1.099681]
     2000 1.624063e-08 [1.0000825] [1.0997021]
 
-<br/>
-
-### Testing our model
+## Testing our model
 
 ```python
 # Testing our model

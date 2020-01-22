@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### 사용할 모듈 추가
+## 사용할 모듈 추가
 
 ```python
 import tensorflow as tf
@@ -18,7 +16,7 @@ import matplotlib.pyplot as plt
 import random
 ```
 
-### MNIST데이터 불러오기
+## MNIST데이터 불러오기
 
 ```python
 from tensorflow.examples.tutorials.mnist import input_data
@@ -26,7 +24,7 @@ from tensorflow.examples.tutorials.mnist import input_data
 mnist = input_data.read_data_sets("MNIST_data/", one_hot=True)
 ```
 
-### 상수 정의
+## 상수 정의
 
 ```python
 learning_rate = 0.001
@@ -34,14 +32,14 @@ training_epochs = 15
 batch_size = 100
 ```
 
-### 입력값 placeholder 선언
+## 입력값 placeholder 선언
 
 ```python
 X = tf.placeholder(tf.float32, [None, 784])
 Y = tf.placeholder(tf.float32, [None, 10])
 ```
 
-### Neural Network 구성
+## Neural Network 구성
 
 **Xavier Initialization**사용<br/>
 **Weight**을 저장할 변수를 선언할 때 `initializer`속성에<br/>
@@ -64,7 +62,7 @@ b3 = tf.Variable(tf.random_normal([10]))
 hypothesis = tf.matmul(L2, W3) + b3
 ```
 
-### 손실함수와 최적화 방법 정의
+## 손실함수와 최적화 방법 정의
 
 ```python
 cost = tf.reduce_mean(
@@ -73,14 +71,14 @@ cost = tf.reduce_mean(
 optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate).minimize(cost)
 ```
 
-### Session 초기화
+## Session 초기화
 
 ```python
 sess = tf.Session()
 sess.run(tf.global_variables_initializer())
 ```
 
-### 모델 학습 진행
+## 모델 학습 진행
 
 ```python
 for epoch in range(training_epochs):
@@ -137,7 +135,7 @@ print('Learning Finished!')
 | 0014  | 1.131284376   | 0.011026526                 |
 | 0015  | 0.882475840   | 0.007114654                 |
 
-### 모델 테스트 및 정확도 확인
+## 모델 테스트 및 정확도 확인
 
 ```python
 correct_prediction = tf.equal(tf.argmax(hypothesis, 1), tf.argmax(Y, 1))
@@ -154,7 +152,7 @@ print(
 
 **Weight**을 초기화하지 않았을 때 보다 **3%**증가했다.
 
-### 임의의 정수 예측하기
+## 임의의 정수 예측하기
 
 ```python
 r = random.randint(0, mnist.test.num_examples - 1)
@@ -170,7 +168,7 @@ print(
     Label:  [4]
     Prediction:  [4]
 
-### 예측한 정수 그리기
+## 예측한 정수 그리기
 
 ```python
 plt.imshow(

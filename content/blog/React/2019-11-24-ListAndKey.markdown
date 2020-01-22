@@ -5,7 +5,7 @@ category: 'React'
 draft: false
 ---
 
-### 코드의 중복의 발생
+## 코드의 중복의 발생
 
 우리가 작성한 `WordClock` 컴포넌트를 여러개 생성하기 위해서<br>
 아래와 같이 여러개의 컴포넌트를 모두 작성해 사용했었다.<br>
@@ -19,7 +19,7 @@ draft: false
 
 이와 같이 사용할 경우 같은 컴포넌트가 **중복**되는 것을 볼 수 있다.<br>
 
-### 중복의 제거
+## 중복의 제거
 
 아래와 같이 **배열**을 생성해 중복된 컴포넌트에 들어간 데이터를 옮겨보자.<br>
 `App`함수에 `cityTimeDate`라는 배열을 생성해 주었다.<br>
@@ -68,7 +68,7 @@ function App() {
 
 <img src="/assets/2019-11-24/1.png" width="600" height="auto"><br>
 
-### Key
+## Key
 
 이전과 동일하게 코드는 작동하지만 개발자 도구를 확인하면<br>
 `Each child in an array should have a unique "key" prop.`<br>

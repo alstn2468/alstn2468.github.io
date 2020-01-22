@@ -14,6 +14,7 @@ import { Disqus } from '../components/disqus'
 import { Utterences } from '../components/utterances'
 import * as ScrollManager from '../utils/scroll'
 
+import 'katex/dist/katex.min.css'
 import '../styles/code.scss'
 
 export default ({ data, pageContext, location }) => {

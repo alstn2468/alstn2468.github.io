@@ -8,9 +8,7 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Animal classification
+## Animal classification
 
 동물의 특징에 따라 동물이 어떤 종인지 예측
 
@@ -22,9 +20,7 @@ import numpy as np
     /anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
       from ._conv import register_converters as _register_converters
 
-<br/>
-
-### Load data file
+## Load data file
 
 ```python
 # 다양한 특징들을 기반으로 동물의 종을 예측
@@ -37,9 +33,7 @@ print(x_data.shape, y_data.shape)
 
     (101, 16) (101, 1)
 
-<br/>
-
-### tf.one_hot and reshape
+## tf.one_hot and reshape
 
 `[[0]. [3]]`의 데이터가 **one hot**과정을 거치게 되면 한 차원들<br/>
 더해 `[[[1, 0, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0]]]`의 데이터가 된다.<br/>
@@ -67,9 +61,7 @@ print("reshape", Y_one_hot)
     one_hot Tensor("one_hot:0", shape=(?, 1, 7), dtype=float32)
     reshape Tensor("Reshape:0", shape=(?, 7), dtype=float32)
 
-<br/>
-
-### Logits & Hypothesis
+## Logits & Hypothesis
 
 ```python
 W = tf.Variable(tf.random_normal([16, nb_classes]), name='weight')
@@ -81,9 +73,7 @@ logits = tf.matmul(X, W) + b
 hypothesis = tf.nn.softmax(logits)
 ```
 
-<br/>
-
-### Cross entropy cost / Loss Function
+## Cross entropy cost / Loss Function
 
 ```python
 cost_i = tf.nn.softmax_cross_entropy_with_logits(logits=logits,
@@ -100,9 +90,7 @@ optimizer = tf.train.GradientDescentOptimizer(learning_rate=0.1).minimize(cost)
 
     See `tf.nn.softmax_cross_entropy_with_logits_v2`.
 
-<br/>
-
-### Training
+## Training
 
 ```python
 prediction = tf.argmax(hypothesis, 1)
@@ -150,9 +138,7 @@ with tf.Session() as sess:
     Step :  1800	Loss : 0.066	Acc : 100.00%
     Step :  1900	Loss : 0.062	Acc : 100.00%
 
-<br/>
-
-### Check Predictive Results
+## Check Predictive Results
 
 ```python
 # y_data: (N,1) = flatten => (N, ) matches pred.shape

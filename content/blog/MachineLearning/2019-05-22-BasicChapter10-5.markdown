@@ -8,16 +8,12 @@ draft: false
 해당 게시물은 [Edwith](https://www.edwith.org)에서 제공하는<br/>
 [머신러닝과 딥러닝 BASIC](https://www.edwith.org/others26/joinLectures/9829)을 듣고 요약 정리한 글입니다.
 
-<br/>
-
-### Tensorboard
+## Tensorboard
 
 진행사항을 한눈에 볼 수 있도록 해준다.<br/>
 **TF Graph** 시각화가 가능하다.
 
-<br/>
-
-### Tensorboard 사용 단계
+## Tensorboard 사용 단계
 
 1. 어떤 **Tensor**를 **logging**할지 결정
    ```python
@@ -43,23 +39,17 @@ draft: false
    tensoorboard --logdir=/assets/2019-05-23/logs
    ```
 
-<br/>
-
-### Logging할 데이터
+## Logging할 데이터
 
 값이 하나(scalar)일 경우 `tf.summary.scalar`사용<br/>
 값이 여러개(vector)일 경우 `tf.summary.histogram`사용
 
-<br/>
-
-### Tensor 그래프 그리기
+## Tensor 그래프 그리기
 
 Tensor그래프를 한번에 펼쳐놓으면 보기 힘들기 때문에<br/>
 **Tensorboard**의 `tf.name_scope`함수를 이용해 **계층별** 정리<br/>
 
-<br/>
-
-### 여러개의 값으로 비교해보고 싶을 때
+## 여러개의 값으로 비교해보고 싶을 때
 
 ex) learning_rate = 0.1 vs learning_rate 0.01<br/>
 
@@ -187,9 +177,7 @@ with tf.Session() as sess:
     Accuracy:
     1.0
 
-<br/>
-
-### XOR 문제 Log
+## XOR 문제 Log
 
 - Cost
 
