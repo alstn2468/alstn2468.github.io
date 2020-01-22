@@ -1,0 +1,32 @@
+.sponsor-button {
+  text-align: right;
+  margin: 4px;
+
+  .bmc-button {
+    display: inline-block;
+    padding: 4px 15px;
+    width: 150px;
+    height: 40px;
+    text-decoration: none;
+    color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    letter-spacing: -0.08px;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: left;
+
+    img {
+      width: 20px;
+      margin-bottom: 1px;
+      box-shadow: none;
+      border: none;
+      vertical-align: middle;
+    }
+
+    span {
+      margin-left: 6px;
+    }
+  }
+}
