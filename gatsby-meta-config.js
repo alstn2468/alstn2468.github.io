@@ -1,6 +1,6 @@
 module.exports = {
   title: `Minsu's Dev Log`,
-  description: `Python / Algorithm / Data Science / AI`,
+  description: `Minsu's blog for storing technical logs`,
   author: `[Minsu Kim]`,
   introduction: `🌈22살 대학생 학생 개발자🙂`,
   siteUrl: `https://alstn2468.github.io`, // Your blog site url

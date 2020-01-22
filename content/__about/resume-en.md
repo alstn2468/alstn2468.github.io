@@ -5,5 +5,5 @@ lang: 'en'
 ---
 
 <div align="center">
-    Test Github Action
+    COMMING SOON
 </div>

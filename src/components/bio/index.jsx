@@ -30,7 +30,7 @@ export const Bio = () => (
                 <div className="author-introduction">{introduction}</div>
                 <p className="author-socials">
                   {social.github && (
-                    <a href={`https://github.com/${social.github}`}>GitHub</a>
+                    <a href={`https://github.com/${social.github}`}>Github</a>
                   )}
                   {social.medium && (
                     <a href={`https://instagram.com/${social.medium}`}>
