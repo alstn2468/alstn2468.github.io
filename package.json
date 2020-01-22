@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-starter-bee",
+  "name": "alstn2468.github.io",
   "private": true,
-  "description": "Gatsby blog starter template",
+  "description": "Minsu's dev log",
   "version": "0.1.0",
-  "author": "Jbee[JaeYeopHan]<ljyhanll@gmail.com>",
+  "author": "Minsu Kim <alstn2468_@naver.com>",
   "bugs": {
-    "url": "https://github.com/JaeYeopHan/gatsby-starter-bee/issues"
+    "url": "https://github.com/alstn2468/alstn2468.github.io/issues"
   },
   "dependencies": {
     "gatsby": "^2.2.8",
@@ -31,6 +31,7 @@
     "gatsby-source-filesystem": "^2.0.28",
     "gatsby-transformer-remark": "^2.3.8",
     "gatsby-transformer-sharp": "^2.1.17",
+    "gh-pages": "^2.0.0",
     "intersection-observer": "^0.5.1",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
@@ -69,7 +70,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/JaeYeopHan/gatsby-starter-bee.git"
+    "url": "https://github.com/alstn2468/alstn2468.github.io"
   },
   "scripts": {
     "post": "node ./cli/create-new-post.js",
