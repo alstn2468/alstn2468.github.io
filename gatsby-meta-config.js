@@ -2,8 +2,8 @@ module.exports = {
   title: `Minsu's Dev Log`,
   description: `Python / Algorithm / Data Science / AI`,
   author: `[Minsu Kim]`,
-  introduction: `👨‍🎓 22살 대학생 학생 개발자 👨‍💻`,
-  siteUrl: `https://gatsby-starter-bee.netlify.com`, // Your blog site url
+  introduction: `🌈22살 대학생 학생 개발자🙂`,
+  siteUrl: `https://alstn2468.github.io`, // Your blog site url
   social: {
     twitter: `minsu-kim-336289160`, // Your Twitter account
     github: `alstn2468`, // Your GitHub account
