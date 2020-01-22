@@ -1,0 +1,168 @@
+---
+title: 'BOJ 1977 완전제곱수'
+date: 2018-12-11 01:41:23
+category: 'Algorithms'
+draft: false
+---
+
+### [완전제곱수](https://www.acmicpc.net/problem/1977)
+
+| 시간 제한 | 메모리 제한 |
+| --------- | ----------- |
+| 2초       | 128MB       |
+
+#### 문제
+
+M과 N이 주어질 때 M이상 N이하의 자연수 중 완전제곱수인 것을 모두 골라<br/>
+그 합을 구하고 그 중 최솟값을 찾는 프로그램을 작성하시오.<br/>
+예를 들어 M=60, N=100인 경우 60이상 100이하의 자연수 중 완전제곱수는<br/>
+64, 81, 100 이렇게 총 3개가 있으므로 그 합은 245가 되고 이 중 최솟값은 64가 된다.<br/>
+
+#### 입력
+
+첫째 줄에 M이, 둘째 줄에 N이 주어진다.<br/>
+M과 N은 10000이하의 자연수이며 M은 N보다 같거나 작다.<br/>
+
+#### 출력
+
+M이상 N이하의 자연수 중 완전제곱수인 것을 모두 찾아<br/>
+첫째 줄에 그 합을, 둘째 줄에 그 중 최솟값을 출력한다.<br/>
+단, M이상 N이하의 자연수 중 완전제곱수가 없을 경우는 첫째 줄에 -1을 출력한다.<br/>
+
+#### 예제 입력
+
+```python
+60
+100
+```
+
+#### 예제 출력
+
+```python
+245
+64
+```
+
+---
+
+### 풀이
+
+**Python**의 내장 함수들을 적절하게 잘 이용하면 <br/>
+**Pythonic**하면서 **간단**하게 구현할 수 있다.<br/>
+
+<br/>
+
+#### 완전제곱수란
+
+문제를 해결하기 전에 우선 **완전 제곱수**에 대하여 간단히 설명하겠다.<br/>
+**완전 제곱수**의 **정의**는 정수의 제곱으로 된 수로<br/>
+예를 들어 `4`는 `2`의 제곱이므로 **완전제곱수**며<br/>
+`25`의 경우 `5`의 제곱이므로 **완전제곱수**다.<br/>
+예제의 경우 `60`에서 `100`사이의 **완전제곱수**는<br/>
+`64(8 X 8)`, `81(9 X 9)` `100(10 X 10)` 세 가지다.<br/>
+
+<br/>
+
+#### 조건의 판단
+
+해당의 수가 **완전제곱수**인지 판단하기 위해서는<br/>
+해당 수의 **제곱근**이 **정수**면 해당 수는 **완전제곱수**다.<br/>
+
+<br/>
+
+#### Pythonic하게 구현하기
+
+- &#127775;&#127775;&#127775; **List Comprehension** &#127775;&#127775;&#127775;<br/>
+  List Comprehension이 무엇인지는 [여기](https://mingrammer.com/introduce-comprehension-of-python/)를 참고하는 것이 좋을 것 같다.<br/>
+- **lambda** 함수 사용<br/>
+  lambda(익명 함수)가 무엇인지는 [여기](https://wikidocs.net/64)을 참고하는 것이 좋을 것 같다.
+- **3항 연산자** 사용<br/>
+  Python에서 3항 연산자는 `a if condition else b` 형식이다.<br/>
+  `a`가 조건이 `True`일 때 실행되는 문장<br/>
+  `b`가 조건이 `False`일 때 실행되는 문장이다.
+- 내장 함수 사용
+  - list()<br/>
+    Sequence Type을 리스트로 반환하는 함수<br/>
+  - filter(func, iterable)<br/>
+    반복 가능 자료형에서 func함수의 값이 True인 것만 묶어서 반환<br/>
+  - is_integer()<br/>
+    해당 값이 정수이면 True를 반환하는 함수<br/>
+  - sqrt()<br/>
+    math 모듈의 제곱근을 반환하는 함수<br/>
+
+등등.. 더 많은 함수들을 사용하긴 했지만 모를만한 함수는 이정도 인 것 같다.
+
+<br/>
+
+#### 알고리즘
+
+1. `N`부터 `M`사이의 `list`를 생성한다.
+2. 리스트의 모든 수의 **제곱근**이 **정수**인지 판단한다.
+3. 2번의 조건이 `True`인 값만으로 **새로운 리스트**를 **생성**한다.
+4. 리스트의 길이가 `0`인 경우는 **완전제곱수**가 없는 경우(`-1`출력)
+5. 아닌 경우 `sum`함수와 `min`함수를 사용하여 합과 최소값 출력<br/>
+
+<br/>
+
+#### 유의할 점
+
+`sum`함수와 `min`함수는 `str`형을 반환하지 않기 때문에<br/>
+문제의 **조건과 같이 출력**하기 위하여 `str`함수를 사용해 해당 값들을<br/>
+`str`형으로 **변환**하고 값의 출력에 **개행**(`\n`)이 존재하기 때문에<br/>
+`str(sum) + "\n" + str(min)`의 형식으로 출력해준다.
+
+<br/>
+
+#### 코드 구현부
+
+**Pythonic Code**
+
+```python
+from math import sqrt
+
+perf_squ_num = list(filter(lambda x: sqrt(x).is_integer(),
+                           [i for i in range(int(input()), int(input()) + 1)]))
+
+print(-1) if len(perf_squ_num) == 0 else print(str(sum(perf_squ_num)) \
+                                               + "\n" + str(min(perf_squ_num)))
+```
+
+**Readable Code**
+
+```python
+from math import sqrt
+
+M = int(input())
+N = int(input())
+
+perf_squ_num = []
+
+for i in range(M, N+1):
+    if sqrt(i).is_integer():
+        perf_squ_num.append(i)
+
+if len(perf_squ_num) == 0:
+    print(-1)
+
+else:
+    print(sum(perf_squ_num))
+    print(min(perf_squ_num))
+```
+
+<br/>
+
+#### 결과
+
+<img src="/assets/2018-12-11-1977/2.PNG" width="500" height="auto">
+
+<img src="/assets/2018-12-11-1977/3.PNG" width="500" height="auto">
+
+숏코딩 **53위**!!<br/>
+
+숏코딩에 욕심은 없지만 **Readable**한 코드로 처음에 작성하였다가<br/>
+더 **짧고 Pythonic**하게 구현할 수 있을 것 같아 코드를 줄여보았다.<br/>
+개인적으로는 나쁘지 않게 **구현**한 것 같다.<br/>
+**Pythonic**한 코드와 **Readable**한 코드 둘 중에 무엇이 정답인지는 판단할 수 없다.<br/>
+둘 다 알맞은 코드라고 생각한다. 개인적으로는 **Pythonic**코드가 더 좋다.
+
+&#9989; 코드는 [[여기]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/1900~1999/1977.py)에서 확인할 수 있다.

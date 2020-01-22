@@ -1,0 +1,6 @@
+.thumbnail-container {
+  min-height: calc(100vh - 3.5rem);
+  :first-child {
+    margin-top: 14px;
+  }
+}
