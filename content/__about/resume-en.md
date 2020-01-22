@@ -5,5 +5,5 @@ lang: 'en'
 ---
 
 <div align="center">
-    Test Github Action
+    Test Github Action.
 </div>
