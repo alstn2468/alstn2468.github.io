@@ -15,7 +15,7 @@ export default class HTML extends React.Component {
           <meta property="og:image" content="https://imgur.com/gIC8qrK" />
           {this.props.headComponents}
           <script
-            data-ad-client="ca-pub-5252096390087406"
+            data-ad-client="ca-pub-2730173194500394"
             async
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
           />
