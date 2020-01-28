@@ -22,7 +22,7 @@ module.exports = {
   ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
-    utterances: 'alstn2468/alstn2468.github.io', // Your repository for archive comment
+    utterances: 'alstn2468/Minsu_Dev_Log_Comments', // Your repository for archive comment
   },
   configs: {
     countOfInitialPost: 10, // Config your initial count of post
