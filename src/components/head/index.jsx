@@ -35,6 +35,10 @@ export function Head({ description, lang, meta, keywords, title }) {
                 content: `website`,
               },
               {
+                property: `og:image`,
+                content: `https://imgur.com/gIC8qrK`,
+              },
+              {
                 name: `twitter:card`,
                 content: `summary`,
               },
