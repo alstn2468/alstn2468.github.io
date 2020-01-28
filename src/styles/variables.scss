@@ -1,5 +1,12 @@
 // app
-$theme-gradient: linear-gradient(72deg, #3527c2, #5dbcd2);
+$theme-gradient: linear-gradient(
+  -45deg,
+  #3527c2,
+  #e84dbb,
+  #ff9b61,
+  #b84de8,
+  #5dbcd2
+);
 $top-header-text-color: #fff;
 
 /**
