@@ -9,7 +9,12 @@ body.dark {
   }
 
   .social-icon {
-    fill: $dark-navigator-background-color;
+    fill: $light-gray;
+    transition: fill .6s ease;
+
+    &:hover {
+      fill: $middle-gray;
+    }
   }
 
   .bio {
