@@ -8,6 +8,10 @@ body.dark {
     color: $dark-light-font-color;
   }
 
+  .social-icon {
+    fill: $dark-navigator-background-color;
+  }
+
   .bio {
     .author-name-content {
       background-color: $dark-category-border-color;
