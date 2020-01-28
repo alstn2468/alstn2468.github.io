@@ -12,7 +12,6 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=2"
           />
-          <meta property="og:image" content="https://imgur.com/gIC8qrK" />
           {this.props.headComponents}
           <script
             data-ad-client="ca-pub-2730173194500394"
