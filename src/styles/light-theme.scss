@@ -20,7 +20,12 @@ body.light {
   }
 
   .social-icon {
-    fill: $light-navigator-background-color;
+    fill: $dark-gray;
+    transition: fill .6s ease;
+
+    &:hover {
+      fill: $middle-gray;
+    }
   }
 
   .category-container {
