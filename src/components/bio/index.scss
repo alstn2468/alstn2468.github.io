@@ -1,7 +1,12 @@
 @import '../../styles/variables.scss';
 
 .bio {
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+
+  .social-icon {
+    width: 28px;
+    height: auto;
+  }
 
   .author-description {
     display: flex;
@@ -36,7 +41,7 @@
   }
 
   .author-socials {
-    margin-top: 4px;
+    margin-top: 10px;
   }
 
   a {
