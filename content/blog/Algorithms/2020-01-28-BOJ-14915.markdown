@@ -108,8 +108,10 @@ print(convert(M, N))
 
 ### 결과
 
-<img src="/assets/2020-01-28-14915/2.PNG" width="500" height="auto">
-
 **재귀함수**를 이용해 간단하게 진법변환 함수를 구현할 수 있었다.<br/>
+
+<img src="/assets/2020-01-28-14915/2.PNG" width="500" height="auto"><br>
+
+간단한 재귀함수이긴하지만 재귀호출 과정을 **직접 그려보면서 이해**하는 것도 좋을 것 같다.<br>
 
 &#9989; 코드는 [[여기]](https://github.com/alstn2468/BaekJoon_Online_Judge/blob/master/14900~14999/14915.py)에서 확인할 수 있다.
