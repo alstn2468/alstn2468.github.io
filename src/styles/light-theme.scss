@@ -2,6 +2,14 @@ body.light {
   background-color: $light-background-color;
   text-shadow: $light-text-shadow;
 
+  .back-home-text {
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  .back-home {
+    border: 1px solid rgba(0, 0, 0, 0.8);
+  }
+
   // home
   .home-header {
     color: $dark-gray;
@@ -21,7 +29,7 @@ body.light {
 
   .social-icon {
     fill: $dark-gray;
-    transition: fill .6s ease;
+    transition: fill 0.6s ease;
 
     &:hover {
       fill: $middle-gray;
