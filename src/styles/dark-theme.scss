@@ -3,6 +3,14 @@ body.dark {
   text-shadow: $dark-text-shadow;
   color: $dark-light-font-color;
 
+  .back-home-text {
+    color: $dark-light-font-color;
+  }
+
+  .back-home {
+    border: 1px solid $dark-light-font-color;
+  }
+
   // home
   .home-header {
     color: $dark-light-font-color;
@@ -10,7 +18,7 @@ body.dark {
 
   .social-icon {
     fill: $light-gray;
-    transition: fill .6s ease;
+    transition: fill 0.6s ease;
 
     &:hover {
       fill: $middle-gray;
