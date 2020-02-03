@@ -37,7 +37,7 @@ export function Head({ description, lang, meta, keywords, title }) {
               },
               {
                 property: `og:image`,
-                content: data.site.siteMetadata.image,
+                content: `https://i.imgur.com/SP43p6p.png`,
               },
               {
                 name: `twitter:card`,
@@ -93,7 +93,6 @@ const detailsQuery = graphql`
         title
         description
         author
-        image
       }
     }
   }

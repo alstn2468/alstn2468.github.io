@@ -11,7 +11,6 @@ module.exports = {
     facebook: `alstn2468`, // Your Facebook account
   },
   icon: `content/assets/felog.png`, // Add your favicon
-  image: `content/assets/felog.png`,
   keywords: [
     `blog`,
     `tect blog`,
