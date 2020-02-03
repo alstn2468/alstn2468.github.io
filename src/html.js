@@ -12,12 +12,11 @@ export default class HTML extends React.Component {
             name="viewport"
             content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1, maximum-scale=2"
           />
-          {this.props.headComponents}
-          <script
-            data-ad-client="ca-pub-2730173194500394"
-            async
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+          <meta
+            name="google-site-verification"
+            content="rur6f0C6BHHOpbBSHH53vuHLN81zkTeSO6F3nIBNleY"
           />
+          {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
           {this.props.preBodyComponents}
