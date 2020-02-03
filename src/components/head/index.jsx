@@ -3,13 +3,14 @@ import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
 
-export function Head({ description, lang, meta, keywords, title, image }) {
+export function Head({ description, lang, meta, keywords, title }) {
   return (
     <StaticQuery
       query={detailsQuery}
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
+
         return (
           <Helmet
             htmlAttributes={{
@@ -36,7 +37,7 @@ export function Head({ description, lang, meta, keywords, title, image }) {
               },
               {
                 property: `og:image`,
-                content: image,
+                content: data.site.siteMetadata.image,
               },
               {
                 name: `twitter:card`,
