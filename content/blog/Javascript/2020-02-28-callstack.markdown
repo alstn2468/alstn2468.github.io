@@ -1,5 +1,5 @@
 ---
-title: '자바스크립트 개발자라면 알아야하는 컨셉 33개 | #1 콜스택 (Call Stack)'
+title: '콜스택 (Call Stack)'
 date: 2020-02-28 00:00:01
 category: 'Javascript'
 draft: false
