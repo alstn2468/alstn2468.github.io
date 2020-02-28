@@ -175,7 +175,7 @@ console.log('Second Log')
 
 <img src="/assets/2020-02-26-CallStack/10.png" width="700"/><br>
 
-`setTimeOUt`함수의 2번째 인자에 0ms를 주었다고 바로 실행되는 것이 아니다.<br>
+`setTimeOut`함수의 2번째 인자에 0ms를 주었다고 바로 실행되는 것이 아니다.<br>
 `Web API`에 의해 호출된 `First Log`가 출력되는 **콜백 함수**는 이벤트 큐에 삽입된다.<br>
 이것은 0ms뒤에 함수를 실행시키라는 의미가 아니라 **이벤트 큐에 삽입하라는 의미**다.<br>
 
