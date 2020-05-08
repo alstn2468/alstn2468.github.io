@@ -108,7 +108,9 @@ console.log(typeof usingNewArray) // object
 자바스크립트에서의 배열(`array`)과 함수(`function`)는 모두 객체(`object`)다.<br/>
 추후에 정리를 하겠지만 자세한 내용은 아래의 링크를 확인해보면 좋을 것이다.<br/>
 
-> [자바스크립트 함수 (1) - 함수 객체, 함수 객체 생성](https://meetup.toast.com/posts/118)<br/> > [JavaScript에서는 배열(Array)도 객체(Object)다](https://preamtree.tistory.com/115)<br/> > [[스터디\_자바스크립트] 12. 함수도 객체이다!](https://programmer-seva.tistory.com/25)
+> [자바스크립트 함수 (1) - 함수 객체, 함수 객체 생성](https://meetup.toast.com/posts/118)<br/>
+> [JavaScript에서는 배열(Array)도 객체(Object)다](https://preamtree.tistory.com/115)<br/>
+> [[스터디\_자바스크립트] 12. 함수도 객체이다!](https://programmer-seva.tistory.com/25)
 
 ### 참조 타입(Reference Type)의 저장 방식
 
