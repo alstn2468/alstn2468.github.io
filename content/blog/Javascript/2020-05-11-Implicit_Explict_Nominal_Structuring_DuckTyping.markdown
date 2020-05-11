@@ -1,5 +1,5 @@
 ---
-title: '명시적 변환, 암시적 변환, Nominal, 구조화, 덕 타이핑'
+title: '명시적, 암시적 변환, Nominal, 구조화, 덕 타이핑'
 date: 2020-05-11 00:00:01
 category: 'Javascript'
 draft: false
@@ -294,7 +294,7 @@ console.log("abc" / 10, typeof ("abc" / 10)); // Nan "number"
 console.log(10 / "abc" / 10, typeof (10 / "abc" / 10)); // Nan "number"
 ```
 
--   `Number \\% String`
+-   `Number ``%`` String`
 
 ```javascript
 console.log(10 % "10", typeof (10 % "10")); // 0 "number"
@@ -304,7 +304,7 @@ console.log("abc" % 10, typeof ("abc" % 10)); // Nan "number"
 console.log((10 % "abc") % 10, typeof ((10 % "abc") % 10)); // Nan "number"
 ```
 
--   `Number (*, -, /, \\%) Boolean`
+-   `Number (*, -, /, ``%``) Boolean`
 
 ```javascript
 console.log(10 * true, 10 * false); // 10 0
