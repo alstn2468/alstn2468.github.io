@@ -25,6 +25,7 @@ console.log(num, typeof num); // 10 "number"
 위와 같은 코드 처럼 `parseInt`나 `toString`같은 함수를 이용해서 **형변환**을 할 수 있다.<br/>
 자바스크립트에서는 `C`나 `Java`와 같은 언어와 달리 `var`나 `let`을 이용해 **변수를 선언**한다.<br/>
 자바스크립트에서 **형변환**을 하는 방법은 **명시적 변환**과 **암시적 변환**이 존재한다.<br/>
+또 자바스크립트에서 사용하지는 않지만 타입 검사 방법으로 **Nominal**, **Structural**, **Duck** 타이핑이 존재한다.<br/>
 
 ## 명시적 변환(Explict Conversion)이란?
 
@@ -293,7 +294,7 @@ console.log("abc" / 10, typeof ("abc" / 10)); // Nan "number"
 console.log(10 / "abc" / 10, typeof (10 / "abc" / 10)); // Nan "number"
 ```
 
--   `Number % String`
+-   `Number \\% String`
 
 ```javascript
 console.log(10 % "10", typeof (10 % "10")); // 0 "number"
@@ -303,7 +304,7 @@ console.log("abc" % 10, typeof ("abc" % 10)); // Nan "number"
 console.log((10 % "abc") % 10, typeof ((10 % "abc") % 10)); // Nan "number"
 ```
 
--   `Number (*, -, /, %) Boolean`
+-   `Number (*, -, /, \\%) Boolean`
 
 ```javascript
 console.log(10 * true, 10 * false); // 10 0
@@ -340,7 +341,6 @@ console.log("1" == true); // true
 
 마찬가지로 `1`과 `"1"` 그리고 `true`도 동일한 관계를 갖는다.<br/>
 타입에 엄격하지 않은 `==`연산자를 대체하여 엄격한 `===`연산자를 사용해 동등 비교를 한다.<br/>
-다른 타입 검사 방법으로 **Nominal**, **Structural**, **Duck** 타이핑이 존재한다.<br/>
 
 ## 명칭적 타이핑(Nominal Typing)이란?
 
@@ -460,5 +460,5 @@ take_walk(dog) # 개가 걷는다.
 
 `Duck`클래스와 `Dog`클래스가 갖는 메서드와 필드가 모두 동일하기 때문이다.<br/>
 만약 `Duck`클래스나 `Dog`클래스에 메서드가 존재하지 않을 경우 **런타임 에러**를 발생시킨다.<br/>
-타입을 지정하면서 생기는 제약은 줄일 수 있어 유연하게 코드를 작성할 수 있다.<br/>
-하지만 타입 검사를 하지 않기 때문에 오류가 발생하기 쉬우며 테스트 코드를 작성하는 것이 좋다.<br/>
+타입을 지정하면서 생기는 **제약은 줄일 수** 있어 **유연하게 코드를 작성**할 수 있다.<br/>
+하지만 타입 검사를 하지 않기 때문에 **오류가 발생**하기 **쉬우며** **테스트 코드**를 **작성하는 것**이 **좋다**.<br/>
