@@ -294,7 +294,7 @@ console.log("abc" / 10, typeof ("abc" / 10)); // Nan "number"
 console.log(10 / "abc" / 10, typeof (10 / "abc" / 10)); // Nan "number"
 ```
 
--   `Number ``%`` String`
+-   `Number \% String`
 
 ```javascript
 console.log(10 % "10", typeof (10 % "10")); // 0 "number"
@@ -304,7 +304,7 @@ console.log("abc" % 10, typeof ("abc" % 10)); // Nan "number"
 console.log((10 % "abc") % 10, typeof ((10 % "abc") % 10)); // Nan "number"
 ```
 
--   `Number (*, -, /, ``%``) Boolean`
+-   `Number (*, -, /, \%) Boolean`
 
 ```javascript
 console.log(10 * true, 10 * false); // 10 0
