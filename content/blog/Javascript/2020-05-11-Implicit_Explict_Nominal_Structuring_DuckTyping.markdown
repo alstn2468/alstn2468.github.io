@@ -232,7 +232,7 @@ print(number + string, type(number + string))
 더하기 연산자에서는 **문자**의 우선순위가 숫자보다 **높다**.<br/>
 객체와 함수또한 **문자**보다 우선순위가 낮다.<br/>
 
--   `Number + String`
+-   Number + String
 
 ```javascript
 console.log(10 + "10", typeof (10 + "10")); // "1010" "string"
@@ -242,7 +242,7 @@ console.log("abc" + 10, typeof ("abc" + 10)); // "abc10" "string"
 console.log(10 + "abc" + 10, typeof (10 + "abc" + 10)); // "10abc10" "string"
 ```
 
--   `String + Boolean`
+-   String + Boolean
 
 ```javascript
 console.log("abc" + true, typeof ("abc" + true)); // "abctrue" "string"
@@ -252,7 +252,7 @@ console.log(false + "abc", typeof (false + "abc")); // "falseabc" "string"
 console.log(true + "abc" + false, typeof (true + "abc" + false)); // "trueabcfalse" "string"
 ```
 
--   `String + Object`
+-   String + Object
 
 ```javascript
 console.log("abc" + { foo: "bar" }, typeof ("abc" + { foo: "bar" })); // "abc[object Object]" "string"
@@ -264,7 +264,7 @@ console.log("abc" + (() => {}), typeof ("abc" + (() => {}))); // "abc() => {}" "
 더하기 연산자를 제외한 연산자에서는 **숫자**의 우선순위가 문자보다 **높다**.<br/>
 숫자가 아닌 `"abc"`같은 문자열이 들어갈 경우 **연산이 불가능**해 `Nan`이 반환된다.<br/>
 
--   `Number * String`
+-   Number * String
 
 ```javascript
 console.log(10 * "10", typeof (10 * "10")); // 100 "number"
@@ -274,7 +274,7 @@ console.log("abc" * 10, typeof ("abc" * 10)); // Nan "number"
 console.log(10 * "abc" * 10, typeof (10 * "abc" * 10)); // Nan "number"
 ```
 
--   `Number - String`
+-   Number - String
 
 ```javascript
 console.log(10 - "10", typeof (10 - "10")); // 0 "number"
@@ -284,7 +284,7 @@ console.log("abc" - 10, typeof ("abc" - 10)); // Nan "number"
 console.log(10 - "abc" - 10, typeof (10 - "abc" - 10)); // Nan "number"
 ```
 
--   `Number / String`
+-   Number / String
 
 ```javascript
 console.log(10 / "10", typeof (10 / "10")); // 1 "number"
@@ -294,7 +294,7 @@ console.log("abc" / 10, typeof ("abc" / 10)); // Nan "number"
 console.log(10 / "abc" / 10, typeof (10 / "abc" / 10)); // Nan "number"
 ```
 
--   `Number $ \% $ String`
+-   Number % String
 
 ```javascript
 console.log(10 % "10", typeof (10 % "10")); // 0 "number"
@@ -304,7 +304,7 @@ console.log("abc" % 10, typeof ("abc" % 10)); // Nan "number"
 console.log((10 % "abc") % 10, typeof ((10 % "abc") % 10)); // Nan "number"
 ```
 
--   `Number (*, -, /, $ \% $) Boolean`
+-   Number (*, -, /, %) Boolean
 
 ```javascript
 console.log(10 * true, 10 * false); // 10 0
