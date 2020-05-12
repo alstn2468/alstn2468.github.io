@@ -1,6 +1,6 @@
 ---
 title: '== vs === vs typeof'
-date: 2020-05-11 00:00:01
+date: 2020-05-12 00:00:01
 category: 'Javascript'
 draft: false
 ---
