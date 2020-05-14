@@ -1,6 +1,6 @@
 ---
 title: '식(expression) vs 문(statement)'
-date: 2020-05-13 00:00:01
+date: 2020-05-14 00:00:01
 category: 'Javascript'
 draft: false
 ---
@@ -104,7 +104,7 @@ if (true) { 9 + 9 }
 지금까지의 내용으로는 **문** (**Statement**)은 아무 값도 반환하지 않았어야 한다.<br/>
 우리는 이 반환된 값을 이용할 수 없고, 따라서 **문** (**Statement**)이 반환하는 값은 의미가 없다.<br/>
 
-> That’s Javascript for you, weird.
+> That’s Javascript for you, weird.<br/>
 > 자바스크립트가 널 위한 거야, 이상해.
 
 ## 함수 선언, 함수 표현식, 네임드 (Named) 함수 표현식
