@@ -142,4 +142,4 @@ function CharacterCount() {
 개인적으로 `redux`나 `contextAPI`를 사용했던 것 보다 쉽게 쓸 수 있을 것 같다.<br/>
 `useRecoilState`, `useRecoilValue`가 `useState`나 `useMemo`같은 `Hook`과 비슷한 것 같다.<br/>
 어렵지 않게 `Hook`을 이용해 **전역적**으로 **상태 관리**를 하게 도와주는 좋은 **패키지**인 것 같다.<br/>
-실제 작성한 코드는 [여기](https://github.com/alstn2468/Recoil_Tutorial/GettingStarted)에서도 확인할 수 있다.<br/>
+실제 작성한 코드는 [여기](https://github.com/alstn2468/Recoil_Tutorial/tree/master/GettingStarted)에서도 확인할 수 있다.<br/>
