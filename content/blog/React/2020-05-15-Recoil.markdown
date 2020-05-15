@@ -79,7 +79,7 @@ const textState = atom({
 
 컴포넌트가 atom을 읽고 쓰게 하기 위해서는 `useRecoilState()`를 아래와 같이 사용하면 된다.<br/>
 
-```jsx
+```javascript
 function CharacterCounter() {
   return (
     <div>
@@ -111,7 +111,7 @@ function TextInput() {
 **Selector**는 파생된 상태(**derived state**)의 일부를 나타냅니다. 파생된 상태는 상태의 **변화**다.<br/>
 파생된 상태를 순수 함수에 전달된 상태를 어떤 방법으로든 수정된 결과물로 생각할 수 있다.<b>
 
-```jsx
+```javascript
 const charCountState = selector({
   key: 'charCountState', // unique ID (with respect to other atoms/selectors)
   get: ({ get }) => {
@@ -124,7 +124,7 @@ const charCountState = selector({
 
 우리는 `useRecoilValue()` 훅을 사용해서 `charCountState` 값을 읽을 수 있다.<br/>
 
-```jsx
+```javascript
 function CharacterCount() {
   const count = useRecoilValue(charCountState)
 
