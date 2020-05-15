@@ -109,9 +109,9 @@ function TextInput() {
 ## Selector
 
 **Selector**는 파생된 상태(**derived state**)의 일부를 나타냅니다. 파생된 상태는 상태의 **변화**다.<br/>
-파생된 상태를 순수 함수에 전달된 상태를 어떤 방법으로든 수정된 결과물로 생각할 수 있다.<b>
+파생된 상태를 순수 함수에 전달된 상태를 어떤 방법으로든 수정된 결과물로 생각할 수 있다.<br/>
 
-```javascript
+```jsx
 const charCountState = selector({
   key: 'charCountState', // unique ID (with respect to other atoms/selectors)
   get: ({ get }) => {
@@ -124,7 +124,7 @@ const charCountState = selector({
 
 우리는 `useRecoilValue()` 훅을 사용해서 `charCountState` 값을 읽을 수 있다.<br/>
 
-```javascript
+```jsx
 function CharacterCount() {
   const count = useRecoilValue(charCountState)
 
