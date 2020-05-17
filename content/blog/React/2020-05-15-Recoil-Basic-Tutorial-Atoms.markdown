@@ -61,6 +61,7 @@ function TodoItemCreator() {
         isComplete: false,
       },
     ]);
+    setInputValue('');
   };
 
   const onChange = ({target: {value}}) => {
