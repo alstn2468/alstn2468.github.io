@@ -93,9 +93,9 @@ const fontSizeLabelState = selector({
 그것이 다른 atom이나 selector에 접근할 때마다 다른 atom이나 selector를 업데이트하면 이 atom이나 selector를 다시 계산할 수 있도록 종속 관계가 만들어진다.<br/>
 
 이 `fontSizeLabelState` 예시에서 selector는 `fontSizeState` atom에서 하나의 의존성을 갖는다.<br/>
-개념적으로 'fontSizeLabelState' selector는 'fontSizeState'를 입력으로 사용하고 형식화된 글꼴 크기 레이블을 출력으로 반환하는 순수 함수처럼 동작한다.<br/>
+개념적으로 `fontSizeLabelState` selector는 `fontSizeState`를 입력으로 사용하고 형식화된 글꼴 크기 레이블을 출력으로 반환하는 순수 함수처럼 동작한다.<br/>
 
-Selector는 'useRecoilValue()'를 사용해 읽을 수 있다. 'useRecoilValue()'는 atom이나 selector를 인자로 받아 해당 값을 반환한다.<br/>
+Selector는 `useRecoilValue()`를 사용해 읽을 수 있다. `useRecoilValue()`는 atom이나 selector를 인자로 받아 해당 값을 반환한다.<br/>
 `fontSizeLabelState` selector는 쓸 수 없기 때문에 우리는 `useRecoilState()`를 이용하지 않는다.<br/>
 (읽기 가능한 selector의 더 많은 정보를 보려면 [selector API reference](/docs/api-reference/core/selector)를 보면된다.)<br/>
 
