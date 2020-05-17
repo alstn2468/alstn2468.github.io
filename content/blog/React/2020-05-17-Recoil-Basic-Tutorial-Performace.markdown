@@ -14,7 +14,7 @@ draft: false
 
 우리의 컴포넌트들을 다시 랜더링 시키는 원인이 무엇인지 생각해보자.<br/>
 
-## <TodoList />
+## \<TodoList />
 
 이 컴포넌트는 'todoListState'와 'todoListFilterState'에 의존하는 selector인 'filteredToListState'를 구독한다.<br/>
 이는 다음 상태가 변경될 때 'TodoList'가 다시 렌더링됨을 의미한다.<br/>
@@ -22,22 +22,22 @@ draft: false
 - `todoListState`
 - `todoListFilterState`
 
-## <TodoItem />
+## \<TodoItem />
 
 이 컴포넌트는 'todoListState'를 구독한다.<br/>
 그래서 'todoListState'가 바뀔 때나 부모 컴포넌트인 'todoList'가 다시 렌더링 될 때 다시 렌더링 된다.<br/>
 
-## <TodoItemCreator />
+## \<TodoItemCreator />
 
 이 컴포넌트는 Recoil 상태("SetRecoilState()"가 구독을 생성하지 않음)를 구독하지 않는다.<br/> 
 그래서 부모 컴포넌트인 `TodoList`가 다시 렌더링 될 때만 다시 렌더링 된다.<br/>
 
-## <TodoListFilters />
+## \<TodoListFilters />
 
 이 컴포넌트는 'todoListFilterState'를 구독한다.<br/>
 그래서 해당 상태가 변경되거나 부모 컴포넌트인 'todoList'가 다시 렌더링될 때 다시 렌더링된다.<br/>
 
-## <TodoListStats />
+## \<TodoListStats />
 
 이 컴포넌트는 `filteredToListState`를 구독한다.<br/>
 그래서 해당 상태가 바뀌거나 부모 컴포넌트인 `TodoList`가 다시 렌더링 될 때마다 다시 렌더링 된다.<br/>
