@@ -14,7 +14,7 @@ draft: false
 
 우리의 컴포넌트들을 다시 랜더링 시키는 원인이 무엇인지 생각해보자.<br/>
 
-## `<TodoList />`
+## <TodoList />
 
 이 컴포넌트는 'todoListState'와 'todoListFilterState'에 의존하는 selector인 'filteredToListState'를 구독한다.<br/>
 이는 다음 상태가 변경될 때 'TodoList'가 다시 렌더링됨을 의미한다.<br/>
@@ -22,22 +22,22 @@ draft: false
 - `todoListState`
 - `todoListFilterState`
 
-## `<TodoItem />`
+## <TodoItem />
 
 이 컴포넌트는 'todoListState'를 구독한다.<br/>
 그래서 'todoListState'가 바뀔 때나 부모 컴포넌트인 'todoList'가 다시 렌더링 될 때 다시 렌더링 된다.<br/>
 
-## `<TodoItemCreator />`
+## <TodoItemCreator />
 
 이 컴포넌트는 Recoil 상태("SetRecoilState()"가 구독을 생성하지 않음)를 구독하지 않는다.<br/> 
 그래서 부모 컴포넌트인 `TodoList`가 다시 렌더링 될 때만 다시 렌더링 된다.<br/>
 
-## `<TodoListFilters />`
+## <TodoListFilters />
 
 이 컴포넌트는 'todoListFilterState'를 구독한다.<br/>
 그래서 해당 상태가 변경되거나 부모 컴포넌트인 'todoList'가 다시 렌더링될 때 다시 렌더링된다.<br/>
 
-## `<TodoListStats />`
+## <TodoListStats />
 
 이 컴포넌트는 `filteredToListState`를 구독한다.<br/>
 그래서 해당 상태가 바뀌거나 부모 컴포넌트인 `TodoList`가 다시 렌더링 될 때마다 다시 렌더링 된다.<br/>
@@ -50,7 +50,7 @@ draft: false
 
 이상적인 경우에는 컴포넌트가 반드시 필요한 경우(화면에 표시되는 데이터가 변경된 경우)에만 다시 렌더링 될 수 있다.<br/>
 
-## 최적화 #1: `React.memo()`
+## 최적화 #1: React.memo()
 
 하위 컴포넌트가 불필요하게 다시 렌더링되는 문제를 완화하기 위해<br/>
 우리는 그 컴포넌트에 전달된 **props**를 기반으로 컴포넌트를 기억하는 [`React.memo()`](https://reactjs.org/docs/react-api.html#reactmemo)를 사용할 수 있다.
@@ -70,7 +70,7 @@ const TodoListStats = React.memo(() => ...);
 그러나  `<TodoItem />`와 `<TodoListStats />`에는 여전히 개별적인 todo 아이템이 갖는 텍스트를 변경할 때<br/>
 새로운 `todoListFilterState`가 생성되면서 그것을 구독하는 `<TodoItem />`와  `<TodoListStats />`가 다시 렌더링되는 문제가 있다.<br/>
 
-## 최적화 #2: `atomFamily()`
+## 최적화 #2: atomFamily()
 
 ## 상태의 모양을 다시 생각하기
 
@@ -98,7 +98,7 @@ const todoListItemIdsState = atom({
 아이템의 ID를 아이템의 데이터에 매핑하는 것을 구현하기 위해서 Recoil은 ID로 atom을 동적으로 매핑할 수 있는 유틸리티 매서드을 제공한다.<br/>
 이 유틸리티가 [`atomFamily()`](https://recoiljs.org/docs/api-reference/utils/atomFamily)다.<br/>
 
-## `atomFamily()`
+## atomFamily()
 
 우리는 `atomFamily()` 함수를 이용한다.
 
