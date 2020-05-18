@@ -13,9 +13,9 @@ draft: false
 **IIFE**의 기본적인 형태는 아래와 같다.<br/>
 
 ```javascript
-;(function() {
+(function() {
   // Do something...
-})()
+})();
 ```
 
 **IIFE**는 함수 **선언**과 **동시**에 함수 **호출**이 되는 **익명 함수**다.<br/>
@@ -30,7 +30,7 @@ function() {
 위와 같은 **익명 함수**를 `()`로 감싸주어 **함수 선언문**을 **함수 표현식**으로 바꾸어준다.<br/>
 
 ```javascript
-;(function() {
+(function() {
   console.log('This is IIFE!')
 })
 ```
@@ -39,9 +39,9 @@ function() {
 이 상태에서 반환 받은 함수에 `()`를 붙여주면서 **함수를 바로 실행**한다.<br/>
 
 ```javascript
-;(function() {
+(function() {
   console.log('This is IIFE!')
-})()
+})();
 ```
 
 ### IIFE를 쓰는 이유
@@ -64,9 +64,9 @@ consoleArray() // [1, 2, 3]
 **IIFE**를 사용해 내부에 변수를 선언할 경우 변수를 **private**하게 사용할 수 있다.<br/>
 
 ```javascript
-;(function() {
+(function() {
   const array = [1, 2, 3]
-})()
+})();
 console.log(array) // ReferenceError: array is not defined
 ```
 
@@ -111,7 +111,7 @@ var counter = (function() {
       return count
     },
   }
-})()
+})();
 
 console.log('Init :', counter.getCount())
 counter.increase()
