@@ -18,7 +18,7 @@ todo 리스트에서 source of truth는 todo 아이템을 나타내는 객체로
 const todoListState = atom({
   key: 'todoListState',
   default: [],
-});
+})
 ```
 
 우리는 atom에 고유한 `key`를 주고 비어있는 배열 값을 `default`로 설정할 것이다.<br/>
@@ -26,7 +26,7 @@ const todoListState = atom({
 
 ```jsx
 function TodoList() {
-  const todoList = useRecoilValue(todoListState);
+  const todoList = useRecoilValue(todoListState)
 
   return (
     <>
@@ -34,11 +34,11 @@ function TodoList() {
       {/* <TodoListFilters /> */}
       <TodoItemCreator />
 
-      {todoList.map((todoItem) => (
-        <TodoItem item={todoItem} />
+      {todoList.map(todoItem => (
+        <TodoItem key={todoItem.id} item={todoItem} />
       ))}
     </>
-  );
+  )
 }
 ```
 
@@ -49,37 +49,37 @@ function TodoList() {
 
 ```jsx
 function TodoItemCreator() {
-  const [inputValue, setInputValue] = useState('');
-  const setTodoList = useSetRecoilState(todoListState);
+  const [inputValue, setInputValue] = useState('')
+  const setTodoList = useSetRecoilState(todoListState)
 
   const addItem = () => {
-    setTodoList((oldTodoList) => [
+    setTodoList(oldTodoList => [
       ...oldTodoList,
       {
         id: getId(),
         text: inputValue,
         isComplete: false,
       },
-    ]);
-    setInputValue('');
-  };
+    ])
+    setInputValue('')
+  }
 
-  const onChange = ({target: {value}}) => {
-    setInputValue(value);
-  };
+  const onChange = ({ target: { value } }) => {
+    setInputValue(value)
+  }
 
   return (
     <div>
       <input type="text" value={inputValue} onChange={onChange} />
       <button onClick={addItem}>Add</button>
     </div>
-  );
+  )
 }
 
 // 고유한 Id 생성을 위한 유틸리티
-let id = 0;
+let id = 0
 function getId() {
-  return id++;
+  return id++
 }
 ```
 
@@ -89,33 +89,33 @@ function getId() {
 우리는 `todoListState`를 읽고 항목 텍스트를 업데이트하고, 완료된 것으로 표시하고, 삭제하는 데 사용하는 setter 함수를 얻기 위해 `useRecoilState()`를 사용한다.<br/>
 
 ```jsx
-function TodoItem({item}) {
-  const [todoList, setTodoList] = useRecoilState(todoListState);
-  const index = todoList.findIndex((listItem) => listItem === item);
+function TodoItem({ item }) {
+  const [todoList, setTodoList] = useRecoilState(todoListState)
+  const index = todoList.findIndex(listItem => listItem === item)
 
-  const editItemText = ({target: {value}}) => {
+  const editItemText = ({ target: { value } }) => {
     const newList = replaceItemAtIndex(todoList, index, {
       ...item,
       text: value,
-    });
+    })
 
-    setTodoList(newList);
-  };
+    setTodoList(newList)
+  }
 
   const toggleItemCompletion = () => {
     const newList = replaceItemAtIndex(todoList, index, {
       ...item,
       isComplete: !item.isComplete,
-    });
+    })
 
-    setTodoList(newList);
-  };
+    setTodoList(newList)
+  }
 
   const deleteItem = () => {
-    const newList = removeItemAtIndex(todoList, index);
+    const newList = removeItemAtIndex(todoList, index)
 
-    setTodoList(newList);
-  };
+    setTodoList(newList)
+  }
 
   return (
     <div>
@@ -127,15 +127,15 @@ function TodoItem({item}) {
       />
       <button onClick={deleteItem}>X</button>
     </div>
-  );
+  )
 }
 
 function replaceItemAtIndex(arr, index, newValue) {
-  return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)];
+  return [...arr.slice(0, index), newValue, ...arr.slice(index + 1)]
 }
 
 function removeItemAtIndex(arr, index) {
-  return [...arr.slice(0, index), ...arr.slice(index + 1)];
+  return [...arr.slice(0, index), ...arr.slice(index + 1)]
 }
 ```
 
