@@ -39,7 +39,7 @@ React의 `useState`와 같지만 이제는 다음과 같은 컴포넌트들 사�
 function FontButton() {
   const [fontSize, setFontSize] = useRecoilState(fontSizeState);
   return (
-    <button onClick={() => setFontSize(size => size + 1)} style={{fontSize}}>
+    <button onClick={() => setFontSize((size) => size + 1)} style={{fontSize}}>
       Click to Enlarge
     </button>
   );
@@ -53,9 +53,7 @@ function FontButton() {
 function Text() {
   const [fontSize, setFontSize] = useRecoilState(fontSizeState);
   return (
-    <p style={{fontSize}}>
-      This text will increase in size too.
-    </p>
+    <p style={{fontSize}}>This text will increase in size too.</p>
   );
 }
 ```
@@ -97,7 +95,7 @@ const fontSizeLabelState = selector({
 
 Selector는 `useRecoilValue()`를 사용해 읽을 수 있다. `useRecoilValue()`는 atom이나 selector를 인자로 받아 해당 값을 반환한다.<br/>
 `fontSizeLabelState` selector는 쓸 수 없기 때문에 우리는 `useRecoilState()`를 이용하지 않는다.<br/>
-(읽기 가능한 selector의 더 많은 정보를 보려면 [selector API reference](/docs/api-reference/core/selector)를 보면된다.)<br/>
+(읽기 가능한 selector의 더 많은 정보를 보려면 [selector API reference](https://recoiljs.org/docs/api-reference/core/selector)를 보면된다.)<br/>
 
 ```jsx
 function FontButton() {
