@@ -333,7 +333,7 @@ def __call__(self, request):
 
 <img src="/assets/2020-06-01/2.PNG" width="700" height="auto">
 
-- 만료된 토큰일 경우 (**403 OK**)
+- 만료된 토큰일 경우 (**403 FORBIDDEN**)
 
 <img src="/assets/2020-06-01/3.png" width="700" height="auto">
 
