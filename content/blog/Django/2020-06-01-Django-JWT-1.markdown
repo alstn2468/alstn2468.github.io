@@ -1,0 +1,342 @@
+---
+title: 'Pure Django로 JWT인증 구현하기 (1)'
+date: 2020-06-01 00:00:01
+category: 'Django'
+draft: false
+---
+
+## JWT란?
+
+**J**son **W**eb **T**oken의 약자로 JSON 객체로 정보를 전달하는 방식이다.<br/>
+이 포스트에서는 **JWT**을 이용해 **인증**을 구현하는 방식을 다루어볼 것이다.<br/>
+
+**JWT**에 관해서 자세하게 알고 싶다면 아래의 링크를 확인하면 좋을 것이다.<br/>
+
+- [Velopert님 블로그](https://velopert.com/2389)
+- [조대협님 블로그](https://bcho.tistory.com/999)
+
+## 필요한 패키지 설치하기
+
+JWT인증을 구현하기위해 아래의 패키지 3개를 설치하였다.<br/>
+
+```shell
+pip install django
+pip install django-dotenv
+pip install pyjwt
+```
+
+## JWT인증을 구현하는 방법
+
+`Django`에서 **JWT**를 구현하는 방법으로는 찾아본 결과로는 두가지가 있는 것 같다.
+
+- `middleware`
+- `decorator`
+
+위의 두가지 방법 중 이 포스트에서는 `middleware`를 이용해 구현해보도록 하겠다.<br/>
+
+## 미들웨어 훑어보기
+
+`Django`공식문서에서는 `middleware`를 아래와 같이 정의하고있다.<br/>
+
+> 미들웨어는 장고의 요청/응답 프로세싱의 중간에서 작업을 하는 가볍고 로우-레벨인 프레임워크이다.<br/>
+> 각각의 미들웨어는 각자의 특별한 역할을 수행한다.
+
+우리가 만들 `middleware`는 요청을 받으면 그 요청이 권한이 있는지 확인하는 `middleware`를 작성할 것이다.<br/>
+
+### Middleware 구조
+
+`Django`의 `middleware`역시 **함수형**, **클래스형**이 존재한다.<br/>
+
+- 함수형 `middleware`
+
+```python
+def custom_middleware(get_response):
+    def middleware(request):
+        response = get_response(request)
+
+        return response
+
+    return middleware
+```
+
+`get_response`라는 인자를 받고 내부에 `middleware`함수가 작성된다.<br/>
+`middleware`함수의 `get_response`함수가 호출되는 부분을 기준으로<br/>
+**위에는 요청이 실행되기전 아래는 요청이 실행된 후** 로직을 작성하면 된다.<br/>
+
+- 클래스형 `middleware`
+
+```python
+class CustomMiddleware(object):
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+
+        return response
+```
+
+함수형과 동일하게 `get_response`를 클래스 생성자의 인자로 받는다.<br/>
+`__call__`함수의 `self.get_response`를 기준으로 위, 아래로 함수형과 동일하게 작성한다.<br/>
+
+### Middleware 등록하기
+
+`settings.py`에 있는 `MIDDLEWARE`리스트에 작성한 미들웨어를 등록하면된다.<br/>
+
+```python
+MIDDLEWARE = [
+    "django.middleware.security.SecurityMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
+    "django.middleware.common.CommonMiddleware",
+    "django.middleware.csrf.CsrfViewMiddleware",
+    "django.contrib.auth.middleware.AuthenticationMiddleware",
+    "django.contrib.messages.middleware.MessageMiddleware",
+    "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+    "user.middleware.JsonWebTokenMiddleWare",
+]
+```
+
+작성한 미들웨어는 `user`앱의 `middleware.py`에 `JsonWebTokenMiddleWare`클래스다.<br/>
+`MIDDLEWARE`리스트에 `<app이름>.<파일 이름>.<클래스 or 함수 이름>`과 같이 추가해주면된다.<br/>
+
+## JWT Middleware 구현하기
+
+본격적으로 `middleware`를 구현하기 전에 작성할 `middleware`가 처리할 일은 아래와 같다.<br/>
+
+- 인증이 필요한 요청이 올때 토큰 확인하기
+- 토큰을 복호화하기
+- 복호화한 토큰의 내용이 유요한지 판단하기
+
+### 환경변수 사용을 위한 설정하기
+
+`manage.py`파일을 열어 아래와 같이 설정해 주어 `.env`파일을 읽도록 해준다.<br/>
+`.env`에는 암호화, 복호화 알고리즘과 비밀키를 넣어주면 된다.<br/>
+
+```python
+import os
+import sys
+import dotenv
+
+...
+
+if __name__ == "__main__":
+    dotenv.read_dotenv()
+    main()
+```
+
+### 토큰 암호화, 복호화 유틸 함수 작성
+
+`Middleware`에서 `request`에 담긴 토큰을 복호화를 진행해야한다.<br/>
+`utils`폴더를 생성하고 `jwt.py`파일을 생성해 유틸 함수를 작성했다.<br/>
+
+```python
+import os
+import jwt
+
+
+JWT_ALGORITHM = os.environ.get("JWT_ALGORITHM")
+SECRET_KEY = os.environ.get("SECRET_KEY")
+```
+
+환경변수에서 `JWT_ALGORITHM`과 `SECRET_KEY`를 가져와 전역으로 설정했다.<br/>
+`JWT_ALGORITHM`은 토큰을 암호화, 복호화할 때 사용하는 **알고리즘**이다.<br/>
+`SECRET_KEY`는 토큰을 암호화, 복호화할 때 사용하는 **비밀키**다.<br/>
+
+```python
+def encode_jwt(data):
+    return jwt.encode(data, SECRET_KEY, algorithm=JWT_ALGORITHM).decode("utf-8")
+
+
+def decode_jwt(access_token):
+    return jwt.decode(
+        access_token,
+        SECRET_KEY,
+        algorithms=[JWT_ALGORITHM],
+        issuer="Redux Todo Web Backend",
+        options={"verify_aud": False},
+    )
+```
+
+`jwt`패키지를 `import`하고 `jwt.encode`, `jwt.decode`함수를 사용해 암,복호화를 진행한다.<br/>
+`jwt.encode`를 한 결과는 `byte-string`이기 때문에 `decode("utf-8)`로 문자열로 변환한다.<br/>
+`issuer`나 `options`의 경우는 발행하는 토큰의 내용에 따라 수정하면 된다.<br/>
+
+### 인증 Middleware 작성하기
+
+#### 1. 필요한 패키지 추가하기
+
+```python
+from django.contrib.auth.models import User
+from django.http import JsonResponse
+from django.core.exceptions import PermissionDenied
+from user.utils.jwt import decode_jwt
+from jwt.exceptions import ExpiredSignatureError
+from http import HTTPStatus
+```
+
+- `User` : 토큰을 복호화해 유효한 사용자임을 확인하기 위함
+- `JsonResponse`, `HTTPStatus` : 인증 실패시 Response를 반환하기 위함
+- `PermissionDenied` : 인증 실패 예외처리를 위함
+- `ExpiredSignatureError` : 만료된 토큰일 경우 예외처리를 위함
+- `deocde_jwt` : 요청으로 받은 토큰을 복호화 하기 위함
+
+#### 2. Middleware 작성하기
+
+- 클래스형 미들웨어 생성하기
+
+```python
+class JsonWebTokenMiddleWare(object):
+
+    def __init__(self, get_response):
+        self.get_response = get_response
+
+    def __call__(self, request):
+        response = self.get_response(request)
+
+        return response
+```
+
+- 인증이 필요한 요청 `path`로 분기하기
+
+토큰을 포함하지 않아도 되는 요청을 `path`를 이용해 분기한다.<br/>
+`signup`과 `login`은 토큰을 발급받는 과정이기 때문에 인증 로직을 넘어간다.<br/>
+관리자 페이지를 이용하는 경우 `path`에 `admin`이 존재하는지 확인했다.<br/>
+
+```python{2-8}
+def __call__(self, request):
+    try:
+        if (
+            request.path != "/signup"
+                and request.path != "/login"
+            and "admin" not in request.path
+        ):
+            pass
+
+        response = self.get_response(request)
+
+        return response
+```
+
+- 요청 헤더에서 인증 토큰 가져오기
+
+`request`에서 `headers`를 가져온 후 `Authorization`을 가져와 `access_token`에 저장한다.<br/>
+`access_token`이 존재하지 않으면 `PermissionDenied`예외를 발생시킨다.<br/>
+
+```python{8-12}
+def __call__(self, request):
+    try:
+        if (
+            request.path != "/signup"
+            and request.path != "/login"
+            and "admin" not in request.path
+        ):
+            headers = request.headers
+            access_token = headers.get("Authorization", None)
+
+            if not access_token:
+                raise PermissionDenied()
+
+        response = self.get_response(request)
+
+        return response
+```
+
+- 인증 토큰 복호화해 유효성 검증하기
+
+유틸 함수로 구현했던 `decode_jwt`를 사용해 토큰을 복호화한다.<br/>
+토큰의 데이터는 `payload`에 저장하고 토큰을 발급받은 사람인 `aud`값을 가져온다.<br/>
+`aud`의 값이 없을 경우 `PermissionDenied` 예외를 발생시킨다.<br/>
+`aud`값이 저장된 `username`으로 `User`모델에서 해당 사용자가 존재하는지 확인한다.<br/>
+여기에서 사용자가 존재하지 않을 경우 `User.DoesNotExist` 예외가 발생한다.<br/>
+
+```python{14-21}
+def __call__(self, request):
+    try:
+        if (
+            request.path != "/signup"
+            and request.path != "/login"
+            and "admin" not in request.path
+        ):
+            headers = request.headers
+            access_token = headers.get("Authorization", None)
+
+            if not access_token:
+                raise PermissionDenied()
+
+            payload = decode_jwt(access_token)
+
+            username = payload.get("aud", None)
+
+            if not username:
+                raise PermissionDenied()
+
+            User.objects.get(username=username)
+
+        response = self.get_response(request)
+
+        return response
+```
+
+- 예외 처리 하기
+
+토큰이 존재하지 않거나, 유효하지 않은 사용자일 경우 **UNAUTHORIZED (401)**을 반환한다.<br/>
+이미 만료된 토큰일 경우 **FORBIDDEN (403)**을 반환한다.<br/>
+
+```python{27-36}
+def __call__(self, request):
+    try:
+        if (
+            request.path != "/signup"
+            and request.path != "/login"
+            and "admin" not in request.path
+        ):
+            headers = request.headers
+            access_token = headers.get("Authorization", None)
+
+            if not access_token:
+                raise PermissionDenied()
+
+            payload = decode_jwt(access_token)
+
+            username = payload.get("aud", None)
+
+            if not username:
+                raise PermissionDenied()
+
+            User.objects.get(username=username)
+
+        response = self.get_response(request)
+
+        return response
+
+    except (PermissionDenied, User.DoesNotExist):
+        return JsonResponse(
+            {"error": "Authorization Error"}, status=HTTPStatus.UNAUTHORIZED
+        )
+
+    except ExpiredSignatureError:
+        return JsonResponse(
+            {"error": "Expired token. Please log in again."},
+            status=HTTPStatus.FORBIDDEN,
+        )
+```
+
+### 미들웨어 작동 확인하기
+
+- 토큰을 같이 보내지 않았을 경우 (**401 UNAUTHORIZED**)
+
+<img src="/assets/2020-06-01/1.PNG" width="700" height="auto">
+
+- 유효한 토큰일 경우 (**200 OK**)
+
+<img src="/assets/2020-06-01/2.PNG" width="700" height="auto">
+
+- 만료된 토큰일 경우 (**403 OK**)
+
+<img src="/assets/2020-06-01/3.PNG" width="700" height="auto">
+
+아직 디테일한 **예외처리**가 조금 부족하지만 잘 작동하는 것을 확인할 수 있다.<br/>
+실제 작성된 코드는 [여기](https://github.com/alstn2468/Redux_ToDo_Web_Backend/blob/master/user/middleware.py)에서 확인할 수 있다.<br/>
+이어지는 포스트에서는 **JWT**를 이용한 로그인과 회원가입을 구현해보도록 하겠다.
