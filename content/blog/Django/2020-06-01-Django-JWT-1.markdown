@@ -339,4 +339,4 @@ def __call__(self, request):
 
 아직 디테일한 **예외처리**가 조금 부족하지만 잘 작동하는 것을 확인할 수 있다.<br/>
 실제 작성된 코드는 [여기](https://github.com/alstn2468/Redux_ToDo_Web_Backend/blob/master/user/middleware.py)에서 확인할 수 있다.<br/>
-이어지는 포스트에서는 **JWT**를 이용한 로그인과 회원가입을 구현해보도록 하겠다.
+이어지는 포스트에서는 **JWT**를 이용한 로그인을 구현해보도록 하겠다.
