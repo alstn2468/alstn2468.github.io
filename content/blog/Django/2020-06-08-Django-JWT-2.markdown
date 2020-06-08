@@ -7,7 +7,7 @@ draft: false
 
 이전 포스트에서는 **Django**에서 **JWT**인증을 위한 미들웨어 작성법을 알아보았다.<br/>
 이번에는 `middleware`를 사용하기 위한 **인증 토큰을 발행**하는 과정을 다루어보겠다.<br/>
-기본적으로 `/login`과 `/signup` 두 가지의 `path`에서 토큰일 발행된다.<br/>
+기본적으로 `/login`과 `/signup` 두 가지의 `path`에서 토큰을 발행된다.<br/>
 
 ## URL 설정하기
 
@@ -199,7 +199,7 @@ def login_view(request):
 `User`모델을 사용해 `username`값을 갖는 사용자가 있는지 확인한다.<br/>
 여기서 해당 사용자가 없을 경우 `User.DoesNotExist`예외가 발생한다.<br/>
 해당 `username`을 갖는 사용자가 있을 경우 `user`객체의 `check_password`를 이용해<br/>
-해당 사용자의 비밀번호가 유요한 비밀번호인지 판단하게 된다.<br/>
+해당 사용자의 비밀번호가 유효한 비밀번호인지 판단하게 된다.<br/>
 요청을 받은 비밀번호가 잘못된 비밀번호 일 경우 `ValueError`예외가 발생한다.<br/>
 
 ```python{16-19}
