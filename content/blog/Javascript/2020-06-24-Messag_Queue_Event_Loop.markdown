@@ -32,7 +32,7 @@ draft: false
 
 ```javascript
 while (queue.waitForMessage()) {
-  queue.processNextMessage()
+  queue.processNextMessage();
 }
 ```
 
@@ -45,14 +45,14 @@ while (queue.waitForMessage()) {
 
 ```javascript
 function foo() {
-  console.log('foo')
+  console.log('foo');
 }
 
 setTimeout(function bar() {
-  console.log('bar')
-}, 1000)
+  console.log('bar');
+}, 1000);
 
-foo()
+foo();
 ```
 
 위와 같이 `setTimeout`함수에 `1000ms`를 주어 실행하게되면<br/>
@@ -68,14 +68,14 @@ bar
 
 ```javascript
 function foo() {
-  console.log('foo')
+  console.log('foo');
 }
 
 setTimeout(function bar() {
-  console.log('bar')
-}, 0)
+  console.log('bar');
+}, 0);
 
-foo()
+foo();
 ```
 
 `foo`가 먼저 출력이 된 후 `bar`가 출력이 되는 것을 확인할 수 있다.<br/>
@@ -95,14 +95,14 @@ foo()
 
 ```javascript
 function foo() {
-  console.log('foo')
+  console.log('foo');
 }
 
 setTimeout(function bar() {
-  console.log('bar')
-}, 0)
+  console.log('bar');
+}, 0);
 
-foo()
+foo();
 ```
 
 **이벤트 루프**에서 설명했던 위의 예시의 설명을 보면 `setTimeout`에 등록된<br/>
