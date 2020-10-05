@@ -1,7 +1,7 @@
 ---
 title: '1일 1커밋 1주년 회고'
 date: 2019-9-10 00:00:05
-category: 'Reminiscence'
+category: 'Retrospective'
 draft: false
 ---
 
