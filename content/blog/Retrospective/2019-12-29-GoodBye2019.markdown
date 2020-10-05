@@ -1,7 +1,7 @@
 ---
 title: '2019년 개발 회고'
 date: 2019-12-29 00:00:05
-category: 'Reminiscence'
+category: 'Retrospective'
 draft: false
 ---
 

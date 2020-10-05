@@ -1,7 +1,7 @@
 ---
 title: 'SW 마에스트로 10기 합격 후기'
 date: 2019-04-19 01:41:23
-category: 'Reminiscence'
+category: 'Retrospective'
 draft: false
 ---
 
