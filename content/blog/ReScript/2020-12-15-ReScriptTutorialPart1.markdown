@@ -6,7 +6,7 @@ draft: false
 ---
 
 본 포스트는 <a href="https://rescript-lang.org/docs/latest/">ReScript 공식문서</a>를 스터디하며 정리한 포스트 입니다.<br/>
-포스트를 작성하며 작성한 코드는 [여기](https://github.com/alstn2468?tab=repositories)에서 확인할 수 있습니다.
+포스트를 작성하며 작성한 코드는 [여기](https://github.com/alstn2468/ReScript_Tutorial)에서 확인할 수 있습니다.
 
 ## ReScript란?
 
