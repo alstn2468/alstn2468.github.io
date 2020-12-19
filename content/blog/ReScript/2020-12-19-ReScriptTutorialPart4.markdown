@@ -88,7 +88,7 @@ ReScript는 하나의 문자만 가지고 있는 문자열 타입을 가지고 �
 let firstLetterOfAlphabet = 'a'
 ```
 
-참고 : `Char`타입은 유니코드 또는 UTF-8을 지원하지 않으므로 권장되지 않는다다.
+참고 : `Char`타입은 유니코드 또는 UTF-8을 지원하지 않으므로 권장되지 않는다.
 
 `String`을 `Char`로 변환하려면 `"a". [0]`와 같이 사용하면 된다.  반대로 `Char`를 `String`으로 변환하려면 `String.make (1, 'a')`와 같이 사용하면 된다.
 
