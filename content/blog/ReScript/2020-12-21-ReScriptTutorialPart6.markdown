@@ -20,7 +20,7 @@ Record는 JavaScript의 객체와 비슷하지만 아래와 같은 차이점이 
 Record는 필수적으로 타입 선언이 필요하다.
 
 ```reason
-type Person = {
+type person = {
   age: int,
   name: string
 }
