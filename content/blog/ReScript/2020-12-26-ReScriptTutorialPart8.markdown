@@ -67,7 +67,7 @@ let friendAccount = Instagram("Jenny")
 
 Variant의 인자에 여러 개의 필드가 있는 경우 Record와 유사한 구문을 사용하여 읽기 쉽도록 레이블을 지정할 수 있다.
 
-```reaon
+```reason
 type user =
   | Number(int)
   | Id({name: string, password: string})
