@@ -99,7 +99,7 @@ ReScript 코드를 JavaScript로 컴파일하기 위해서 아래와 같은 스�
   ],
   "warnings": {
     "error" : "+101"
-  },
+  }
 }
 ```
 
