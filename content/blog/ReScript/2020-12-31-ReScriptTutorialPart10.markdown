@@ -22,7 +22,7 @@ ReScript의 배열의 각 항목은 타입이 동일해야 한다.
 
 #### Array를 사용하는 방법
 
-[Js.Array](https://rescript-lang.org/docs/manual/latest/api/js/array) API를 보면된다.
+Array를 사용하기 위해서는 [Js.Array](https://rescript-lang.org/docs/manual/latest/api/js/array) API를 보면된다.
 
 Array의 항목에 접근하고 업데이트 하기위해서는 아래와 같이 사용하면 된다.
 
