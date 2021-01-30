@@ -20,7 +20,6 @@ export default class HTML extends React.Component {
             name="naver-site-verification"
             content="827b1a994f25a73917bc2cf204f2021eacea978a"
           />
-          <link rel="canonical" href="https://alstn2468.github.io/" />
           {this.props.headComponents}
         </head>
         <body {...this.props.bodyAttributes}>
