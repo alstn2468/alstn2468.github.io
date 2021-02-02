@@ -40,7 +40,7 @@ ReScript의 공식문서에서는 타입 시스템 외에도 아래와 같은 Re
 - 죽은 코드를 잘 제거해 준다. (High Quality Dead Code Elimination)
 - 작은 JavaScript코드로 컴파일된 결과물이 출력된다. (Tiny JS Output)
 - 반복문이 빠르다. (Fast Iteration Loop)
-- 출력이 읽기 쉬우며 인터럽트가 멋지다. (Readable Output & Great Interop)
+- 출력이 읽기 쉬우며 뛰어난 상호운용성을 갖는다. (Readable Output & Great Interop)
 - 코드 구조를 보존한다. (Preservation of Code Structure)
 
 각 장점에 대한 자세한 설명은 [Other Highlights](https://rescript-lang.org/docs/manual/latest/introduction#other-highlights)에서 확인할 수 있다.
