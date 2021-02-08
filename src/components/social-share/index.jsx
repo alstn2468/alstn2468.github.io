@@ -6,7 +6,7 @@ import { shareToTwitter, shareToFacebook } from '../../utils/share'
 import './index.scss'
 
 export const SocialShare = ({ title, author }) => {
-  const text = `"${title}" by ${author}(@JbeeLjyhanll)`
+  const text = `"${title}" by ${author}(@alstn2468)`
 
   const onClickTwitterIcon = e => {
     e.preventDefault()
