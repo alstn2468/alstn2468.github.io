@@ -30,7 +30,10 @@ export const Bio = () => (
                 <div className="author-introduction">{introduction}</div>
                 <p className="author-socials">
                   {social.github && (
-                    <a href={`https://github.com/${social.github}`}>
+                    <a
+                      href={`https://github.com/${social.github}`}
+                      target="_blank"
+                    >
                       <svg
                         className="social-icon"
                         enableBackground="new 0 0 24 24"
@@ -42,7 +45,10 @@ export const Bio = () => (
                     </a>
                   )}
                   {social.instagram && (
-                    <a href={`https://instagram.com/${social.instagram}`}>
+                    <a
+                      href={`https://instagram.com/${social.instagram}`}
+                      target="_blank"
+                    >
                       <svg
                         className="social-icon"
                         viewBox="0 0 512 512"
@@ -55,7 +61,10 @@ export const Bio = () => (
                     </a>
                   )}
                   {social.twitter && (
-                    <a href={`https://www.linkedin.com/in/${social.twitter}`}>
+                    <a
+                      href={`https://www.linkedin.com/in/${social.twitter}`}
+                      target="_blank"
+                    >
                       <svg
                         className="social-icon"
                         viewBox="0 0 512 512"
@@ -66,7 +75,10 @@ export const Bio = () => (
                     </a>
                   )}
                   {social.facebook && (
-                    <a href={`https://www.facebook.com/${social.facebook}`}>
+                    <a
+                      href={`https://www.facebook.com/${social.facebook}`}
+                      target="_blank"
+                    >
                       <svg
                         className="social-icon"
                         viewBox="0 0 512 512"
