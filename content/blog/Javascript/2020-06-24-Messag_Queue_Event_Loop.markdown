@@ -21,7 +21,7 @@ draft: false
 큐는 먼저들어온 것이 먼저나가는 **FIFO**(**F**irst **I**n **F**irst **O**ut)의 특징을 갖는다.<br/>
 자바스크립트의 브라우저 엔진의 메시지 큐에는 **비동기**로 처리될 **콜백 함수**가 저장된다.<br/>
 
-<img src="/assets/2020-06-24-Message_Queue_Event_Loop/1.png" width="500"/>
+<img src="./images/2020-06-24-Message_Queue_Event_Loop/1.png" width="500"/>
 
 **콜스택**이 비어있게 되면 메시지 큐에 있는 **콜백 함수**를 꺼내와 실행하게 된다.<br/>
 **메시지큐**에서 **콜백 함수**를 꺼내오는 이 과정은 **이벤트 루프**가 담당한다.<br/>
@@ -32,7 +32,7 @@ draft: false
 
 ```javascript
 while (queue.waitForMessage()) {
-  queue.processNextMessage();
+  queue.processNextMessage()
 }
 ```
 
@@ -45,14 +45,14 @@ while (queue.waitForMessage()) {
 
 ```javascript
 function foo() {
-  console.log('foo');
+  console.log('foo')
 }
 
 setTimeout(function bar() {
-  console.log('bar');
-}, 1000);
+  console.log('bar')
+}, 1000)
 
-foo();
+foo()
 ```
 
 위와 같이 `setTimeout`함수에 `1000ms`를 주어 실행하게되면<br/>
@@ -68,21 +68,21 @@ bar
 
 ```javascript
 function foo() {
-  console.log('foo');
+  console.log('foo')
 }
 
 setTimeout(function bar() {
-  console.log('bar');
-}, 0);
+  console.log('bar')
+}, 0)
 
-foo();
+foo()
 ```
 
 `foo`가 먼저 출력이 된 후 `bar`가 출력이 되는 것을 확인할 수 있다.<br/>
 `setTimeout`을 사용하게 되면서 `bar`함수는 **메시지 큐**에 들어가게된다.<br/>
 그 후 `foo`함수는 **콜스택**에 들어가게 된다. 그림으로 표현하면 아래와 같다.<br/>
 
-<img src="/assets/2020-06-24-Message_Queue_Event_Loop/2.png" width="500"/>
+<img src="./images/2020-06-24-Message_Queue_Event_Loop/2.png" width="500"/>
 
 이 과정에서 `foo`함수가 먼저 실행이 되고 **콜스택**이 비어있게되면<br/>
 **이벤트 루프**가 `bar`함수를 **콜스택**에 추가해주게 된다.<br/>
@@ -95,14 +95,14 @@ foo();
 
 ```javascript
 function foo() {
-  console.log('foo');
+  console.log('foo')
 }
 
 setTimeout(function bar() {
-  console.log('bar');
-}, 0);
+  console.log('bar')
+}, 0)
 
-foo();
+foo()
 ```
 
 **이벤트 루프**에서 설명했던 위의 예시의 설명을 보면 `setTimeout`에 등록된<br/>

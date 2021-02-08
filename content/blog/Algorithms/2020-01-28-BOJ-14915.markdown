@@ -97,7 +97,7 @@ print(convert(M, N))
 
 문제의 3번째 테스트케이스인 `M = 248`, `N = 16`을 예제로 들어보겠다.<br>
 
-<img src="/assets/2020-01-28-14915/1.PNG" width="600" height="auto">
+<img src="./images/2020-01-28-14915/1.PNG" width="600" height="auto">
 
 **몫**이 `0`이 되는 것을 **재귀함수**의 **탈출 조건**이다.<br>
 위의 그림처럼 `divmod`함수를 사용하면서 **몫**이 `0`이될 때까지 재귀함수를 진행한다.<br>
@@ -110,7 +110,7 @@ print(convert(M, N))
 
 **재귀함수**를 이용해 간단하게 진법변환 함수를 구현할 수 있었다.<br/>
 
-<img src="/assets/2020-01-28-14915/2.PNG" width="500" height="auto">
+<img src="./images/2020-01-28-14915/2.PNG" width="500" height="auto">
 
 간단한 재귀함수이긴하지만 재귀호출 과정을 **직접 그려보면서 이해**하는 것도 좋을 것 같다.<br>
 

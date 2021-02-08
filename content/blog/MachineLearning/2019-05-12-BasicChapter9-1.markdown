@@ -24,7 +24,7 @@ draft: false
 
 ### 소프트웨어
 
-<img src="/assets/2019-05-12/1.png" width="200" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-12/1.png" width="200" height="auto" alt="아직 안만듬">
 
 ### 하드웨어적
 
@@ -38,7 +38,7 @@ draft: false
 
 ## XOR Problem
 
-<img src="/assets/2019-05-12/2.png" width="400" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-12/2.png" width="400" height="auto" alt="아직 안만듬">
 
 | X1  | X2  | Y   |
 | --- | --- | --- |

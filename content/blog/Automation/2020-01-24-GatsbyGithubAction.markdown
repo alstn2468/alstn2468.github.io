@@ -13,7 +13,7 @@ draft: false
 테마는 이전 부터 보았던 jbee님의 [gatsby-starter-bee](https://github.com/JaeYeopHan/gatsby-starter-bee)를 사용하기로 했다.<br>
 로컬 환경에서 테스트를 마치고 배포를 완료한 후 내 원격 저장소를 보고는 놀랄 수 밖에 없었다.<br>
 
-<img src="/assets/2020-01-23/1.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/1.PNG" width="400" height="auto">
 
 #### 어? 내 코드 다 어디갔지?
 
@@ -54,11 +54,11 @@ draft: false
 내 레파지토리에 직접적으로 접근을 하기위해 Github의 **Access Token**이 필요했다.<br>
 [여기](https://github.com/settings/tokens)에서 `Generate new token`을 클릭해 생성할 수 있다.<br>
 
-<img src="/assets/2020-01-23/2.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/2.PNG" width="400" height="auto">
 
 위와 같이 모든 Repo설정에 대한 권한을 주고 토큰을 생성했다.<br>
 
-<img src="/assets/2020-01-23/3.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/3.PNG" width="400" height="auto">
 
 생성된 토큰을 복사해 사용할 레파지토르의 `settings`의 `Secrets`으로간 후<br>
 `Add a new secret`을 클릭하고 `GITHUB_API_KEY`의 이름으로 키를 적용하자.<br>
@@ -67,13 +67,13 @@ draft: false
 
 사용할 레파지토리의 상단 부분의 `Actions`버튼을 클릭해보자.<br>
 
-<img src="/assets/2020-01-23/4.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/4.PNG" width="400" height="auto">
 
 나는 이미 여러번 배포를 해서 이력이 있지만 아마 사용하지 않았다면 비어있을 것이다.<br>
 `New workflow`버튼을 클릭해 새로운 `workflow`를 생성해보자.<br>
 `Get started with Github Action`과 같은 페이지가 뜨는데 스킵하면 된다.<br>
 
-<img src="/assets/2020-01-23/5.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/5.PNG" width="400" height="auto">
 
 아래의 `yml`코드를 붙여넣기 한 후 저장하고 레파지토리에 `pull`을 해주자.
 
@@ -114,7 +114,7 @@ jobs:
 `workflow`를 생성하고 `pull`을 하면 `.github`폴더안에 `yml`파일이 생성되었을 것이다.<br>
 이 상태에서 블로그에 관한것을 변경한 후 `push`하게되면 자동으로 배포가된다.<br>
 
-<img src="/assets/2020-01-23/6.PNG" width="400" height="auto">
+<img src="./images/2020-01-23/6.PNG" width="400" height="auto">
 
 별 문제가 없다면 위의 사진과 같이 `deploy`단계 까지 완료가 될 것이다.<br>
 `deploy`단계까지 오류가 없이 잘 진행되었다면 배포가 완료된 것이다.<br>

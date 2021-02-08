@@ -7,7 +7,7 @@ draft: false
 
 ## 공개SW 체험캠프란?
 
-<img src="/assets/2019-11-01/4.jpg" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/4.jpg" width="500" height="auto" alt="아직 안만듬"><br/>
 
 과학기술정보통신부에서 주최하고 정보통신산업진흥원과 충북대학교에서 주관하는 행사다.<br>
 세션1과 세션2로 나누어져 있었으며 세션1은 강연 형식으로 진행되었고<br>
@@ -16,7 +16,7 @@ draft: false
 
 ## 참여 계기
 
-<img src="/assets/2019-11-01/6.png" width="600" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/6.png" width="600" height="auto" alt="아직 안만듬"><br/>
 
 현재 저는 [DevelUP](https://develup.goorm.io)이라는 개발 커뮤니티에서 **멘토**로 활동 중 입니다.<br>
 그러던 중 DevelUP 멘토 슬랙 채널에서 **공개SW 체험캠프** 강의자를 구하는 글을 보게되었다.<br>
@@ -30,7 +30,7 @@ draft: false
 **공개 SW 체험캠프** 운영 계획을 담은 메일이였는데 아래의 사진과 같은 첨부파일과<br>
 필요한 설치프로그램들을 회신해달라는 내용을 담고 있었다.<br>
 
-<img src="/assets/2019-11-01/3.jpeg" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/3.jpeg" width="500" height="auto" alt="아직 안만듬"><br/>
 
 운영 계획안을 보고 저는 **첫번째 멘붕**에 빠졌습니다.<br>
 저를 제외하고는 강연자분들과 실습해주시는 강사님들 모두 너무 뛰어나 보였다.<br>
@@ -62,20 +62,20 @@ draft: false
 하지만 어떠한 수준으로 어떻게 강의할지는 오랫동안 고민했다.<br>
 ~~일단 만들면서 스크린샷을 찍어두고 발표자료를 준비하자!~~라는 생각으로 자료를 만들기 시작했다.<br>
 
-<img src="/assets/2019-11-01/7.png" width="600" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/7.png" width="600" height="auto" alt="아직 안만듬"><br/>
 
 폴더에는 현재 47장 정도의 스크린샷이 존재하나 중간중간 자료를 만드는 중에<br>
 더 추가하고 삭제한 부분이 더 많았던 것 같다.<br>
 
 ### 이렇게 스크린샷을 모두 찍어두고 발표자료를 만들었더니?
 
-<img src="/assets/2019-11-01/5.png" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/5.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
 **쉽게 쉽게 줄여서 줄여서** 만든 자료가 112장이나 되었다...<br>
 
 ## 대망의 강의 진행
 
-<img src="/assets/2019-11-01/2.jpeg" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-01/2.jpeg" width="500" height="auto" alt="아직 안만듬"><br/>
 
 미리 세팅되어 있는 컴퓨터를 확인하고 강의를 시작했다.<br>
 그래도 전공자인데 **이 정도는 알겠지?** 하고 강의를 준비했던 저는...<br>

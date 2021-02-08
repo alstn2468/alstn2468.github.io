@@ -56,7 +56,7 @@ $$
 
 **`W`값의 변화에 따라 달라지는 `cost(W)`의 값 그래프**
 
-<img src="/assets/2019-01-02-4_1/1.png" width="400" height="auto">
+<img src="./images/2019-01-02-4_1/1.png" width="400" height="auto">
 
 우리의 목표 : `cost(W)`가 **최소화** 되는 점을 찾는 것
 
@@ -103,4 +103,4 @@ $$
 
 - **경사하강법**을 사용할 때 그래프가 아래와 같은 모양인지 **확인 필수**
 
-<img src="/assets/2019-01-02-4_1/2.png" width="400" height="auto">
+<img src="./images/2019-01-02-4_1/2.png" width="400" height="auto">

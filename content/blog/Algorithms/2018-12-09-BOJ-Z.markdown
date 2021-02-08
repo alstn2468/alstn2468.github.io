@@ -17,18 +17,18 @@ draft: false
 예를 들어, 2*2배열을 왼쪽 위칸, 오른쪽 위칸, 왼쪽 아래칸,<br/>
 오른쪽 아래칸 순서대로 방문하면 Z모양이다.<br/>
 
-<img src="/assets/2018-12-09-1074/1.PNG" width="100" height="auto">
+<img src="./images/2018-12-09-1074/1.PNG" width="100" height="auto">
 
 만약, 2차원 배열의 크기가 2^N _ 2^N라서 왼쪽 위에 있는 칸이 하나가 아니라면,<br/>
 배열을 4등분 한 후에 (크기가 같은 2^(N-1)로) 재귀적으로 순서대로 방문한다.<br/>
 다음 예는 2^2 _ 2^2 크기의 배열을 방문한 순서이다.<br/>
 
-<img src="/assets/2018-12-09-1074/2.PNG" width="150" height="auto">
+<img src="./images/2018-12-09-1074/2.PNG" width="150" height="auto">
 
 N이 주어졌을 때, (r, c)를 몇 번째로 방문하는지 출력하는 프로그램을 작성하시오.<br/>
 다음 그림은 N=3일 때의 예이다.<br/>
 
-<img src="/assets/2018-12-09-1074/3.PNG" width="300" height="auto">
+<img src="./images/2018-12-09-1074/3.PNG" width="300" height="auto">
 
 ### 입력
 
@@ -82,7 +82,7 @@ r과 c는 0보다 크거나 같고, 2^N-1보다 작거나 같은 정수이다<br
 
 ### 예제 분석
 
-<img src="/assets/2018-12-09-1074/4.PNG" width="300" height="auto">
+<img src="./images/2018-12-09-1074/4.PNG" width="300" height="auto">
 
 예제 1번의 **흐름(?)**을 그림으로 그려본 것이다.<br/>
 **검은 원**인 **(3, 1)**은 처음에 입력으로 받은 `r`, `c`에 해당하는 것이고<br/>
@@ -175,7 +175,7 @@ print(result)
 
 ### 결과
 
-<img src="/assets/2018-12-09-1074/5.PNG" width="500" height="auto">
+<img src="./images/2018-12-09-1074/5.PNG" width="500" height="auto">
 
 재귀를 사용하지 않고 **반복문을 사용**해서 풀었다.<br/>
 **4분할 문제**답게 **사분면**을 사용하여 접근하였으며, `(2 * r) + c`로 **일반화**된 공식을<br/>

@@ -10,7 +10,7 @@ const cwd = process.cwd()
 
 const CONTENTS_DIR = '/content/blog'
 const TARGET_DIR = `${cwd}${CONTENTS_DIR}`
-const IGNORE_DIR = 'images'
+const IGNORE_DIR = 'assets'
 const UTF_8 = 'utf8'
 const DATE_FORMAT = 'YYYY-MM-DD HH:MM:SS'
 

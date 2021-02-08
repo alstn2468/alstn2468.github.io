@@ -153,7 +153,7 @@ else:
 
 ### 결과
 
-<img src="/assets/2018-12-06-1032/1.PNG" width="500" height="auto">
+<img src="./images/2018-12-06-1032/1.PNG" width="500" height="auto">
 
 어렵지 않고 빠르게 해결할 수 있는 문제였다.<br/>
 고려해야하는 **예외**들이 몇가지 존재하여 **주의해서 생각**하지 않는다면<br/>

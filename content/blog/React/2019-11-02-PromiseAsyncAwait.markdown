@@ -56,7 +56,7 @@ sayHello('Frank').then(() => console.log('안녕히 가세요.'))
 
 아래와 같이 이전과 동일한 결과를 확인할 수 있다.<br>
 
-<img src="/assets/2019-11-02/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-02/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ## Promise 활용하기
 
@@ -91,7 +91,7 @@ sayHello('Mike')
 특정 조건에 따라 성공(`resolve`)나 실패(`reject`)로 상황을 나누어<br>
 `then`과 `catch`로 전달받은 `callback`함수가 실행되도록 할 수 있다.<br>
 
-<img src="/assets/2019-11-02/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-02/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ## Async - Await
 
@@ -135,9 +135,9 @@ sayByeAsync('Minsu')
 또한 `Promise`내부의 `resolve`함수에 **인자**로 넘겨 주었던 `name`을<br>
 `sayHelloAsync`함수의 **결과값**으로 받을 수 있는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-11-02/3.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-02/3.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 `await`키워드를 삭제하고 함수를 호출하게 되면 아래와 같은 결과가 반환된다.<br>
 이미 약속되어 있는 값(`Promise`)이 제대로 받아지지 않아 아래의 결과가 반환된다.<br>
 
-<img src="/assets/2019-11-02/4.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-11-02/4.png" width="300" height="auto" alt="아직 안만듬"><br/>

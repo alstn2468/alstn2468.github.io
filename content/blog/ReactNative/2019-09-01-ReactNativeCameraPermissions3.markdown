@@ -41,7 +41,7 @@ draft: false
 
 ### 작동 테스트
 
-<img src="/assets/2019-09-01/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 전방 카메라로 잘 작동하는 것을 확인할 수 있다.<br>
 
@@ -114,8 +114,8 @@ const IconBar = styled.View`
 `state`를 `Camera.Constants.Type.front`와 `Camera.Constants.Type.back`으로<br>
 바꾸면서 화면과 아이콘의 변화를 테스트합니다.<br>
 
-<img src="/assets/2019-09-01/2.png" width="280" height="auto" alt="아직 안만듬">
-<img src="/assets/2019-09-01/3.png" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/2.png" width="280" height="auto" alt="아직 안만듬">
+<img src="./images/2019-09-01/3.png" width="280" height="auto" alt="아직 안만듬"><br/>
 
 ## 12. 버튼을 눌렀을 때 state 변경하기
 
@@ -189,6 +189,6 @@ switchCameraType = () => {
 
 아래와 같이 잘 작동하는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-09-01/4.gif" width="300" height="auto" alt="아직 안만듬"><br>
+<img src="./images/2019-09-01/4.gif" width="300" height="auto" alt="아직 안만듬"><br>
 
 다음 포스트에서는 **얼굴을 인식**하고 직접 **사진을 찍는 것** 까지 진행해보겠습니다.

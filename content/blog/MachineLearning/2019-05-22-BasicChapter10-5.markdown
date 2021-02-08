@@ -26,7 +26,7 @@ draft: false
    ```
 3. **Summary**(logging한 데이터)를 어디에 기록할지 설정
    ```python
-   wrtier = tf.summary.FileWriter("/assets/2019-05-23/logs")
+   wrtier = tf.summary.FileWriter("./images/2019-05-23/logs")
    wrtier.add_graph(sess.graph)
    ```
 4. **Session**을 열어 **Summary**실행 및 파일에 기록
@@ -36,7 +36,7 @@ draft: false
    ```
 5. 터미널에서 **Tensorboard**명령어 실행
    ```
-   tensoorboard --logdir=/assets/2019-05-23/logs
+   tensoorboard --logdir=./images/2019-05-23/logs
    ```
 
 ## Logging할 데이터
@@ -65,12 +65,12 @@ logs
 ```
 
 위와 같은 경우<br/>
-`tensorboard --logidr=/assets/2019-05-23/logs/run0_1`<br/>
-`tensorboard --logidr=/assets/2019-05-23/logs/run0_01`<br/>
-`tensorboard --logidr=/assets/2019-05-23/logs/run0_01`<br/>
+`tensorboard --logidr=./images/2019-05-23/logs/run0_1`<br/>
+`tensorboard --logidr=./images/2019-05-23/logs/run0_01`<br/>
+`tensorboard --logidr=./images/2019-05-23/logs/run0_01`<br/>
 의 명령어로 Tensorboard를 실행시킬 수 있지만<br/>
 
-`tensorboard --logidr=/assets/2019-05-23/logs`와 같이<br/>
+`tensorboard --logidr=./images/2019-05-23/logs`와 같이<br/>
 상위 디렉토리로 Tensorboard를 실행시키면 비교가 가능<br/>
 
 ```python
@@ -131,7 +131,7 @@ tf.summary.scalar("accuracy", accuracy)
 
 with tf.Session() as sess:
     merged_summary = tf.summary.merge_all()
-    writer = tf.summary.FileWriter("/assets/2019-05-23/xor_logs")
+    writer = tf.summary.FileWriter("./images/2019-05-23/xor_logs")
     writer.add_graph(sess.graph)
 
     sess.run(tf.global_variables_initializer())
@@ -181,28 +181,28 @@ with tf.Session() as sess:
 
 - Cost
 
-<img src="/assets/2019-05-22/11.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/11.png" width="500" height="auto" alt="아직 안만듬">
 
 - Accuracy
 
-<img src="/assets/2019-05-22/12.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/12.png" width="500" height="auto" alt="아직 안만듬">
 
 - Graph
 
-<img src="/assets/2019-05-22/13.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/13.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Distribution
 
-<img src="/assets/2019-05-22/14.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/14.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Distribution
 
-<img src="/assets/2019-05-22/15.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/15.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer1 Histogram
 
-<img src="/assets/2019-05-22/16.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/16.png" width="500" height="auto" alt="아직 안만듬">
 
 - Layer2 Histogram
 
-<img src="/assets/2019-05-22/17.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-22/17.png" width="500" height="auto" alt="아직 안만듬">

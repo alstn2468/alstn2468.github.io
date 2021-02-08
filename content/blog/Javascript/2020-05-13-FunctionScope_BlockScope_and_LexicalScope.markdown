@@ -170,16 +170,16 @@ scopeChainTest()
 
 위의 코드의 실행 컨텍스트는 아래와 같다.<br/>
 
-<img src="/assets/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/1.PNG" width="800"/>
+<img src="./images/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/1.PNG" width="800"/>
 
 함수가 실행 될 때마다 `[[Scope]]`가 연결리스트 처럼 연결된다.<br/>
 `returnVariable`에서는 아래와 같은 `[[Scope]]`를 가지게 된다.<br/>
 
-<img src="/assets/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/2.PNG" width="300"/>
+<img src="./images/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/2.PNG" width="300"/>
 
 실제 크롬 개발자 도구를 이용해 `[[Scope]]`를 확인해 보았다.<br/>
 
-<img src="/assets/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/3.PNG" width="600"/>
+<img src="./images/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/3.PNG" width="600"/>
 
 `scopeChainTest`함수에서는 `[[Scope]]`로 `Global` 전역 범위를 가지고 있다.<br/>
 `returnVariable`함수에서는 `0`번째로 `scopeChainTest` 다음으로 `Global`을 가지고 있다.<br/>
@@ -203,7 +203,7 @@ scopeChainTest(returnVariable)
 
 바뀐 코드에서 `returnVariable`함수가 참조하는 `[[Scope]]`는 `Global`이 될 것이다.<br/>
 
-<img src="/assets/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/4.PNG" width="600"/>
+<img src="./images/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/4.PNG" width="600"/>
 
 개발자 도구에서 확인해 보면 두 함수 모드 `Global`만 범위로 가지고 있다.<br/>
 두 함수 모두 **전역 범위에서 정의**되었기 때문에 **자신의 변수 객체**와 `Global`만 갖게 된다.<br/>
@@ -229,6 +229,6 @@ function usingLetKeyword() {
 `var`키워드를 사용한 함수에서는 `i`의 값이 `3`으로 출력되었다.<br/>
 그러나 `let`키워드를 사용한 함수에서는 `i`가 정의되지 않았다는 에러가 발생했다.<br/>
 
-<img src="/assets/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/5.PNG" width="300"/>
+<img src="./images/2020-05-13-FunctionScope_BlockScope_and_LexicalScope/5.PNG" width="300"/>
 
 `let`과 `const`키워드를 사용할 경우 **괄호의 범위** 안에서만 접근이 가능하다.<br/>

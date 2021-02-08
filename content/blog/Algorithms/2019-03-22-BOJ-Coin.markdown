@@ -103,7 +103,7 @@ print(count)
 
 ### 결과
 
-<img src="/assets/2019-03-22-11074/1.png" width="500" height="auto">
+<img src="./images/2019-03-22-11074/1.png" width="500" height="auto">
 
 정답률 **59%**의 문제로 어렵지 않게 해결할 수 있었다.
 

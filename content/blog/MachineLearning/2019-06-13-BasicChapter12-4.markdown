@@ -14,13 +14,13 @@ draft: false
 손으로 쓴 $32 \times 32$크기의 글씨 이미지를 학습<br/>
 Filter로 $5 \times 5$크기의 **Filter**로 **1**의 크기의 **Stride**사용<br/>
 **Pooling**을 진행할 때 $2 \times 2$크기와 **2**의 크기의 **Stride**사용<br/>
-<img src="/assets/2019-06-13/10.jpg" width="700" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-06-13/10.jpg" width="700" height="auto" alt="아직 안만듬"><br/>
 
 ## AlexNet
 
 **Krizhevsky** et al (2012)<br/>
 
-<img src="/assets/2019-06-13/11.png" width="700" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-06-13/11.png" width="700" height="auto" alt="아직 안만듬"><br/>
 
 입력값 : $227 \times 227 \times 3 $의 컬러 이미지<br/>
 첫번째 Layer : **CNN** (96개의 $11 \times 11$크기, Stride가 4인 Filter)<br/>
@@ -86,7 +86,7 @@ Filter로 $5 \times 5$크기의 **Filter**로 **1**의 크기의 **Stride**사�
 
 **Szegedy** et al (2014)<br/>
 **Inception Moudle**이라는 것을 사용했다.<br/>
-<img src="/assets/2019-06-13/12.png" width="700" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-06-13/12.png" width="700" height="auto" alt="아직 안만듬"><br/>
 
 ## ResNet
 

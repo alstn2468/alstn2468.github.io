@@ -2,15 +2,21 @@ module.exports = {
   title: `Minsu's Dev Log`,
   description: `Minsu's blog for storing technical logs`,
   author: `[Minsu Kim]`,
-  introduction: `🌈22살 대학생 학생 주니어 개발자🙂`,
+  introduction: `🌈23살 대학생 학생 주니어 개발자🙂`,
   siteUrl: `https://alstn2468.github.io`, // Your blog site url
   social: {
     twitter: `minsu-kim-336289160`, // Your Twitter account
     github: `alstn2468`, // Your GitHub account
-    medium: `minsu._.0102`, // Your Medium account
+    instagram: `minsu._.0102`, // Your Medium account
     facebook: `alstn2468`, // Your Facebook account
   },
   icon: `content/assets/felog.png`, // Add your favicon
+  thumbnail: `https://alstn2468.github.io/thumbnail.png`,
+  resume: {
+    title: 'About Minsu Kim',
+    description: 'docs: Update RESUME.md for introducing myself',
+    thumbnail: 'https://alstn2468.github.io/about_thumbnail.png',
+  },
   keywords: [
     `blog`,
     `tect blog`,

@@ -96,4 +96,10 @@ body.light {
       opacity: 0.9;
     }
   }
+  blockquote {
+    color: $light-blockquote-quote-color;
+    &::before {
+      background-image: $light-blockquote-quote-image;
+    }
+  }
 }

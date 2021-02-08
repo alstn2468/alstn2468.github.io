@@ -60,7 +60,7 @@ for i, val in enumerate(arr):
 ```
 
 아래의 사진과 같은 결과를 얻을 수 있다.<br/>
-<img src="/assets/2019-03-21/1.png" width="600" height="auto">
+<img src="./images/2019-03-21/1.png" width="600" height="auto">
 
 그리고 `sum`함수를 이용해 **리스트의 모든 값의 합**을 구했다.
 
@@ -93,7 +93,7 @@ print("\nThis is Missing Integer :", missing_val, "\n")
 ```
 
 아래의 사진과 같은 결과를 확인할 수 있다.<br/>
-<img src="/assets/2019-03-21/2.png" width="600" height="auto">
+<img src="./images/2019-03-21/2.png" width="600" height="auto">
 
 어떠한 값이 사라졌는지 확인은 했지만 리스트의 값들을 모두 출력해<br/>
 다시한번 확인해보도록 하자.
@@ -111,7 +111,7 @@ print("     |")
 ```
 
 아래의 사진과 같은 결과를 확인할 수 있다.
-<img src="/assets/2019-03-21/3.png" width="600" height="auto">
+<img src="./images/2019-03-21/3.png" width="600" height="auto">
 
 정수 21과 23사이의 **22가 사라진 것**을 찾았다.
 

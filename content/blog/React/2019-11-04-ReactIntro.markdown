@@ -15,7 +15,7 @@ draft: false
 개발자의 성지인 **스택오버플로우**의 통계에 따르면 웹 프레임워크 중 **2위**를<br>
 차지할 정도로 많이 사용되어지고 있는 웹 프레임워크 중 하나이다.<br>
 
-<img src="/assets/2019-11-04/1.png" width="500" height="auto"><br>
+<img src="./images/2019-11-04/1.png" width="500" height="auto"><br>
 
 위의 통계에서 `React`나 `Vue`같은 프레임워크는 **프론트엔드**를 위한 프레임워크고<br>
 `Express`나 `Spring`, `Django`는 **백 엔드**를 위한 웹 프레임워크다.<br>
@@ -45,7 +45,7 @@ draft: false
 **D**ocument **O**bject **M**odel의 약자<br>
 여기서 **Document**란 `HTML`을 뜻하며 **DOM**은 아래와 같은 **웹 페이지의 구조**를 뜻한다.<br>
 
-<img src="/assets/2019-11-04/2.png" width="400" height="auto"><br>
+<img src="./images/2019-11-04/2.png" width="400" height="auto"><br>
 
 위의 **DOM**은 `body`는 `h1`과 `div`가 묶여있고 `div`는 `p`두개와 묶여있는 구조를 갖는다.<br>
 따라서 **DOM**은 거대한 **트리 구조**로 되어있고 웹에서 동작하는 형태다.<br>
@@ -56,7 +56,7 @@ draft: false
 **레고**와 비슷하게 작성된 **컴포넌트**를 모아 웹 어플리케이션을 구성할 수 있다.<br>
 **React**공식문서에 있는 아래의 이미지로 **컴포넌트**를 설명할 수 있다.<br>
 
-<img src="/assets/2019-11-04/3.png" width="200" height="auto"><br>
+<img src="./images/2019-11-04/3.png" width="200" height="auto"><br>
 
 위의 이미지에는 크게 5개의 컴포넌트가 존재한다.<br>
 
@@ -74,14 +74,14 @@ draft: false
 어떠한 페이지에서 **변경사항**이 생겼을 경우(**상태가 변한 경우**) 이전의 경우<br>
 **처음으로 돌아가** 다시 모든 컴포넌트를 거치며 **새로 페이지를 구성**한다.<br>
 
-<img src="/assets/2019-11-04/4.png" width="600" height="auto"><br>
+<img src="./images/2019-11-04/4.png" width="600" height="auto"><br>
 
 ## React에서의 DOM과 Component
 
 **React**에서는 이전의 웹과 다르게 상태가 변경된 경우 **Virtual DOM**에서변경된 구조를<br>
 미리 구성한 후 기존의 **React DOM**과 비교해 **변경된 컴포넌트만**찾아 재구성한다.<br>
 
-<img src="/assets/2019-11-04/5.png" width="400" height="auto"><br>
+<img src="./images/2019-11-04/5.png" width="400" height="auto"><br>
 
 [[Image source : www.oreilly.com - learning react native]](https://www.oreilly.com/library/view/learning-react-native/9781491929049/ch02.html)
 

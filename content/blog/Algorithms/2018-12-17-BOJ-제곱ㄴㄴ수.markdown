@@ -187,7 +187,7 @@ print(count)
 
 ### 결과
 
-<img src="/assets/2018-12-17-1016/1.PNG" width="500" height="auto">
+<img src="./images/2018-12-17-1016/1.PNG" width="500" height="auto">
 
 느리고.. 느리고.. 느렸다..<br/>
 채점하는데도 진짜 2분은 더 걸린 것 같다..<br/>
@@ -195,7 +195,7 @@ print(count)
 [1977번 완전제곱수](https://www.acmicpc.net/problem/1977) 문제처럼 **Pythonic**하게도 짜봐야지~ 했는데...<br/>
 **시간 초과**, **메모리 초과**의 벽에서 무너졌다&#128531;&#128531;
 
-<img src="/assets/2018-12-17-1016/2.PNG" width="500" height="auto">
+<img src="./images/2018-12-17-1016/2.PNG" width="500" height="auto">
 
 최근 푼 문제들 중에 **제일** 힘들었다...&#128565;&#128565;
 

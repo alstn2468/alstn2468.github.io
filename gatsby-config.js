@@ -31,21 +31,20 @@ module.exports = {
           {
             resolve: `gatsby-remark-katex`,
             options: {
-              // Add any KaTeX options from https://github.com/KaTeX/KaTeX/blob/master/docs/options.md here
               strict: `ignore`,
             },
           },
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 1200,
               linkImagesToOriginal: false,
             },
           },
           {
             resolve: `gatsby-remark-images-medium-zoom`,
             options: {
-              margin: 36,
+              margin: 12,
               scrollOffset: 0,
             },
           },

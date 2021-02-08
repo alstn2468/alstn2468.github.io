@@ -51,7 +51,7 @@ plt.plot(W_history, cost_history)
 plt.show()
 ```
 
-<img src="/assets/2019-01-04-4_2/1.png" width="400" height="auto">
+<img src="./images/2019-01-04-4_2/1.png" width="400" height="auto">
 
 ## Gradient descent
 

@@ -32,18 +32,18 @@ draft: false
 
 RBM의 구조<br/>
 Reestriction : Layer안에서 연결이 없다.<br/>
-<img src="/assets/2019-05-24/2.png" width="300" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-24/2.png" width="300" height="auto" alt="아직 안만듬">
 
 2가지 Operation을 갖는다.<br/>
 
 - Forward
 
-<img src="/assets/2019-05-24/3.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-05-24/3.png" width="300" height="auto" alt="아직 안만듬"><br/>
 위의 그림과 같은 방법으로 값을 구하는 방법
 
 - Backward
 
-<img src="/assets/2019-05-24/4.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-05-24/4.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 입력받은 $$X$$의 값과 **Forward**로 생성된 $$X$$의 값의<br/>
 **차가 최저**가 되도록 **Weight**를 조절하는 방법이다.
