@@ -4,10 +4,11 @@
 
   .bmc-button {
     display: inline-block;
-    padding: 4px 15px;
-    width: 150px;
-    height: 40px;
+    padding: 0px 7px;
+    width: 133px;
+    height: 33px;
     text-decoration: none;
+    background-color: #bb5794;
     color: #ffffff;
     border: 1px solid transparent;
     border-radius: 6px;
@@ -16,6 +17,11 @@
     font-size: 12px;
     line-height: 30px;
     text-align: left;
+
+    &:hover,
+    &:active {
+      background-color: #a0457d;
+    }
 
     img {
       width: 20px;

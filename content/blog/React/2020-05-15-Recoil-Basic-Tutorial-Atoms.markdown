@@ -146,4 +146,4 @@ function removeItemAtIndex(arr, index) {
 
 실제 작성한 코드는 [여기](https://github.com/alstn2468/Recoil_Tutorial/tree/master/BasicTutorial)에서 확인할 수 있습니다.<br/>
 
-<img src="/assets/2020-05-15-Recoil-Basic-Tutorial-Atoms/demo.gif" width="400" height="auto"><br>
+<img src="./images/2020-05-15-Recoil-Basic-Tutorial-Atoms/demo.gif" width="400" height="auto"><br>

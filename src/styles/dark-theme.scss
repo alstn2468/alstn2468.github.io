@@ -80,9 +80,11 @@ body.dark {
     }
   }
 
-  // post
   blockquote {
-    border-left: 4px solid rgba(255, 255, 255, 0.822);
+    color: $dark-blockquote-quote-color;
+    &::before {
+      background-image: $dark-blockquote-quote-image;
+    }
   }
 
   h1,

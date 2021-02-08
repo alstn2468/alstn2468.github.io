@@ -168,20 +168,20 @@ console.log('assignLikePrimitiveTwo :', assignLikePrimitiveTwo)
 
 `secondPerson = firstPerson`처럼 값을 복사했을 경우 아래와 같이 복사된다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/1.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/1.png" width="400"/><br>
 
 첫 번째 예시는 위와 같이 `firstPerson`, `secondPerson` 모두 `Heap`의 하나의 값을 가리킨다.<br>
 따라서 `firstPerson`의 값을 변경할 경우 아래 처럼 두 개의 **참조**가 가르키는 값이 변경된다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/2.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/2.png" width="400"/><br>
 
 `Object.assign`을 사용한 두 번째 예제는 아래와 같은 모습으로 값이 저장된다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/3.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/3.png" width="400"/><br>
 
 `assignLikePrimitiveOne`의 값을 변경하면 아래 처럼 변경된다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/4.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/4.png" width="400"/><br>
 
 두 개의 객체 모두 같은 값을 갖는 **다른 레퍼런스**를 갖기 때문에 값을 바꿔도 변경되지 않는다.<br>
 
@@ -220,11 +220,11 @@ console.log('secondInfo :', secondInfo)
 아래 그림과같이 `Object`자체는 새로운 값으로 할당이 되었지만<br>
 `hobbies`는 **참조**가 저장되어 있어서 `hobbies`는 참조하는 배열을 가르키고 있다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/5.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/5.png" width="400"/><br>
 
 따라서 `push`함수로 배열에 값을 추가하면 아래와 같이 값이 저장된다.<br>
 
-<img src="/assets/2020-03-06-PrimitiveType/6.png" width="400"/><br>
+<img src="./images/2020-03-06-PrimitiveType/6.png" width="400"/><br>
 
 이는 `Object.assign`함수가 내부의 모든 객체를 복사하지 않기 때문이다.<br>
 깊은 복사를하기 위해서는 **재귀 함수**를 이용하거나 `JSON`객체의 함수를 이용하면 된다.<br>

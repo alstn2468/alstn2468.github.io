@@ -47,11 +47,11 @@ onFacesDetected = faces => {
 
 아래와 같이 얼굴을 잘 찾는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-09-01/5.gif" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/5.gif" width="280" height="auto" alt="아직 안만듬"><br/>
 
 얼굴을 **찾지 못하면** 아래와 같이 빈 `array`가 반환된다.<br>
 
-<img src="/assets/2019-09-01/6.png" width="400" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/6.png" width="400" height="auto" alt="아직 안만듬"><br/>
 
 ## 14. 웃는 얼굴 분류하기 (1)
 
@@ -84,7 +84,7 @@ import * as FaceDetector from 'expo-face-detector';
 
 얼굴의 모든 **부분**의 **좌표**를 찾는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-09-01/7.gif" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/7.gif" width="280" height="auto" alt="아직 안만듬"><br/>
 
 ## 15. 웃는 얼굴 분류하기 (2)
 
@@ -108,7 +108,7 @@ import * as FaceDetector from 'expo-face-detector';
 이전과 같은 이미지를 가지고 테스트하여 콘솔을 확인한 결과<br>
 `smilingProbability`라는 **웃는 얼굴일 가능성**을 확인할 수 있는 값이 생겼다.<br>
 
-<img src="/assets/2019-09-01/8.png" width="700" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/8.png" width="700" height="auto" alt="아직 안만듬"><br/>
 
 ## 16. 웃는 얼굴을 분류 결과 state 만들기
 
@@ -217,7 +217,7 @@ onFacesDetected = faces => {
 `smilingProbability`가 **높은** 사진에서는 `smileDetected`가 `true`가 되었고<br>
 얼굴을 더 이상 감지하지 않음을 확인할 수 있다.<br>
 
-<img src="/assets/2019-09-01/9.gif" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/9.gif" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ## 19. 카메라를 작동해 사진 찍기
 
@@ -345,8 +345,8 @@ savePhoto = async uri => {
 `smilingProbability`가 `0.7`보다 커진 경우 사진이 찍혔으며<br>
 **Smiley Cam**폴더에 사진이 저장된 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-09-01/10.gif" width="280" height="auto" alt="아직 안만듬">
-<img src="/assets/2019-09-01/11.png" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-01/10.gif" width="280" height="auto" alt="아직 안만듬">
+<img src="./images/2019-09-01/11.png" width="280" height="auto" alt="아직 안만듬"><br/>
 
 #### ~~아이유 짱짱걸~~
 

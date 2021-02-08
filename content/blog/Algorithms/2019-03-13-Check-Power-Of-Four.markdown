@@ -162,4 +162,4 @@ else:
 
 ## 실행 결과
 
-<img src="/assets/2019-03-13/1.png" width="600" height="auto">
+<img src="./images/2019-03-13/1.png" width="600" height="auto">

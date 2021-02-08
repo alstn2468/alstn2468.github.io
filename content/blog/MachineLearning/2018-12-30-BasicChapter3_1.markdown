@@ -33,7 +33,7 @@ draft: false
 
 아래와 같은 그래프로 데이터를 표현 가능<br/>
 
-<img src="/assets/2018-12-30-3_1/1.png" width="400" height="auto">
+<img src="./images/2018-12-30-3_1/1.png" width="400" height="auto">
 
 x축이 `x`의 값을 표현하고 y축이 `y`의 값을 표현<br/>
 **Regression**모델을 학습할 때는 하나의 **가설**을 세운다.<br/>
@@ -44,7 +44,7 @@ x축이 `x`의 값을 표현하고 y축이 `y`의 값을 표현<br/>
 
 ## 무엇이 더 좋은가?
 
-<img src="/assets/2018-12-30-3_1/2.png" width="400" height="auto">
+<img src="./images/2018-12-30-3_1/2.png" width="400" height="auto">
 
 실제 데이터와 가설이 나타내는 **데이터의 차이**를<br/>
 계산해 그 값이 **더 작은 것**이 좋은 가설이다.<br/>

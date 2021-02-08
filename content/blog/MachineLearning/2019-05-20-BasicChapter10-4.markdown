@@ -32,7 +32,7 @@ $$
 
 ### Logic Diagram Symbol
 
-<img src="/assets/2019-05-20/10.png" width="400" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-20/10.png" width="400" height="auto" alt="아직 안만듬">
 
 [[이미지 출처]](https://mathphysics.tistory.com/579)
 

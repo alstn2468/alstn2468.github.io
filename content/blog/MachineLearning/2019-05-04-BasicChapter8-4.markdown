@@ -133,4 +133,4 @@ with tf.Session() as sess:
     Label:  [8]
     Prediction:  [8]
 
-<img src="/assets/2019-05-04/1.png" width="200" height="auto">
+<img src="./images/2019-05-04/1.png" width="200" height="auto">

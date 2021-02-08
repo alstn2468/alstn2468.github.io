@@ -136,7 +136,7 @@ function CharacterCount() {
 
 아래는 완성된 결과물이다.<br/>
 
-<img src="/assets/2020-05-15-Recoil/demo.gif" width="400" height="auto">
+<img src="./images/2020-05-15-Recoil/demo.gif" width="400" height="auto">
 
 `input`에 값을 적고 그 값의 길이를 확인하는 짧은 예제를 살펴보았다.<br/>
 개인적으로 `redux`나 `contextAPI`를 사용했던 것 보다 쉽게 쓸 수 있을 것 같다.<br/>

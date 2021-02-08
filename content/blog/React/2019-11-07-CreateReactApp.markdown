@@ -48,18 +48,18 @@ npm start
 
 아래와 같이 `React`앱이 잘 생성된 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-11-07/1.png" width="400" height="auto"><br>
-<img src="/assets/2019-11-07/2.png" width="400" height="auto"><br>
+<img src="./images/2019-11-07/1.png" width="400" height="auto"><br>
+<img src="./images/2019-11-07/2.png" width="400" height="auto"><br>
 
 `my-app`폴더로 이동후 `npm start`명령어를 사용하면 아래와 같은 앱이 실행된다.<br>
 
-<img src="/assets/2019-11-07/3.png" width="500" height="auto"><br>
+<img src="./images/2019-11-07/3.png" width="500" height="auto"><br>
 
 ## React 구조 이해하기
 
 새로운 `React`앱을 생성하고 폴더를 보면 아래와 같은 구조로 되어있다.<br>
 
-<img src="/assets/2019-11-07/4.png" width="300" height="auto"><br>
+<img src="./images/2019-11-07/4.png" width="300" height="auto"><br>
 
 - `node_modules` : 설치한 패키지들이 저장되어 있는 폴더
 
@@ -70,18 +70,18 @@ npm start
 `public`폴더의 `index.html`을 열어보면 `body`태그는 아래와 같다.<br>
 `noscript`태그와 `root`라는`id`값을 갖는 태그 하나 만 존재한다.<br>
 
-<img src="/assets/2019-11-07/5.png" width="500" height="auto"><br>
+<img src="./images/2019-11-07/5.png" width="500" height="auto"><br>
 
 하지만 **개발자 도구**를 사용해서 소스코드를 확인하면 아래와 같이<br>
 `index.html`에는 작성되어있지 않은 태그들이 존재하는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-11-07/6.png" width="600" height="auto"><br>
+<img src="./images/2019-11-07/6.png" width="600" height="auto"><br>
 
 ## index.js
 
 `index.html`과 이름이 비슷한 `index.js`를 보면 아래의 코드가 작성되어 있다.<br>
 
-<img src="/assets/2019-11-07/7.png" width="600" height="auto"><br>
+<img src="./images/2019-11-07/7.png" width="600" height="auto"><br>
 
 이 코드의 핵심 부분은 아래와 같다.<br>
 `ReactDom`이 `App`을 `document`의 `id`가 `root`인 태그안에 **랜더링**한다는 의미다.<br>
@@ -98,13 +98,13 @@ ReactDOM.render(<h1>Hello World!</h1>, document.getElementById('root'))
 
 우리가 작성한 `<h1>Hello World!</h1>`가 `root`안에 랜더링 되는 것을 볼 수 있다.<br>
 
-<img src="/assets/2019-11-07/8.png" width="600" height="auto"><br>
+<img src="./images/2019-11-07/8.png" width="600" height="auto"><br>
 
 ## App.js
 
 우리가 개발자 도구에서 보았던 컴포넌트는 `App.js`에 아래와 같이 작성되어 있다.<br>
 
-<img src="/assets/2019-11-07/9.png" width="600" height="auto"><br>
+<img src="./images/2019-11-07/9.png" width="600" height="auto"><br>
 
 `App.js`를 아래와 같이 수정해보고 새로고침해보자.<br>
 
@@ -127,7 +127,7 @@ export default App
 
 우리가 작성한 `HTML`태그들이 잘 보여지는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-11-07/10.png" width="600" height="auto"><br>
+<img src="./images/2019-11-07/10.png" width="600" height="auto"><br>
 
 ## App.js 구조 이해하기
 

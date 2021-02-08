@@ -23,7 +23,7 @@ console.log('안녕히가세요')
 `console.log("안녕하세요")`가 `console.log("안녕히가세요")`보다<br/>
 먼저 작성되어 있지만 아래와 같이 `안녕히가세요`가 **먼저 출력**된다.<br>
 
-<img src="/assets/2019-10-31/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-10-31/1.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ### 비동기성의 이유
 
@@ -64,7 +64,7 @@ sayHello(() => console.log('안녕히 가세요'))
 **비동기성**의 예제와 다르게 `안녕하세요`가 먼저 출력되고 `안녕히 가세요`가 출력된다.<br>
 여기서 **인자**로 받은 `sayGoodbye`는 **callback함수**로서 받아졌다.<br>
 
-<img src="/assets/2019-10-31/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-10-31/2.png" width="300" height="auto" alt="아직 안만듬"><br/>
 
 ### Callback Hell
 

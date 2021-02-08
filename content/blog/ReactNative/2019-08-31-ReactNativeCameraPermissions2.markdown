@@ -46,7 +46,7 @@ componentDidMount = async () => {
 
 `render`함수 내부에서 `console.log(this.state);`를 해봅시다.<br>
 
-<img src="/assets/2019-08-31/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-08-31/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
 첫번째 `object`는 `componentDidMount`가 **실행**되기 **전** 초기의 상태이고<br>
 두번째 `object`는 `componentDidMount`가 **실행**된 **후**의 상태이다.<br>
@@ -93,8 +93,8 @@ render() {
 아무런 style이 적용되지 않아서 잘 보이진 않지만 **잘 작동**하는 것이 확인된다.<br>
 `hasPermission`이 `null`일 때를 확인하고 싶으면 `cdm`내용을 지우면 된다.<br>
 
-<img src="/assets/2019-08-31/2.png" width="280" height="auto" alt="아직 안만듬">
-<img src="/assets/2019-08-31/3.png" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-08-31/2.png" width="280" height="auto" alt="아직 안만듬">
+<img src="./images/2019-08-31/3.png" width="280" height="auto" alt="아직 안만듬"><br/>
 
 ## 7. 스타일 조금 넣기
 
@@ -127,8 +127,8 @@ const Text = styled.Text`
 
 화면 가운데에 잘 보이도록 작동하는 것을 확인할 수 있다.<br>
 
-<img src="/assets/2019-08-31/4.png" width="280" height="auto" alt="아직 안만듬">
-<img src="/assets/2019-08-31/5.png" width="280" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-08-31/4.png" width="280" height="auto" alt="아직 안만듬">
+<img src="./images/2019-08-31/5.png" width="280" height="auto" alt="아직 안만듬"><br/>
 
 ## 8. 카메라 띄위기
 
@@ -169,7 +169,7 @@ if (hasPermission === true) {
 
 - 시뮬레이터에서는 카메라 기능을 사용할 수 없습니다.
 
-<img src="/assets/2019-08-31/6.png" width="300" height="auto" alt="아직 안만듬"><br>
+<img src="./images/2019-08-31/6.png" width="300" height="auto" alt="아직 안만듬"><br>
 
 위와 같이 잘 작동하는 것을 확인할 수 있다.<br>
 

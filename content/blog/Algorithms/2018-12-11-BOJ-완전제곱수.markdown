@@ -139,9 +139,9 @@ else:
 
 ### 결과
 
-<img src="/assets/2018-12-11-1977/2.PNG" width="500" height="auto">
+<img src="./images/2018-12-11-1977/2.PNG" width="500" height="auto">
 
-<img src="/assets/2018-12-11-1977/3.PNG" width="500" height="auto">
+<img src="./images/2018-12-11-1977/3.PNG" width="500" height="auto">
 
 숏코딩 **53위**!!<br/>
 

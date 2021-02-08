@@ -47,7 +47,7 @@ n개의 정점을 갖는 이진 트리의 정점에 1부터 n까지의 번호가
 
 백준의 예제는 너무 쉽게 끝나므로 다음의 예로 설명하겠습니다.
 
-<img src="/assets/2018-12-05-2263/1.PNG" width="400" height="auto">
+<img src="./images/2018-12-05-2263/1.PNG" width="400" height="auto">
 
 Inorder Traversal
 
@@ -218,7 +218,7 @@ get_preorder(0, n - 1, 0, n - 1)
 
 ### 결과(Preorder Traversal)
 
-<img src="/assets/2018-12-05-2263/2.PNG" width="500" height="auto">
+<img src="./images/2018-12-05-2263/2.PNG" width="500" height="auto">
 
 3 &#10095; 2 &#10095; 1 &#10095; 5 &#10095; 4 &#10095; 6 의 순서로 출력이 된다.
 

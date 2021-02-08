@@ -19,19 +19,19 @@ draft: false
 
 ### 하나의 Unit
 
-<img src="/assets/2019-05-15/1.png" width="500" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-15/1.png" width="500" height="auto" alt="아직 안만듬">
 
 위의 Unit과 같은 모양이지만 다른 **weight**과 **bias**를 갖는<br/>
 두개의 Unit에서 나온 결과(Y1, Y2) 다른 Unit에 넣어 값을 예측한다.
 
-<img src="/assets/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-15/2.png" width="700" height="auto" alt="아직 안만듬">
 
 ### Sigmoid Function
 
 입력값이 **작을수록 0**에 수렴<br/>
 입력값이 **클수록 1**에 수렴
 
-<img src="/assets/2019-05-15/4.png" width="300" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-15/4.png" width="300" height="auto" alt="아직 안만듬">
 
 [[이미지 참조]](https://en.wikipedia.org/wiki/Sigmoid_function)
 
@@ -91,7 +91,7 @@ $$
 
 아래와 같은 구조를 하나의 **Neural Network**라고 할 수 있다.
 
-<img src="/assets/2019-05-15/3.png" width="800" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-15/3.png" width="800" height="auto" alt="아직 안만듬">
 
 다른 **weight**값과 **bias**값은 존재 가능<br/>
 위의 구조는 아래의 **Nominal Classification**과 비슷하다.
@@ -117,7 +117,7 @@ $$
 
 그림으로 위의 그림의 구조를 표현해보자면
 
-<img src="/assets/2019-05-15/5.png" width="800" height="auto" alt="아직 안만듬">
+<img src="./images/2019-05-15/5.png" width="800" height="auto" alt="아직 안만듬">
 
 다음과 같은 구조로 표현이 가능하다.<br/>
 위의 구조를 수식으로 정리하면 아래와 같다.

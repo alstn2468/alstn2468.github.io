@@ -169,4 +169,4 @@ plt.imshow(
 plt.show()
 ```
 
-<img src="/assets/2019-06-03/3.png" width="300" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-06-03/3.png" width="300" height="auto" alt="아직 안만듬"><br/>

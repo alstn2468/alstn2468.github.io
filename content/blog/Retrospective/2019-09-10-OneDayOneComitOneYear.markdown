@@ -7,7 +7,7 @@ draft: false
 
 ## 1일 1커밋 1주년 달성
 
-<img src="/assets/2019-09-10/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
+<img src="./images/2019-09-10/1.png" width="500" height="auto" alt="아직 안만듬"><br/>
 
 `Sujin Lee`님의 [깃허브(Github)로 취업하기](http://sujinlee.me/professional-github/)를 보고 깃헙을 시작했던 것 같다.<br>
 **2018년 9월 7일**부터 시작한 **1일 1커밋**이 **2019년 9월 7일** 드디어 **1주년**을 맞이했다.<br>

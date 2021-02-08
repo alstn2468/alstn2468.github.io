@@ -15,7 +15,7 @@ draft: false
 파생된 상태는 다른 데이터에 의존하는 동적인 데이터를 만들 수 있기 때문에 강력한 개념이다. <br/>
 우리의 todo 리스트 애플리케이션 맥락에서는 다음과 같은 것들이 파생된 상태로 간주된다.<br/>
 
-- **필터링 된 todo 리스트** :  전체 todo 리스트에서 일부 기준에 따라 특정 항목이 필터링 된 새 리스트(예: 이미 완료된 항목 필터링)를 생성되어 파생된다.
+- **필터링 된 todo 리스트** : 전체 todo 리스트에서 일부 기준에 따라 특정 항목이 필터링 된 새 리스트(예: 이미 완료된 항목 필터링)를 생성되어 파생된다.
 - **Todo 리스트 통계** : 전체 todo 리스트에서 목록의 총 항목 수, 완료된 항목 수, 완료된 항목의 백분율 같은 리스트의 유용한 속성들을 계산하여 파생된다.
 
 필터링 된 todo 리스트를 구현하기 위해서 우리는 atom에 저장될 수 있는 필터 기준을 선택해야 한다. <br/>
@@ -26,7 +26,7 @@ draft: false
 const todoListFilterState = atom({
   key: 'todoListFilterState',
   default: 'Show All',
-});
+})
 ```
 
 `todoListFilterState`와 `todoListState`를 사용해서 우리는 필터링 된 리스트를 파생하는 `filteredTodoListState` selector를 구성할 수 있다.<br/>
@@ -34,20 +34,20 @@ const todoListFilterState = atom({
 ```javascript
 const filteredTodoListState = selector({
   key: 'filteredTodoListState',
-  get: ({get}) => {
-    const filter = get(todoListFilterState);
-    const list = get(todoListState);
+  get: ({ get }) => {
+    const filter = get(todoListFilterState)
+    const list = get(todoListState)
 
     switch (filter) {
       case 'Show Completed':
-        return list.filter((item) => item.isComplete);
+        return list.filter(item => item.isComplete)
       case 'Show Uncompleted':
-        return list.filter((item) => !item.isComplete);
+        return list.filter(item => !item.isComplete)
       default:
-        return list;
+        return list
     }
   },
-});
+})
 ```
 
 `filteredTodoListState`는 내부적으로 2개의 의존성 `todoListFilterState`와 `todoListState`을 추적한다. <br/>
@@ -63,7 +63,7 @@ const filteredTodoListState = selector({
 ```jsx
 function TodoList() {
   // changed from todoListState to filteredTodoListState
-  const todoList = useRecoilValue(filteredTodoListState);
+  const todoList = useRecoilValue(filteredTodoListState)
 
   return (
     <>
@@ -71,11 +71,11 @@ function TodoList() {
       <TodoListFilters />
       <TodoItemCreator />
 
-      {todoList.map((todoItem) => (
+      {todoList.map(todoItem => (
         <TodoItem item={todoItem} key={todoItem.id} />
       ))}
     </>
-  );
+  )
 }
 ```
 
@@ -84,11 +84,11 @@ UI는 'toListFilterState'의 기본값인 'Show All'과 동일하다. <br/>
 
 ```jsx
 function TodoListFilters() {
-  const [filter, setFilter] = useRecoilState(todoListFilterState);
+  const [filter, setFilter] = useRecoilState(todoListFilterState)
 
-  const updateFilter = ({target: {value}}) => {
-    setFilter(value);
-  };
+  const updateFilter = ({ target: { value } }) => {
+    setFilter(value)
+  }
 
   return (
     <>
@@ -99,7 +99,7 @@ function TodoListFilters() {
         <option value="Show Uncompleted">Uncompleted</option>
       </select>
     </>
-  );
+  )
 }
 ```
 
@@ -119,21 +119,21 @@ function TodoListFilters() {
 ```javascript
 const todoListStatsState = selector({
   key: 'todoListStatsState',
-  get: ({get}) => {
-    const todoList = get(filteredTodoListState);
-    const totalNum = todoList.length;
-    const totalCompletedNum = todoList.filter((item) => item.isComplete).length;
-    const totalUncompletedNum = totalNum - totalCompletedNum;
-    const percentCompleted = totalNum === 0 ? 0 : totalCompletedNum / totalNum;
+  get: ({ get }) => {
+    const todoList = get(filteredTodoListState)
+    const totalNum = todoList.length
+    const totalCompletedNum = todoList.filter(item => item.isComplete).length
+    const totalUncompletedNum = totalNum - totalCompletedNum
+    const percentCompleted = totalNum === 0 ? 0 : totalCompletedNum / totalNum
 
     return {
       totalNum,
       totalCompletedNum,
       totalUncompletedNum,
       percentCompleted,
-    };
+    }
   },
-});
+})
 ```
 
 `todoListStatsState`값을 읽기 위해, 우리는 `useRecoilValue()`를 한 번 더 사용할 것이다.<br/>
@@ -145,9 +145,9 @@ function TodoListStats() {
     totalCompletedNum,
     totalUncompletedNum,
     percentCompleted,
-  } = useRecoilValue(todoListStatsState);
+  } = useRecoilValue(todoListStatsState)
 
-  const formattedPercentCompleted = Math.round(percentCompleted * 100);
+  const formattedPercentCompleted = Math.round(percentCompleted * 100)
 
   return (
     <ul>
@@ -156,7 +156,7 @@ function TodoListStats() {
       <li>Items not completed: {totalUncompletedNum}</li>
       <li>Percent completed: {formattedPercentCompleted}</li>
     </ul>
-  );
+  )
 }
 ```
 
@@ -174,4 +174,4 @@ function TodoListStats() {
 
 실제 작성한 코드는 [여기](https://github.com/alstn2468/Recoil_Tutorial/tree/master/BasicTutorial)에서 확인할 수 있습니다.<br/>
 
-<img src="/assets/2020-05-16-Recoil-Basic-Tutorial-Selectors/demo.gif" width="400" height="auto"><br>
+<img src="./images/2020-05-16-Recoil-Basic-Tutorial-Selectors/demo.gif" width="400" height="auto"><br>

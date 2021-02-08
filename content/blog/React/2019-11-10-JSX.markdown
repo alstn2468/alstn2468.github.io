@@ -60,7 +60,7 @@ function App() {
 `style={{...}}`에서 첫번째 **중괄호**는 JS코드가 들어간 다는 것을 의미를 갖고<br>
 그 안에있는 `{ color: "red }`는 하나의 스타일 정보를 가지고 있는 `Object`다.<br>
 
-<img src="/assets/2019-11-10/1.png" width="400" height="auto"><br>
+<img src="./images/2019-11-10/1.png" width="400" height="auto"><br>
 
 위와 같이 스타일이 잘 적용된 것을 확인할 수 있게되었다.<br>
 아래 처럼 직접 넣지 않고 밖에서 코드를 작성하여 넣을 수도 있다.<br>
@@ -93,7 +93,7 @@ const headerStyle = {
 ...
 ```
 
-<img src="/assets/2019-11-10/2.png" width="400" height="auto"><br>
+<img src="./images/2019-11-10/2.png" width="400" height="auto"><br>
 
 우리가 의도한 스타일이 잘 적용되었음을 개발자 도구로 확인할 수 있다.<br>
 
@@ -123,6 +123,6 @@ function App() {
 }
 ```
 
-<img src="/assets/2019-11-10/3.png" width="500" height="auto"><br>
+<img src="./images/2019-11-10/3.png" width="500" height="auto"><br>
 
 우리가 지정한 `titleStyle`클래스에 `css`가 잘 적용된 것을 확인할 수 있다.<br>

@@ -22,33 +22,37 @@ draft: false
 **식** (**Expression**)은 하나의 **값**을 만들어 낸다.<br/>
 **식** (**Expression**)의 종류는 4가지가 존재한다.<br/>
 
--   **값**
+- **값**
 
 아래 같은 `number`, `string`, `undefined`, `null`같은 **값 자체도 식**이다.<br/>
 
 ```javascript
 1
 3.14
-"expression"
+;('expression')
 undefined
 null
 ```
 
--   **연산식**
+- **연산식**
 
 아래와 같은 **연산자가 포함**된 경우도 결과적으로 **하나의 값을 갖는 식**이 된다.<br/>
 연산자가 많아져 연산식이 길어져도 결국은 **하나의 값**만 갖는다.<br/>
 
 ```javascript
 1 + 1 // 2
-2 > 1 // true
-(1 * 2 * 3) / 2 // 3
+2 >
+  1(
+    // true
+    1 * 2 * 3
+  ) /
+    2 // 3
 1 * 2 * 3 > 1 // true
 true || 1 // true
 5 > 1 ? 5 : 1 // 5
 ```
 
--   **리터럴**
+- **리터럴**
 
 **객체를 생성**하기 위한 **리터럴** 또한 **참조값을 갖는 식**이다.<br/>
 
@@ -59,15 +63,17 @@ function () {} // 함수 리터럴
 /\b/ // 정규식 리터럴
 ```
 
--   **함수 호출**
+- **함수 호출**
 
 아래와 같이 **함수의 호출** 결과 또한 **값을 반환하는 식**이다.<br/>
 `voidFunction`과 같이 반환값이 없는 함수도 `undefined`라는 값을 반환하는 **식**이된다.<br/>
 
 ```javascript
 Math.ceil(3.14) // 4
-voidFunction() // undefined
-(5).toString() // "5"
+voidFunction()(
+  // undefined
+  5
+).toString() // "5"
 ```
 
 ## 문 (Statement)
@@ -98,7 +104,7 @@ foo(if (true) { return 2 }) // Uncaught SyntaxError: Unexpected token 'if'
 if (true) { 9 + 9 }
 ```
 
-<img src="/assets/2020-05-14-Expression_vs_Statement/1.PNG" width="200"/>
+<img src="./images/2020-05-14-Expression_vs_Statement/1.PNG" width="200"/>
 
 하지만 우리는 이 **문** (**Statement**)의 결과를 **식** (**Expression**)처럼 사용할 수 없다.<br/>
 지금까지의 내용으로는 **문** (**Statement**)은 아무 값도 반환하지 않았어야 한다.<br/>
@@ -113,20 +119,20 @@ if (true) { 9 + 9 }
 
 ```javascript
 function thisIsStatement(func) {
-    return func.name;
+  return func.name
 }
 ```
 
 **익명 함수**라 불리는 **함수 표현식**은 **식** (**Expression**)이다.<br/>
 
 ```javascript
-thisIsStatement(function () {}); // ""
+thisIsStatement(function() {}) // ""
 ```
 
 **익명 함수**와 비슷하지만 이름이 있는 **네임드 함수 표현식**은 **식** (**Expression**)이다.<br/>
 
 ```javascript
-thisIsStatement(function namedFunc() {}); // "namedFunc"
+thisIsStatement(function namedFunc() {}) // "namedFunc"
 ```
 
 **값이 들어올 곳**에 **함수를 선언**하면, 자바스크립트는 **그 함수를 값으로 사용**하려 한다.<br/>
@@ -165,7 +171,7 @@ function () {} // Function statements require a function name
 `a * 1`, `a - 1`같은 식에 의해서도 `a`의 값은 그대로 `1`이다.<br/>
 
 ```javascript
-let a = 1; // 문 (Statement)
+let a = 1 // 문 (Statement)
 
 a * 1 // 식 (Expression)
 a - 1 // 식 (Expression)
@@ -179,13 +185,13 @@ console.log(a) // 1
 하지만 **함수 호출**과 같은 식은 **상태을 변화시키는 문**을 포함할 수 있다.<br/>
 
 ```javascript
-let a = 1;
+let a = 1
 function foo() {
-    a = 2;
+  a = 2
 }
 
 console.log(a) // 1
-foo();
+foo()
 console.log(a) // 2
 ```
 
@@ -193,15 +199,15 @@ console.log(a) // 2
 **함수 호출** 식으로 인한 **의도치않은 상태 변경**을 막기위해서는 **명시적 반환**을 하면 된다.<br/>
 
 ```javascript
-let a = 1;
+let a = 1
 function foo() {
-    return 2;
+  return 2
 }
 
 console.log(a) // 1
-foo();
+foo()
 console.log(a) // 1
-a = foo();
+a = foo()
 console.log(a) // 2
 ```
 
@@ -211,7 +217,7 @@ console.log(a) // 2
 
 ```javascript
 2 + 2
-2 + 2;
+2 + 2
 ```
 
 위의 `2 + 2`는 **식** (**Expression**)이다.<br/>
@@ -229,20 +235,27 @@ Math.ceil(2 + 2;) // ERROR
 세미콜론 (`;`)을 사용하면 여러줄의 **문** (**Statement**)을 한 줄에 넣을 수 있다.<br/>
 
 ```javascript
-let a; function foo() {}; const b = 2;
+let a
+function foo() {}
+const b = 2
 ```
 
 콤마 연산자(`,`)를 사용하면 여러 개의 **식** (**Expression**)을 **연결**할 수 있다.<br/>
 반환되는 식의 값은 **마지막 식**의 **값만 반환**된다.<br/>
 
 ```javascript
-(1 + 2, true, Math.ceil(4.5)) // 5
-(function () {}, 5 > 1 ? 5 : 1) // 5
+;(1 + 2, true, Math.ceil(4.5))(
+  // 5
+  function() {},
+  5 > 1 ? 5 : 1
+) // 5
 ```
 
 또한 **식** (**Expression**)은 왼쪽에서 오른쪽으로 계산된다.<br/>
 
 ```javascript
-function foo() { return true, false, 1, "expression" }
+function foo() {
+  return true, false, 1, 'expression'
+}
 foo() // expression
 ```

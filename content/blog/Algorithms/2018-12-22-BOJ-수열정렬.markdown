@@ -184,7 +184,7 @@ for a in A:
 
 ### 결과
 
-<img src="/assets/2018-12-22-1015/1.png" width="500" height="auto">
+<img src="./images/2018-12-22-1015/1.png" width="500" height="auto">
 
 문제를 해결하는 것은 어렵지 않았다.<br/>
 하지만 문제 자체를 이해하는 데 시간이 엄청 오래걸렸던 문제였다.<br/>
