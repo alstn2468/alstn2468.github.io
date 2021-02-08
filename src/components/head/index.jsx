@@ -36,7 +36,8 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
               },
               {
                 property: `og:image`,
-                content: thumbnail ?? `thumbnail.png`,
+                content:
+                  thumbnail ?? `https://alstn2468.github.io/thumbnail.png`,
               },
               {
                 name: `twitter:card`,
@@ -56,7 +57,8 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
               },
               {
                 name: `twitter:image`,
-                content: thumbnail ?? `thumbnail.png`,
+                content:
+                  thumbnail ?? `https://alstn2468.github.io/thumbnail.png`,
               },
             ]
               .concat(
