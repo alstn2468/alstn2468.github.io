@@ -70,6 +70,16 @@ body.light {
     &:hover {
       background-color: $light-thumbnail-hover-background-color;
     }
+    small {
+      color: $light-link-color;
+    }
+    small {
+      color: $light-link-color;
+    }
+    border-top: 1px solid $light-category-text-color;
+    &:first-of-type {
+      border-top: none;
+    }
   }
 
   .footer {
