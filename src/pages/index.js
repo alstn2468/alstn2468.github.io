@@ -26,7 +26,10 @@ export default ({ data, location }) => {
 
   const { siteMetadata } = data.site
   const { countOfInitialPost } = siteMetadata.configs
-  const posts = data.allMarkdownRemark.edges
+  const posts = data.allMarkdownRemark.edges.filter(
+    edge =>
+      process.env.NODE_ENV === 'development' || !edge.node.frontmatter.draft
+  )
   const categories = useMemo(
     () => _.uniq(posts.map(({ node }) => node.frontmatter.category)),
     []
@@ -88,6 +91,7 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             category
+            draft
           }
         }
       }
