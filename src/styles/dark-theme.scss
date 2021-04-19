@@ -71,6 +71,13 @@ body.dark {
     &:hover {
       background-color: $dark-thumbnail-hover-background-color;
     }
+    small {
+      color: $dark-link-color;
+    }
+    border-top: 1px solid $dark-category-text-color;
+    &:first-of-type {
+      border-top: none;
+    }
   }
 
   .footer {
