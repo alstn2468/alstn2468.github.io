@@ -19,7 +19,7 @@ export const Utterances = ({ repo }) => {
       repo,
       branch,
       theme: isDarkTheme ? DARK_THEME : LIGHT_THEME,
-      label: 'comment',
+      label: '💬 comment',
       async: true,
       'issue-term': 'title',
       crossorigin: 'anonymous',
