@@ -112,4 +112,9 @@ body.light {
       background-image: $light-blockquote-quote-image;
     }
   }
+
+  figcaption {
+    margin-top: 8px;
+    text-align: center;
+  }
 }
