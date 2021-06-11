@@ -1,4 +1,4 @@
-const metaConfig = require('./gatsby-meta-config')
+const metaConfig = require('./gatsby-meta-config');
 
 module.exports = {
   siteMetadata: metaConfig,
@@ -37,7 +37,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 1200,
+              maxWidth: 600,
               linkImagesToOriginal: false,
             },
           },
@@ -106,4 +106,4 @@ module.exports = {
     `gatsby-plugin-lodash`,
     `gatsby-plugin-sitemap`,
   ],
-}
+};
