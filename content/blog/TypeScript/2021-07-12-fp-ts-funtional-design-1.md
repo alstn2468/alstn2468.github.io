@@ -9,7 +9,7 @@ draft: false
 
 ## 함수형 디자인: combinators
 
-이 글에서 "combinator"라는 용어는 [combinator 패턴](https://wiki.haskell.org/Combinator)을 가리킵니다.
+이번 포스트에서 "combinator"라는 용어는 [combinator 패턴](https://wiki.haskell.org/Combinator)을 가리킵니다.
 
 > 어떤 것을 결합하는 아이디어 중심으로 라이브러리를 구성하는 방식. 일반적으로 `T` 타입, `T` 타입의 "원시" 값, 그리고 `T` 타입의 값을 다양한 방법으로 조합하여 `T` 타입보다 복잡한 값을 구성할 수 있는 "combinator"가 있습니다.
 
@@ -227,4 +227,4 @@ Elapsed: 189
 */
 ```
 
-어떻게 하면 `time` combinator를 더 일반적으로 만들 수 있을까요? 다음 글에서 방법을 살펴보겠습니다.
+어떻게 하면 `time` combinator를 더 일반적으로 만들 수 있을까요? [다음 포스트](https://alstn2468.github.io/TypeScript/2021-07-20-fp-ts-funtional-design-2/)에서 방법을 살펴보겠습니다.
