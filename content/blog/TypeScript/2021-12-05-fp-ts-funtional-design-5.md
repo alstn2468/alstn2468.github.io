@@ -86,7 +86,7 @@ const init: Promise<Array<T>> = Promise.resolve([]);
 declare function push<T>(x: Array<T>, y: T): Array<T>;
 ```
 
-두 `Promise`가 모두 주어진 경우 `pushPromise`에서 `acc`와 `x`를 어떻게 연결할 수 있을까요?
+두 `Promise`가 모두 주어지면 `pushPromise`에서 `acc`와 `x`를 어떻게 연결할 수 있을까요?
 
 우리가 필요한 것은 프로시저이며 `liftA2`로 부르겠습니다. 이 프로시저는 `Promise` "안의" 값에 대해 작업할 수 있는 새 함수를 생성하는 함수 `push`를 "들어올릴" 수 있습니다. 다시 우리는 구현 없이 예상 결과를 선언(`declare`)합니다.
 
