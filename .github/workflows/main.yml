@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - gh-pages
+      - main
 name: build gatsby
 jobs:
   build_gatsby:
@@ -13,17 +13,21 @@ jobs:
         with:
           node-version: '14'
 
-      - name: yarn install
-        run: yarn install
+      - name: Cache node_modules
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-build-${{hashFiles('**/yarn.lock')}}
+          restore-keys: |
+            ${{ runner.OS }}-build-${{ runner.OS }}-
+      - name: Install dependencies
+        run: yarn install --prod --pure-lockfile
 
-      - name: gatsby build
-        env:
-          GH_API_KEY: ${{ secrets.GITHUB_API_KEY }}
+      - name: Build
         run: yarn build
 
-      - name: deploy
-        uses: maxheld83/ghpages@v0.2.1
+      - uses: peaceiris/actions-gh-pages@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GH_PAT: ${{ secrets.GITHUB_API_KEY }}
-          BUILD_DIR: 'public/'
+          PUBLISH_BRANCH: gh-pages
+          PUBLISH_DIR: ./public
