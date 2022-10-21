@@ -29,10 +29,17 @@ export default ({ data, pageContext, location }) => {
   const metaData = data.site.siteMetadata
   const { title, comment, siteUrl, author, sponsor } = metaData
   const { disqusShortName, utterances } = comment
-  const { title: postTitle, date } = post.frontmatter
+  const { title: postTitle, date, thumbnail } = post.frontmatter
+  const thumbnailSrc = thumbnail && thumbnail.childImageSharp
+    ? `${siteUrl}${thumbnail.childImageSharp.fixed.src}`
+    : undefined
   return (
     <Layout location={location} title={title}>
-      <Head title={postTitle} description={post.excerpt} />
+      <Head
+        title={postTitle}
+        description={post.excerpt}
+        thumbnail={thumbnailSrc}
+      />
       <PostTitle title={postTitle} />
       <PostDate date={date} />
       <PostContainer html={post.html} />
@@ -79,6 +86,13 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        thumbnail {
+          childImageSharp {
+            fixed(width:1200, height:630) {
+              src
+            }
+          }
+        }
       }
     }
   }
