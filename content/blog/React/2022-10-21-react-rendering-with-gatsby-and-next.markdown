@@ -18,7 +18,7 @@ SPA가 동작하기 위해서는 처음 요청을 보냈을 때 앱에 필요한
 
 CSR 방식은 구현된 코드들을 번들링 도구를 통해 하나 또는 여러 개의 JavaScript 파일로 묶어 사용자에게 한 번에 전달합니다.
 
-<img src="./images/2022-10-21/1-client-side-rendering.png" />
+<img src='./images/2022-10-21/1-client-side-rendering.png' />
 
 위의 그림과 같이 HTML 문서를 응답으로 전달받으면, 브라우저는 HTML에서 필요로 하는 JavaScript 파일을 다운로드합니다. JavaScript 파일이 다운로드되면 React는 컴포넌트 트리를 렌더링하고 DOM 노드들을 생성합니다.
 
@@ -58,7 +58,7 @@ GatsbyJS는 React 기반의 웹 애플리케이션 생성 프레임워크며 대
 
 CSR 방식의 애플리케이션의 라우팅은 JavaScript를 이용해 필요한 콘텐츠를 다시 그려주는 방식이지만 SSG 방식의 애플리케이션은 **빌드 과정에서 각 페이지의 HTML 파일을 생성**해 페이지를 이동하는 방식입니다.
 
-<img src="./images/2022-10-21/2-static-site-generation.png" />
+<img src='./images/2022-10-21/2-static-site-generation.png' />
 
 SSG 방식은 애플리케이션의 **모든 페이지를 미리 렌더링**해 사용자의 요청에 맞는 HTML 파일을 응답합니다. 이런 SSG 방식은 데이터베이스나 서버가 거의 필요 없는 구조로 애플리케이션을 구성할 수 있습니다. 또한 기존 CSR의 장점인 정적 파일을 이용한 **CDN 호스팅 또한 가능**합니다.
 
@@ -92,7 +92,7 @@ GatsbyJS는 애플리케이션 빌드가 완료되면 모든 페이지가 각각
 GatsbyJS의 라우팅을 위한 Link API는 [여기](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/)에서 자세히 확인할 수 있습니다.
 
 <figure>
-  <img src="./images/2022-10-21/3-gatsby-routing-optimization.gif" />
+  <img src='./images/2022-10-21/3-gatsby-routing-optimization.gif' />
   <figcaption>
     GatsbyJS가 라우팅 될 페이지의 데이터를 미리 가져오는 모습
   </figcaption>
@@ -106,7 +106,7 @@ GatsbyJS의 라우팅을 위한 Link API는 [여기](https://www.gatsbyjs.com/do
 
 CSR 방식은 브라우저를 이용해 HTML을 생성하는 방식이지만 SSR 방식은 사용자의 요청에 따라 **서버에서 JavaScript를 실행해 HTML을 생성하는 방식**입니다.
 
-<img src="./images/2022-10-21/4-server-side-rendering.png" />
+<img src='./images/2022-10-21/4-server-side-rendering.png' />
 
 JavaScript를 실행한 SSR 방식은 웹에 자주 사용되던 PHP나 JSP/Servlet과 비슷하게 동작합니다. 다른 점은 **GatsbyJS의 SSR의 런타임은 Node.js가 사용**됩니다.
 
@@ -153,19 +153,19 @@ SSR 방식의 장단점을 요약하면 아래와 같습니다.
 
 GatsbyJS의 SSR은 v4부터 새롭게 추가되었습니다. GatsbyJS는 앞에서 소개한 SSG 방식이나 뒤에서 소개하게 될 DSG(**D**eferred **S**tatic **G**eneration) 방식을 사용하는 것을 권장하지만 사용자 인증이나 A/B 테스트, 위치나 사용자 데이터 기반으로 구성되어야 하는 사례가 있을 경우를 위해 SSR 방식 또한 제공합니다.
 
-<img src="./images/2022-10-21/5-server-side-rendering.jpeg" />
+<img src='./images/2022-10-21/5-server-side-rendering.jpeg' />
 
 GatsbyJS에서 소개하는 SSR의 흐름은 위의 그림과 같습니다. SSR 방식으로 동작하기 위해서는 스크립트를 실행해야 하므로 Gatsby Cloud와 같은 **Cloud Worker 시스템이 추가로 필요**한 것을 확인할 수 있습니다.
 
 GatsbyJS에서 SSR 방식을 사용하기 위해서는 비동기 `getServerData` 함수를 사용해야 합니다.
 
 ```typescript
-import * as React from "react"
+import * as React from 'react'
 
 const SSRPage = ({ serverData }) => (
   <main>
     <h1>SSR Page with Dogs</h1>
-    <img alt="Happy dog" src={serverData.message} />
+    <img alt='Happy dog' src={serverData.message} />
   </main>
 );
 
@@ -190,6 +190,29 @@ export async function getServerData() {
 
 ### **D**eferred **S**tatic **G**eneration (DSG)
 
+GatsbyJS의 기본 렌더링 방식인 **SSG 방식은 CSR 방식에 비해 빠른 웹사이트 경험을 제공하지만, 빌드 시간이 오래 걸린다는 단점**이 존재합니다. **D**eferred **S**tatic **G**eneration(DSG) 방식은 SSG의 이런 단점을 개선합니다.
+
+<img src='./images/2022-10-21/6-deferred-static-generation.png' />
+
+DSG 방식을 이용하면 특정 페이지의 **빌드 시점을 지연(defer)**시킬 수 있습니다. 이러한 방식은 처음으로 페이지를 방문하는 사용자의 브라우저에서 빌드가 진행됩니다. 이 사용자에게는 로딩 시간이 길 수 있지만, 이어지는 사용자에게는 SSG 방식과 동일하게 페이지가 제공됩니다. DSG 방식을 사용한 페이지의 요청은 SSG 방식과 동일하게 **CDN을 이용해 제공**될 수 있지만 SSG 방식과 다르게 서버를 초기 빌드 후에도 계속 켜두어야 합니다.
+
+<img src='./images/2022-10-21/7-deferred-static-generation.jpg' />
+
+GatsbyJS에서 소개하는 DSG의 흐름은 위의 그림과 같습니다. DSG 방식으로 동작하기 위해서는 SSR 방식과 동일하게 Gatsby Cloud와 같은 **Cloud Worker 시스템이 추가로 필요**합니다.
+
+GatsbyJS에서 DSG 방식을 사용하기 위해서는 Gatsby Node API의 `createPage` 함수의 인자 객체에 `defer: true` 값을 추가해주면 됩니다.
+
+```typescript
+createPage({
+  path: 'page-path',
+  component: 'component-path',
+  context: {},
+  defer: true,
+});
+```
+
+지금까지 GatsbyJS의 렌더링 방식에 대해서 알아보았습니다. 다음 섹션에서는 NextJS에서 이용하는 렌더링 방식에 대해서 알아보겠습니다.
+
 ## NextJS의 렌더링 방식
 
 ### **S**tatic **S**ite **G**eneration (SSG)
@@ -206,10 +229,11 @@ export async function getServerData() {
 - [NextJS: Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
 - [NextJS: Incremental Static Regeneration](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration)
 - [Vercel: Incremental Static Regeneration](https://vercel.com/docs/concepts/incremental-static-regeneration/overview)
-- [GatsbyJS: What’s New in Gatsby 4](https://www.gatsbyjs.com/blog/whats-new-in-gatsby-4)
 - [GatsbyJS: Rendering Options](https://v4.gatsbyjs.com/docs/conceptual/rendering-options/)
 - [GatsbyJS: Static Site Generator](https://www.gatsbyjs.com/docs/glossary/static-site-generator/)
 - [GatsbyJS: Server-Side Rendering](https://www.gatsbyjs.com/docs/glossary/server-side-rendering/)
 - [GatsbyJS: Using Server-side Rendering (SSR)](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-server-side-rendering/)
 - [GatsbyJS: Using Deferred Static Generation (DSG)](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-deferred-static-generation/)
 - [GatsbyJS: A Guide To Deferred Static Generation](https://www.gatsbyjs.com/blog/deferred-static-generation-guide/)
+- [What’s New in Gatsby 4](https://www.gatsbyjs.com/blog/whats-new-in-gatsby-4)
+- [Behind the Scenes: What makes Gatsby Great](https://www.gatsbyjs.com/blog/2019-04-02-behind-the-scenes-what-makes-gatsby-great/#why-server-side-render)
