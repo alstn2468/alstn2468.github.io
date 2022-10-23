@@ -104,17 +104,17 @@ GatsbyJS의 라우팅을 위한 Link API는 [여기](https://www.gatsbyjs.com/do
 
 ### **S**erver **S**ide **R**endering (SSR)
 
-CSR 방식은 브라우저를 이용해 HTML을 생성하는 방식이지만 SSSR은 사용자의 요청에 따라 **서버에서 JavaScript를 실행해 HTML을 생성하는 방식**입니다.
+CSR 방식은 브라우저를 이용해 HTML을 생성하는 방식이지만 SSR 방식은 사용자의 요청에 따라 **서버에서 JavaScript를 실행해 HTML을 생성하는 방식**입니다.
 
 <img src="./images/2022-10-21/4-server-side-rendering.png" />
 
-JavaScript를 실행한 SSR 방식은 웹에 자주 사용되던 PHP나 JSP/Servlet과 비슷하게 동작합니다. 다른점은 **GatsbyJS의 SSR의 런타임은 Node.js가 사용**됩니다.
+JavaScript를 실행한 SSR 방식은 웹에 자주 사용되던 PHP나 JSP/Servlet과 비슷하게 동작합니다. 다른 점은 **GatsbyJS의 SSR의 런타임은 Node.js가 사용**됩니다.
 
-SSR 방식은 브라우저에서 실행 될 JavaScript를 서버에서 실행해 HTML을 생성하기 때문에 CSR 방식보다 **초기 페이지 렌더링이 늦어**질 수 있지만, CSR 방식에 비하여 사용자에게 보여주는 **콘텐츠가 로딩되는 시점은 빨라**질 수 있으며, HTML을 서버에서 생성해서 응답하기 때문에 CSR의 단점인 **SEO 문제가 해결**될 수 있습니다.
+SSR 방식은 브라우저에서 실행될 JavaScript를 서버에서 실행해 HTML을 생성하기 때문에 CSR 방식보다 **초기 페이지 렌더링이 늦어**질 수 있지만, CSR 방식에 비하여 사용자에게 보여주는 **콘텐츠가 로딩되는 시점은 빨라**질 수 있으며, HTML을 서버에서 생성해서 응답하기 때문에 CSR의 단점인 **SEO 문제가 해결**될 수 있습니다.
 
 SSR 방식은 CSR 방식과 다르게 C**DN을 이용한 정적 파일 제공이 불가능**하며 Node.js 환경에서 실행되기 때문에 **브라우저 API를 사용할 때 주의**해야 합니다. Node.js 환경에서는 `window`나 `document`와 같은 브라우저 객체에 접근할 수 없으므로 관련 코드를 작성할 때 유의해야 합니다.
 
-- `typeof` 키워드를 이용해 예외처리를 하는 예시
+- `typeof` 키워드를 이용해 예외 처리를 하는 예시
 
 ```typescript
 if (typeof window !== 'undefined') {
@@ -123,7 +123,7 @@ if (typeof window !== 'undefined') {
 }
 ```
 
-- `useEffect`를 이용해 예외처리를 하는 예시
+- `useEffect`를 이용해 예외 처리를 하는 예시
 
 React의 `useEffect` 훅은 컴포넌트가 마운트 되는 시점에 호출되기 때문에 브라우저 환경에서 실행되므로 `window`나 `docuemnt` 같은 브라우저 객체에 접근할 수 있습니다.
 
@@ -151,11 +151,11 @@ SSR 방식의 장단점을 요약하면 아래와 같습니다.
 
 **GatsbyJS의 SSR**
 
-GatsbyJS의 SSR은 v4 부터 새롭게 추가 되었습니다. GatsbyJS는 앞에서 소개한 SSG 방식이나 뒤에서 소개하게 될 DSG(**D**eferred **S**tatic **G**eneration) 방식을 사용하는 것을 권장하지만 사용자 인증이나 A/B 테스트, 위치나 사용자 데이터 기반으로 구성되어야 하는 사례가 있을 경우를 위해 SSR 방식 또한 제공합니다.
+GatsbyJS의 SSR은 v4부터 새롭게 추가되었습니다. GatsbyJS는 앞에서 소개한 SSG 방식이나 뒤에서 소개하게 될 DSG(**D**eferred **S**tatic **G**eneration) 방식을 사용하는 것을 권장하지만 사용자 인증이나 A/B 테스트, 위치나 사용자 데이터 기반으로 구성되어야 하는 사례가 있을 경우를 위해 SSR 방식 또한 제공합니다.
 
 <img src="./images/2022-10-21/5-server-side-rendering.jpeg" />
 
-GatsbyJS에서 소개하는 SSR의 흐름은 위의 그림과 같습니다. SSR 방식으로 동작하기 위해서는 스크립트를 실행해야 하므로 Gatsby Cloud와 같은 **Cloud Worker 시스템이 추가적으로 필요**한 것을 확인할 수 있습니다.
+GatsbyJS에서 소개하는 SSR의 흐름은 위의 그림과 같습니다. SSR 방식으로 동작하기 위해서는 스크립트를 실행해야 하므로 Gatsby Cloud와 같은 **Cloud Worker 시스템이 추가로 필요**한 것을 확인할 수 있습니다.
 
 GatsbyJS에서 SSR 방식을 사용하기 위해서는 비동기 `getServerData` 함수를 사용해야 합니다.
 
