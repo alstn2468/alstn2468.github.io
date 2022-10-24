@@ -288,6 +288,29 @@ export async function getStaticProps({ prarms }) {
 
 ### **S**erver **S**ide **R**endering (SSR)
 
+NextJS의 SSR 방식 또한 GatsbyJS와 동일하게 매 **요청마다 HTML을 생성**합니다. SSR 방식을 사용하기 위해서는 `getServerSideProps` 함수를 사용하면 됩니다.
+
+`getStaticProps` 함수와의 차이점은 `getStaticProps` 함수는 빌드 시점에 한 번만 실행되지만 `getServerSideProps` 함수는 **매 요청마다 실행**됩니다.
+
+```typescript
+function Post({ data }) {
+  // 개별 페이지 렌더링
+}
+
+export async function getServerSideProps() {
+  const res = await fetch(`https://.../data`);
+  const data = await res.json();
+
+  return { props: { data } };
+}
+```
+
+`getServerSideProps` 함수도 마찬가지로 **페이지 파일에서만** 사용할 수 있습니다. `getServerSideProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)에서 확인할 수 있습니다.
+
+NextJS는 페이지 요청시 데이터를 가져와야만 렌더링을 할 수 있는 **인증 헤더 또는 지역 정보가 필요한 경우같은 상황에서만 사용하기를 권장**합니다. 페이지 요청 중에 데이터를 렌더링할 필요가 없는 경우에는 클라이언트에서 데이터를 가져오거나 `getStaticProps` 함수를 이용한 **SSG 방식을 권장**합니다.
+
+마지막으로 NextJS의 렌더링 방식인 증분 정적 재생성(**I**ncremental **S**tatic **R**egeneration, ISR) 방식을 살펴보도록 하겠습니다.
+
 ### **I**ncremental **S**tatic **R**egeneration (ISR)
 
 ## 마무리
