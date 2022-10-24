@@ -129,7 +129,7 @@ React의 `useEffect` 훅은 컴포넌트가 마운트 되는 시점에 호출되
 useEffect(() => {
   // 브라우저에서 실행되어야 하는 코드
   window.addEventListener('scroll', onScroll);
-}, [])
+}, []);
 ```
 
 SSR 방식의 장단점을 요약하면 아래와 같습니다.
@@ -158,12 +158,12 @@ GatsbyJS에서 소개하는 SSR 방식의 흐름은 위의 그림과 같습니�
 GatsbyJS에서 SSR 방식을 사용하기 위해서는 비동기 `getServerData` 함수를 사용해야 합니다.
 
 ```typescript
-import * as React from 'react'
+import * as React from 'react';
 
 const SSRPage = ({ serverData }) => (
   <main>
     <h1>SSR Page with Dogs</h1>
-    <img alt='Happy dog' src={serverData.message} />
+    <img alt="Happy dog" src={serverData.message} />
   </main>
 );
 
@@ -173,7 +173,7 @@ export async function getServerData() {
   try {
     const res = await fetch(`https://dog.ceo/api/breeds/image/random`);
     if (!res.ok) {
-      throw new Error(`Response failed`)
+      throw new Error(`Response failed`);
     }
     return { props: await res.json() };
   } catch (error) {
@@ -213,7 +213,78 @@ createPage({
 
 ## NextJS의 렌더링 방식
 
+NextJS는 모든 페이지에 기본적으로 **pre-rendering**을 이용합니다. 이것은 NextJS는 CSR 방식처럼 사용자의 브라우저에서 JavaScript를 모두 실행하는 대신에 각각 페이지의 HTML을 미리 생성합니다.
+
+NextJS를 이용해 생성된 HTML은 페이지에 필요한 최소한의 JavaScript를 가지고 있습니다. 브라우저에서 페이지가 로딩되면 JavaScript 코드가 실행되어 페이지에서 상호작용을 할 수 있도록 만듭니다.
+
+> NextJS의 이러한 과정을 *hydration*이라고 부릅니다.
+
+NextJS는 GatsbyJS와 같게 SSG, SSR 방식을 지원하지만, GatsbyJS에서 지원하지 않는 증분 정적 재생성(**I**ncremental **S**tatic **R**egeneration, ISR) 방식을 지원합니다. 이번 섹션에서는 NextJS에서 각각의 렌더링 방식을 이용하는 법을 살펴보겠습니다.
+
 ### **S**tatic **S**ite **G**eneration (SSG)
+
+SSG 방식은 GatsbyJS와 동일하게 **빌드 시점에 모든 페이지의 HTML을 생성**하고 각 페이지를 요청할 때 **재사용**합니다. NextJS는 공식 문서에서도 CDN 캐싱과 같은 성능 향상의 이유로 SSR 방식보다 **SSG 방식을 권장**하고 있습니다.
+
+NextJS에서 SSG 방식을 이용하는 방법은 아래와 같이 두 가지가 존재합니다.
+
+1. 페이지의 **내용이 외부 데이터에 의존**할 경우
+
+페이지의 내용이 외부 데이터에 의존할 경우 `getStaticProps` 함수를 이용할 수 있습니다.
+
+```typescript
+function Blog({ posts }) {
+  // 개별 페이지 렌더링
+}
+
+export async function getStaticProps() {
+  try {
+    const res = await fetch('https://.../posts');
+    return {
+      props: { post: await res.json() },
+    };
+  } catch (error) {
+    return { notFound: true };
+  }
+}
+```
+
+`getStaticProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)에서 확인할 수 있습니다.
+
+2. 페이지의 **URL이 외부 데이터에 의존**할 경우
+
+페이지의 URL이 외부 데이터에 의존할 경우 `getStaticPaths` 함수를 사용할 수 있습니다. `pages/posts/[id].js`와 같이 동적인 URL을 생성해야 할 경우가 포함됩니다.
+
+```typescript
+function Post({ post }) {
+  // 개별 페이지 렌더링
+}
+
+export async function getStaticPaths() {
+  const res = await fetch('https://.../posts');
+  const posts = await res.json();
+  const paths = posts.map(post => ({
+    params: { id: post.id },
+  }));
+  return { paths, fallback: false };
+}
+
+export async function getStaticProps({ prarms }) {
+  try {
+    const res = await fetch(`https://.../posts/${params.id}`);
+    return {
+      props: { post: await res.json() },
+    };
+  } catch (error) {
+    return { notFound: true };
+  }
+}
+```
+
+`getStaticPaths` 함수에서 외부 데이터를 호출해 `id`의 해당하는 값들을 `paths`에 담아 객체 형태로 전달합니다. `paths`에 포함된 페이지들은 빌드 시에 pre-rendering 되며 `fallback` 속성이 `false`이므로 다른 URL 들은 404를 반환합니다.
+
+`getStaticPaths` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths)에서 확인할 수 있습니다.
+
+`getStaticProps`, `getStaticPaths` 함수는 **빌드 시점에 호출**되며 **페이지 파일에서만** 사용할 수 있습니다. 페이지 파일이 아닌 `_app`, `_document`, `_error`와 같은 파일에서는 사용할 수 없습니다.
 
 ### **S**erver **S**ide **R**endering (SSR)
 
@@ -222,6 +293,7 @@ createPage({
 ## 마무리
 
 **참고자료**
+
 - [Prateek Surana: The future of rendering in React](https://prateeksurana.me/blog/future-of-rendering-in-react/)
 - [NextJS: Pre-rendering](https://nextjs.org/docs/basic-features/pages#pre-rendering)
 - [NextJS: Server-side Rendering](https://nextjs.org/docs/basic-features/pages#server-side-rendering)
