@@ -286,6 +286,10 @@ export async function getStaticProps({ prarms }) {
 
 `getStaticProps`, `getStaticPaths` 함수는 **빌드 시점에 호출**되며 **페이지 파일에서만** 사용할 수 있습니다. 페이지 파일이 아닌 `_app`, `_document`, `_error`와 같은 파일에서는 사용할 수 없습니다.
 
+NextJS의 Link 컴포넌트 또한 최적화를 위해 페이지 데이터를 prefetch 합니다. 기본값은 `true`로 설정되어 있으며 GatsbyJS와 동일하게 SSG 방식을 사용한 페이지는 preload 됩니다. Link 컴포넌트에 대해서 자세한 내용은 [여기](https://nextjs.org/docs/api-reference/next/link)에서 확인할 수 있습니다.
+
+다음으로는 NextJS에서의 SSR 방식에 대해서 살펴보겠습니다.
+
 ### **S**erver **S**ide **R**endering (SSR)
 
 NextJS의 SSR 방식 또한 GatsbyJS와 동일하게 매 **요청마다 HTML을 생성**합니다. SSR 방식을 사용하기 위해서는 `getServerSideProps` 함수를 사용하면 됩니다.
