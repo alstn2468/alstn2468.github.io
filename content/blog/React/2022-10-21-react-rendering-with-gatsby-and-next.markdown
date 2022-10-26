@@ -1,9 +1,8 @@
 ---
 title: 'GatsbyJS와 NextJS로 알아보는 React 렌더링 방식'
-date: 2022-10-21 00:00:14
+date: 2022-10-26 00:00:14
 category: 'React'
 thumbnail: './images/react-rendering-with-gatsby-and-next/thumbnail.png'
-draft: true
 ---
 
 ## React의 기본적인 렌더링 방식
