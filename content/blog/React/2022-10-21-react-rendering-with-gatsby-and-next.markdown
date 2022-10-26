@@ -110,7 +110,7 @@ JavaScript를 실행한 SSR 방식은 웹에 자주 사용되던 PHP나 JSP/Serv
 
 SSR 방식은 브라우저에서 실행될 JavaScript를 서버에서 실행해 HTML을 생성하기 때문에 CSR 방식보다 **초기 페이지 렌더링이 늦어**질 수 있지만, CSR 방식에 비하여 사용자에게 보여주는 **콘텐츠가 로딩되는 시점은 빨라**질 수 있으며, HTML을 서버에서 생성해서 응답하기 때문에 CSR 방식의 단점인 **SEO 문제가 해결**될 수 있습니다.
 
-SSR 방식은 CSR 방식과 다르게 C**DN을 이용한 정적 파일 제공이 불가능**하며 Node.js 환경에서 실행되기 때문에 **브라우저 API를 사용할 때 주의**해야 합니다. Node.js 환경에서는 `window`나 `document`와 같은 브라우저 객체에 접근할 수 없으므로 관련 코드를 작성할 때 유의해야 합니다.
+SSR 방식은 CSR 방식과 다르게 **CDN을 이용한 정적 파일 제공이 불가능**하며 Node.js 환경에서 실행되기 때문에 **브라우저 API를 사용할 때 주의**해야 합니다. Node.js 환경에서는 `window`나 `document`와 같은 브라우저 객체에 접근할 수 없으므로 관련 코드를 작성할 때 유의해야 합니다.
 
 - `typeof` 키워드를 이용해 예외 처리를 하는 예시
 
@@ -217,7 +217,7 @@ createPage({
 
 ## NextJS의 렌더링 방식
 
-NextJS는 모든 페이지에 기본적으로 **pre-rendering**을 이용합니다. 이것은 NextJS는 CSR 방식처럼 사용자의 브라우저에서 JavaScript를 모두 실행하는 대신에 각각 페이지의 HTML을 미리 생성합니다.
+NextJS는 모든 페이지에 기본적으로 **pre-rendering**을 이용합니다. 이것은 NextJS가 CSR 방식처럼 사용자의 브라우저에서 JavaScript를 모두 실행하는 대신에 각각 페이지의 HTML을 미리 생성합니다.
 
 NextJS를 이용해 생성된 HTML은 페이지에 필요한 최소한의 JavaScript를 가지고 있습니다. 브라우저에서 페이지가 로딩되면 JavaScript 코드가 실행되어 페이지에서 상호작용을 할 수 있도록 만듭니다.
 
@@ -264,7 +264,7 @@ function Post({ post }) {
 export async function getStaticPaths() {
   const res = await fetch('https://.../posts');
   const posts = await res.json();
-  const paths = posts.map((post) => ({
+  const paths = posts.map(post => ({
     params: { id: post.id },
   }));
   return { paths, fallback: false };
@@ -348,7 +348,7 @@ export async function getStaticProps() {
 export async function getStaticPaths() {
   const res = await fetch('https://.../posts');
   const posts = await res.json();
-  const paths = posts.map((post) => ({
+  const paths = posts.map(post => ({
     params: { id: post.id },
   }));
   return { paths, fallback: 'blocking' };
