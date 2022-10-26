@@ -87,7 +87,7 @@ SSG 방식의 장단점을 요약하면 아래와 같습니다.
 
 GatsbyJS는 애플리케이션 빌드가 완료되면 모든 페이지가 각각의 HTML로 만들어집니다. SSG 방식으로 빌드된 HTML 문서 간의 라우팅 과정에서 사용자 경험을 위해 페이지 데이터들을 [prefetch](https://developer.mozilla.org/en-US/docs/Glossary/Prefetch), [preload](https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/preload)하는 방식을 추가로 사용합니다.
 
-GatsbyJS의 라우팅을 위한 Link API는 [여기](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/)에서 자세히 확인할 수 있습니다.
+> GatsbyJS의 라우팅을 위한 Link API는 [여기](https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/)에서 자세히 확인할 수 있습니다.
 
 <figure>
   <img src='./images/react-rendering-with-gatsby-and-next/3-gatsby-routing-optimization.gif' />
@@ -182,7 +182,9 @@ export async function getServerData() {
 }
 ```
 
-서버에서 페이지를 구성하기 위한 스크립트를 `getServerData` 함수에서 작성해 반환하여 페이지 컴포넌트에서 `serverData` 속성으로 가져와 사용할 수 있습니다. GatsbyJS의 SSR 방식에 대한 조금 더 자세한 내용은 [여기](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-server-side-rendering/)에서 확인할 수 있습니다.
+서버에서 페이지를 구성하기 위한 스크립트를 `getServerData` 함수에서 작성해 반환하여 페이지 컴포넌트에서 `serverData` 속성으로 가져와 사용할 수 있습니다.
+
+> GatsbyJS의 SSR 방식에 대한 자세한 내용은 [여기](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-server-side-rendering/)에서 확인할 수 있습니다.
 
 다음으로는 SSR 방식과 같이 GatsbyJS v4에서 새롭게 추가된 **D**eferred **S**tatic **G**eneration (DSG) 방식에 대해서 알아보도록 하겠습니다.
 
@@ -209,6 +211,8 @@ createPage({
 });
 ```
 
+> GatsbyJS의 DSG 방식에 대한 자세한 내용은 [여기](https://www.gatsbyjs.com/docs/how-to/rendering-options/using-deferred-static-generation/)에서 확인할 수 있습니다.
+
 지금까지 GatsbyJS의 렌더링 방식에 대해서 알아보았습니다. 다음 섹션에서는 NextJS에서 이용하는 렌더링 방식에 대해서 알아보겠습니다.
 
 ## NextJS의 렌더링 방식
@@ -231,6 +235,8 @@ NextJS에서 SSG 방식을 이용하는 방법은 아래와 같이 두 가지가
 
 페이지의 내용이 외부 데이터에 의존할 경우 `getStaticProps` 함수를 이용할 수 있습니다.
 
+> `getStaticProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)에서 확인할 수 있습니다.
+
 ```typescript
 function Blog({ posts }) {
   // 개별 페이지 렌더링
@@ -244,11 +250,11 @@ export async function getStaticProps() {
 }
 ```
 
-`getStaticProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-props)에서 확인할 수 있습니다.
-
 2. 페이지의 **URL이 외부 데이터에 의존**할 경우
 
 페이지의 URL이 외부 데이터에 의존할 경우 `getStaticPaths` 함수를 사용할 수 있습니다. `pages/posts/[id].js`와 같이 동적인 URL을 생성해야 할 경우가 포함됩니다.
+
+> `getStaticPaths` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths)에서 확인할 수 있습니다.
 
 ```typescript
 function Post({ post }) {
@@ -274,8 +280,6 @@ export async function getStaticProps({ prarms }) {
 
 `getStaticPaths` 함수에서 외부 데이터를 호출해 `id`의 해당하는 값들을 `paths`에 담아 객체 형태로 전달합니다. `paths`에 포함된 페이지들은 빌드 시에 pre-rendering 되며 `fallback` 속성이 `false`이므로 다른 URL 들은 404를 반환합니다.
 
-`getStaticPaths` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-static-paths)에서 확인할 수 있습니다.
-
 `getStaticProps`, `getStaticPaths` 함수는 **빌드 시점에 호출**되며 **페이지 파일에서만** 사용할 수 있습니다. 페이지 파일이 아닌 `_app`, `_document`, `_error`와 같은 파일에서는 사용할 수 없습니다.
 
 NextJS의 Link 컴포넌트 또한 최적화를 위해 페이지 데이터를 prefetch 합니다. 기본값은 `true`로 설정되어 있으며 GatsbyJS와 동일하게 SSG 방식을 사용한 페이지는 preload 됩니다. Link 컴포넌트에 대해서 자세한 내용은 [여기](https://nextjs.org/docs/api-reference/next/link)에서 확인할 수 있습니다.
@@ -295,6 +299,8 @@ NextJS의 SSR 방식 또한 GatsbyJS와 동일하게 매 **요청마다 HTML을 
 
 `getStaticProps` 함수와의 차이점은 `getStaticProps` 함수는 빌드 시점에 한 번만 실행되지만 `getServerSideProps` 함수는 **매 요청마다 실행**됩니다.
 
+> `getServerSideProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)에서 확인할 수 있습니다.
+
 ```typescript
 function Post({ data }) {
   // 개별 페이지 렌더링
@@ -308,7 +314,7 @@ export async function getServerSideProps() {
 }
 ```
 
-`getServerSideProps` 함수도 마찬가지로 **페이지 파일에서만** 사용할 수 있습니다. `getServerSideProps` 함수의 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/get-server-side-props)에서 확인할 수 있습니다.
+`getServerSideProps` 함수도 마찬가지로 **페이지 파일에서만** 사용할 수 있습니다.
 
 NextJS는 페이지 요청시 데이터를 가져와야만 렌더링을 할 수 있는 **인증 헤더 또는 지역 정보가 필요한 경우같은 상황에서만 사용하기를 권장**합니다. 페이지 요청 중에 데이터를 렌더링할 필요가 없는 경우에는 클라이언트에서 데이터를 가져오거나 `getStaticProps` 함수를 이용한 **SSG 방식을 권장**합니다.
 
@@ -321,6 +327,8 @@ NextJS는 페이지 요청시 데이터를 가져와야만 렌더링을 할 수 
 > 캐싱 전략의 자세한 내용은 [여기](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cache-Control)에서 확인할 수 있습니다.
 
 ISR 방식을 이용하면 **SSG 방식의 장점을 유지하면서 페이지를 쉽게 확장**할 수 있습니다. ISR 방식을 이용하기 위해서는 SSG 방식에 사용되었던 `getStaticProps` 함수에 반환 값에 `revalidate` 값을 추가해주면 됩니다.
+
+> NextJS의 ISR 방식에 대한 자세한 내용은 [여기](https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration)에서 확인할 수 있습니다.
 
 ```typescript
 function Blog({ posts }) {
