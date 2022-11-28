@@ -60,6 +60,10 @@ export function Head({ description, lang, meta, keywords, title, thumbnail }) {
                 content:
                   thumbnail ?? `https://alstn2468.github.io/thumbnail.png`,
               },
+              {
+                name: 'google-site-verification',
+                content: 'yEu1kvFb3GsfYU9DYB2doVx4Bptt6TlRgCnnzHWRAUo',
+              },
             ]
               .concat(
                 keywords.length > 0
