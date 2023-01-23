@@ -7,8 +7,8 @@ module.exports = {
   social: {
     twitter: `minsu-kim-336289160`, // Your Twitter account
     github: `alstn2468`, // Your GitHub account
-    instagram: `minsu._.0102`, // Your Medium account
-    facebook: `alstn2468`, // Your Facebook account
+    instagram: ``, // Your Medium account
+    facebook: ``, // Your Facebook account
   },
   icon: `content/assets/felog.png`, // Add your favicon
   thumbnail: `https://alstn2468.github.io/thumbnail.png`,
