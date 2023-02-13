@@ -2,7 +2,7 @@ module.exports = {
   title: `Minsu's Dev Log`,
   description: `Minsu's blog for storing technical logs`,
   author: `Minsu Kim`,
-  introduction: `Software Engineer at Devsisters Corp.`,
+  introduction: `Software Engineer at KakaoPay Corp.`,
   siteUrl: `https://alstn2468.github.io`, // Your blog site url
   social: {
     twitter: `minsu-kim-336289160`, // Your Twitter account
@@ -25,6 +25,7 @@ module.exports = {
     `react`,
     `react native`,
     `django`,
+    `functional programming`,
   ],
   comment: {
     disqusShortName: '', // Your disqus-short-name. check disqus.com.
