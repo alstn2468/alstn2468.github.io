@@ -8,7 +8,7 @@
     "url": "https://github.com/alstn2468/alstn2468.github.io/issues"
   },
   "dependencies": {
-    "gatsby": "^2.2.8",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.0.34",
     "gatsby-plugin-canonical-urls": "^2.9.0",
     "gatsby-plugin-feed": "^2.1.0",
